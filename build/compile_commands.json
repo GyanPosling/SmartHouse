@@ -1,0 +1,158 @@
+[
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\exceptions\\src\\Exception.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\exceptions\\src\\Exception.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/exceptions/src/Exception.cpp",
+  "output": "CMakeFiles/smartHouse.dir/exceptions/src/Exception.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\exceptions\\src\\InputException.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\exceptions\\src\\InputException.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/exceptions/src/InputException.cpp",
+  "output": "CMakeFiles/smartHouse.dir/exceptions/src/InputException.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\exceptions\\src\\FileException.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\exceptions\\src\\FileException.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/exceptions/src/FileException.cpp",
+  "output": "CMakeFiles/smartHouse.dir/exceptions/src/FileException.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\exceptions\\src\\ContainerException.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\exceptions\\src\\ContainerException.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/exceptions/src/ContainerException.cpp",
+  "output": "CMakeFiles/smartHouse.dir/exceptions/src/ContainerException.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\utils\\src\\InputUtils.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\utils\\src\\InputUtils.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/utils/src/InputUtils.cpp",
+  "output": "CMakeFiles/smartHouse.dir/utils/src/InputUtils.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\models\\src\\Sensor.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\models\\src\\Sensor.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/models/src/Sensor.cpp",
+  "output": "CMakeFiles/smartHouse.dir/models/src/Sensor.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\models\\src\\User.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\models\\src\\User.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/models/src/User.cpp",
+  "output": "CMakeFiles/smartHouse.dir/models/src/User.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\models\\src\\SmartHome.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\models\\src\\SmartHome.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/models/src/SmartHome.cpp",
+  "output": "CMakeFiles/smartHouse.dir/models/src/SmartHome.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\models\\src\\EnvironmentSimulator.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\models\\src\\EnvironmentSimulator.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/models/src/EnvironmentSimulator.cpp",
+  "output": "CMakeFiles/smartHouse.dir/models/src/EnvironmentSimulator.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\models\\src\\devices\\Device.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\models\\src\\devices\\Device.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/models/src/devices/Device.cpp",
+  "output": "CMakeFiles/smartHouse.dir/models/src/devices/Device.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\models\\src\\devices\\SmartDevice.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\models\\src\\devices\\SmartDevice.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/models/src/devices/SmartDevice.cpp",
+  "output": "CMakeFiles/smartHouse.dir/models/src/devices/SmartDevice.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\models\\src\\devices\\SmartAirConditioner.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\models\\src\\devices\\SmartAirConditioner.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/models/src/devices/SmartAirConditioner.cpp",
+  "output": "CMakeFiles/smartHouse.dir/models/src/devices/SmartAirConditioner.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\models\\src\\devices\\SmartHeater.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\models\\src\\devices\\SmartHeater.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/models/src/devices/SmartHeater.cpp",
+  "output": "CMakeFiles/smartHouse.dir/models/src/devices/SmartHeater.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\models\\src\\devices\\SmartHumidifier.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\models\\src\\devices\\SmartHumidifier.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/models/src/devices/SmartHumidifier.cpp",
+  "output": "CMakeFiles/smartHouse.dir/models/src/devices/SmartHumidifier.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\models\\src\\devices\\SmartDehumidifier.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\models\\src\\devices\\SmartDehumidifier.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/models/src/devices/SmartDehumidifier.cpp",
+  "output": "CMakeFiles/smartHouse.dir/models/src/devices/SmartDehumidifier.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\models\\src\\devices\\SmartFan.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\models\\src\\devices\\SmartFan.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/models/src/devices/SmartFan.cpp",
+  "output": "CMakeFiles/smartHouse.dir/models/src/devices/SmartFan.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\models\\src\\devices\\SmartLight.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\models\\src\\devices\\SmartLight.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/models/src/devices/SmartLight.cpp",
+  "output": "CMakeFiles/smartHouse.dir/models/src/devices/SmartLight.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\models\\src\\DeviceContainer.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\models\\src\\DeviceContainer.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/models/src/DeviceContainer.cpp",
+  "output": "CMakeFiles/smartHouse.dir/models/src/DeviceContainer.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\repositories\\src\\UserRepository.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\repositories\\src\\UserRepository.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/repositories/src/UserRepository.cpp",
+  "output": "CMakeFiles/smartHouse.dir/repositories/src/UserRepository.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\repositories\\src\\DeviceRepository.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\repositories\\src\\DeviceRepository.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/repositories/src/DeviceRepository.cpp",
+  "output": "CMakeFiles/smartHouse.dir/repositories/src/DeviceRepository.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\repositories\\src\\SensorRepository.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\repositories\\src\\SensorRepository.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/repositories/src/SensorRepository.cpp",
+  "output": "CMakeFiles/smartHouse.dir/repositories/src/SensorRepository.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\services\\src\\AuthenticationService.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\services\\src\\AuthenticationService.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/services/src/AuthenticationService.cpp",
+  "output": "CMakeFiles/smartHouse.dir/services/src/AuthenticationService.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\services\\src\\DeviceService.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\services\\src\\DeviceService.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/services/src/DeviceService.cpp",
+  "output": "CMakeFiles/smartHouse.dir/services/src/DeviceService.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\services\\src\\CommandHistory.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\services\\src\\CommandHistory.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/services/src/CommandHistory.cpp",
+  "output": "CMakeFiles/smartHouse.dir/services/src/CommandHistory.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\services\\src\\AutomationService.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\services\\src\\AutomationService.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/services/src/AutomationService.cpp",
+  "output": "CMakeFiles/smartHouse.dir/services/src/AutomationService.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\main\\main.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\main\\main.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/main/main.cpp",
+  "output": "CMakeFiles/smartHouse.dir/main/main.cpp.obj"
+}
+]

@@ -1,0 +1,3 @@
+C:\mingw64\bin\cmake.exe -E rm -f CMakeFiles\smartHouse.dir/objects.a
+C:\mingw64\bin\ar.exe qc CMakeFiles\smartHouse.dir/objects.a @CMakeFiles\smartHouse.dir\objects1.rsp
+C:\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\smartHouse.dir/objects.a -Wl,--no-whole-archive -o smartHouse.exe -Wl,--out-implib,libsmartHouse.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\smartHouse.dir\linkLibs.rsp
