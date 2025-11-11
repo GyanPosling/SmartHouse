@@ -680,6 +680,54 @@ services/src/AutomationService.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/services/src/AutomationService.cpp.s
 .PHONY : services/src/AutomationService.cpp.s
 
+services/src/ClimateFileManager.obj: services/src/ClimateFileManager.cpp.obj
+.PHONY : services/src/ClimateFileManager.obj
+
+# target to build an object file
+services/src/ClimateFileManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/services/src/ClimateFileManager.cpp.obj
+.PHONY : services/src/ClimateFileManager.cpp.obj
+
+services/src/ClimateFileManager.i: services/src/ClimateFileManager.cpp.i
+.PHONY : services/src/ClimateFileManager.i
+
+# target to preprocess a source file
+services/src/ClimateFileManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/services/src/ClimateFileManager.cpp.i
+.PHONY : services/src/ClimateFileManager.cpp.i
+
+services/src/ClimateFileManager.s: services/src/ClimateFileManager.cpp.s
+.PHONY : services/src/ClimateFileManager.s
+
+# target to generate assembly for a file
+services/src/ClimateFileManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/services/src/ClimateFileManager.cpp.s
+.PHONY : services/src/ClimateFileManager.cpp.s
+
+services/src/ClimateNormalizer.obj: services/src/ClimateNormalizer.cpp.obj
+.PHONY : services/src/ClimateNormalizer.obj
+
+# target to build an object file
+services/src/ClimateNormalizer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/services/src/ClimateNormalizer.cpp.obj
+.PHONY : services/src/ClimateNormalizer.cpp.obj
+
+services/src/ClimateNormalizer.i: services/src/ClimateNormalizer.cpp.i
+.PHONY : services/src/ClimateNormalizer.i
+
+# target to preprocess a source file
+services/src/ClimateNormalizer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/services/src/ClimateNormalizer.cpp.i
+.PHONY : services/src/ClimateNormalizer.cpp.i
+
+services/src/ClimateNormalizer.s: services/src/ClimateNormalizer.cpp.s
+.PHONY : services/src/ClimateNormalizer.s
+
+# target to generate assembly for a file
+services/src/ClimateNormalizer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/services/src/ClimateNormalizer.cpp.s
+.PHONY : services/src/ClimateNormalizer.cpp.s
+
 services/src/CommandHistory.obj: services/src/CommandHistory.cpp.obj
 .PHONY : services/src/CommandHistory.obj
 
@@ -830,6 +878,12 @@ help:
 	@echo ... services/src/AutomationService.obj
 	@echo ... services/src/AutomationService.i
 	@echo ... services/src/AutomationService.s
+	@echo ... services/src/ClimateFileManager.obj
+	@echo ... services/src/ClimateFileManager.i
+	@echo ... services/src/ClimateFileManager.s
+	@echo ... services/src/ClimateNormalizer.obj
+	@echo ... services/src/ClimateNormalizer.i
+	@echo ... services/src/ClimateNormalizer.s
 	@echo ... services/src/CommandHistory.obj
 	@echo ... services/src/CommandHistory.i
 	@echo ... services/src/CommandHistory.s

@@ -169,6 +169,10 @@ CMakeFiles/smartHouse.dir/main/main.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/bits/codecvt.h \
  C:/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.tcc \
  C:/mingw64/include/c++/14.2.0/bits/locale_conv.h \
+ C:/mingw64/include/c++/14.2.0/iomanip \
+ C:/mingw64/include/c++/14.2.0/bits/quoted_string.h \
+ C:/mingw64/include/c++/14.2.0/sstream \
+ C:/mingw64/include/c++/14.2.0/bits/sstream.tcc \
  D:/programming/C++programming/PnaYAVU/kursavaya/services/include/AuthenticationService.hpp \
  D:/programming/C++programming/PnaYAVU/kursavaya/models/include/User.hpp \
  D:/programming/C++programming/PnaYAVU/kursavaya/repositories/include/UserRepository.hpp \
@@ -179,8 +183,6 @@ CMakeFiles/smartHouse.dir/main/main.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/bits/stl_bvector.h \
  C:/mingw64/include/c++/14.2.0/bits/vector.tcc \
  D:/programming/C++programming/PnaYAVU/kursavaya/utils/include/InputUtils.hpp \
- C:/mingw64/include/c++/14.2.0/sstream \
- C:/mingw64/include/c++/14.2.0/bits/sstream.tcc \
  D:/programming/C++programming/PnaYAVU/kursavaya/exceptions/include/InputException.hpp \
  D:/programming/C++programming/PnaYAVU/kursavaya/services/include/DeviceService.hpp \
  D:/programming/C++programming/PnaYAVU/kursavaya/models/include/DeviceContainer.hpp \
@@ -233,6 +235,13 @@ CMakeFiles/smartHouse.dir/main/main.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/bits/erase_if.h \
  C:/mingw64/include/c++/14.2.0/array \
  C:/mingw64/include/c++/14.2.0/compare \
+ D:/programming/C++programming/PnaYAVU/kursavaya/services/include/ClimateNormalizer.hpp \
+ D:/programming/C++programming/PnaYAVU/kursavaya/services/include/ClimateData.hpp \
+ D:/programming/C++programming/PnaYAVU/kursavaya/services/include/ClimateFileManager.hpp \
+ C:/mingw64/include/c++/14.2.0/fstream \
+ C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/basic_file.h \
+ C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++io.h \
+ C:/mingw64/include/c++/14.2.0/bits/fstream.tcc \
  D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/SmartAirConditioner.hpp \
  D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/SmartHeater.hpp \
  D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/SmartHumidifier.hpp \

@@ -1,1 +1,6 @@
 1|heater|gostinnaya|0|12
+2|hello|hello|0|23
+2|hello|hello|0|23
+3|3|3|3|3
+2|hello|hello|0|100
+2|2|2|0|100
