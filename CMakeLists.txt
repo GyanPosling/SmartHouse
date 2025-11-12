@@ -15,6 +15,7 @@ set(EXCEPTIONS_SOURCES
 # Утилиты
 set(UTILS_SOURCES
     utils/src/InputUtils.cpp
+    utils/src/Menu.cpp
 )
 
 # Модели
@@ -46,7 +47,9 @@ set(SERVICES_SOURCES
     services/src/AuthenticationService.cpp
     services/src/DeviceService.cpp
     services/src/CommandHistory.cpp
-    services/src/AutomationService.cpp
+    services/src/ClimateNormalizer.cpp
+    services/src/ClimateFileManager.cpp
+    services/src/ClimateData.cpp
 )
 
 # Все исходные файлы
@@ -71,3 +74,4 @@ target_include_directories(smartHouse PRIVATE
     services/include
     main
 )
+

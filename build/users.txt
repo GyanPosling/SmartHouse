@@ -3,3 +3,6 @@
 3|anton |122
 4|hello|hello
 5|avon|zz
+6|d|d
+7|1|1
+8|12|12

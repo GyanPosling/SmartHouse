@@ -30,12 +30,13 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/programming/C++programming/PnaYAVU/kursavaya/repositories/src/SensorRepository.cpp" "CMakeFiles/smartHouse.dir/repositories/src/SensorRepository.cpp.obj" "gcc" "CMakeFiles/smartHouse.dir/repositories/src/SensorRepository.cpp.obj.d"
   "D:/programming/C++programming/PnaYAVU/kursavaya/repositories/src/UserRepository.cpp" "CMakeFiles/smartHouse.dir/repositories/src/UserRepository.cpp.obj" "gcc" "CMakeFiles/smartHouse.dir/repositories/src/UserRepository.cpp.obj.d"
   "D:/programming/C++programming/PnaYAVU/kursavaya/services/src/AuthenticationService.cpp" "CMakeFiles/smartHouse.dir/services/src/AuthenticationService.cpp.obj" "gcc" "CMakeFiles/smartHouse.dir/services/src/AuthenticationService.cpp.obj.d"
-  "D:/programming/C++programming/PnaYAVU/kursavaya/services/src/AutomationService.cpp" "CMakeFiles/smartHouse.dir/services/src/AutomationService.cpp.obj" "gcc" "CMakeFiles/smartHouse.dir/services/src/AutomationService.cpp.obj.d"
+  "D:/programming/C++programming/PnaYAVU/kursavaya/services/src/ClimateData.cpp" "CMakeFiles/smartHouse.dir/services/src/ClimateData.cpp.obj" "gcc" "CMakeFiles/smartHouse.dir/services/src/ClimateData.cpp.obj.d"
   "D:/programming/C++programming/PnaYAVU/kursavaya/services/src/ClimateFileManager.cpp" "CMakeFiles/smartHouse.dir/services/src/ClimateFileManager.cpp.obj" "gcc" "CMakeFiles/smartHouse.dir/services/src/ClimateFileManager.cpp.obj.d"
   "D:/programming/C++programming/PnaYAVU/kursavaya/services/src/ClimateNormalizer.cpp" "CMakeFiles/smartHouse.dir/services/src/ClimateNormalizer.cpp.obj" "gcc" "CMakeFiles/smartHouse.dir/services/src/ClimateNormalizer.cpp.obj.d"
   "D:/programming/C++programming/PnaYAVU/kursavaya/services/src/CommandHistory.cpp" "CMakeFiles/smartHouse.dir/services/src/CommandHistory.cpp.obj" "gcc" "CMakeFiles/smartHouse.dir/services/src/CommandHistory.cpp.obj.d"
   "D:/programming/C++programming/PnaYAVU/kursavaya/services/src/DeviceService.cpp" "CMakeFiles/smartHouse.dir/services/src/DeviceService.cpp.obj" "gcc" "CMakeFiles/smartHouse.dir/services/src/DeviceService.cpp.obj.d"
   "D:/programming/C++programming/PnaYAVU/kursavaya/utils/src/InputUtils.cpp" "CMakeFiles/smartHouse.dir/utils/src/InputUtils.cpp.obj" "gcc" "CMakeFiles/smartHouse.dir/utils/src/InputUtils.cpp.obj.d"
+  "D:/programming/C++programming/PnaYAVU/kursavaya/utils/src/Menu.cpp" "CMakeFiles/smartHouse.dir/utils/src/Menu.cpp.obj" "gcc" "CMakeFiles/smartHouse.dir/utils/src/Menu.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

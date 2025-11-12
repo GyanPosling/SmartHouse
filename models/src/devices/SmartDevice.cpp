@@ -39,6 +39,26 @@ string SmartDevice::getModeString() const {
     }
 }
 
+bool SmartDevice::operator==(const SmartDevice& other) const {
+    // Если режим поиска - MODE, проверяем здесь
+    if (Device::getSearchMode() == DeviceSearchField::MODE) {
+        return mode == other.mode;
+    }
+    
+    // Для остальных полей используем базовый класс
+    return Device::operator==(other);
+}
+
+bool SmartDevice::operator<(const SmartDevice& other) const {
+    // Если режим сортировки - MODE, проверяем здесь
+    if (Device::getSearchMode() == DeviceSearchField::MODE) {
+        return static_cast<int>(mode) < static_cast<int>(other.mode);
+    }
+    
+    // Для остальных полей используем базовый класс
+    return Device::operator<(other);
+}
+
 string SmartDevice::getDeviceInfo() const {
     return Device::getDeviceInfo() + ", Mode: " + getModeString();
 }

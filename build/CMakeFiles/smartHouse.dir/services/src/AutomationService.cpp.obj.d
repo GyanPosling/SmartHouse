@@ -147,6 +147,8 @@ CMakeFiles/smartHouse.dir/services/src/AutomationService.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/bits/istream.tcc \
  C:/mingw64/include/c++/14.2.0/sstream \
  C:/mingw64/include/c++/14.2.0/bits/sstream.tcc \
+ C:/mingw64/include/c++/14.2.0/utility \
+ C:/mingw64/include/c++/14.2.0/bits/stl_relops.h \
  D:/programming/C++programming/PnaYAVU/kursavaya/models/include/EnvironmentSimulator.hpp \
  C:/mingw64/include/c++/14.2.0/vector \
  C:/mingw64/include/c++/14.2.0/bits/stl_uninitialized.h \

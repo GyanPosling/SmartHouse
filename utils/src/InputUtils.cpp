@@ -9,31 +9,107 @@ void InputUtils::clearInputBuffer(istream& input) {
 }
 
 int InputUtils::readInt(istream& input, const string& prompt) {
-    int value;
+    string line;
     cout << prompt;
     
     while (true) {
-        if (input >> value) {
-            clearInputBuffer(input);
+        getline(input, line);
+        
+        if (line.empty()) {
+            throw InputException(1, "Error: empty input. Please enter an integer.");
+        }
+        
+        // Проверяем, что строка содержит только число (возможно с пробелами)
+        size_t firstNonSpace = line.find_first_not_of(" \t");
+        size_t lastNonSpace = line.find_last_not_of(" \t");
+        
+        if (firstNonSpace == string::npos) {
+            throw InputException(1, "Error: empty input. Please enter an integer.");
+        }
+        
+        string trimmed = line.substr(firstNonSpace, lastNonSpace - firstNonSpace + 1);
+        
+        // Проверяем, что все символы - цифры или знак минуса в начале
+        bool isValid = true;
+        for (size_t i = 0; i < trimmed.length(); ++i) {
+            if (i == 0 && trimmed[i] == '-') {
+                continue; // Минус в начале допустим
+            }
+            if (trimmed[i] < '0' || trimmed[i] > '9') {
+                isValid = false;
+                break;
+            }
+        }
+        
+        if (!isValid) {
+            throw InputException(1, "Error: invalid input. Please enter only an integer (no letters or special characters).");
+        }
+        
+        try {
+            int value = stoi(trimmed);
             return value;
-        } else {
-            clearInputBuffer(input);
-            throw InputException(1, "Error: not a number. Please enter an integer.");
+        } catch (const invalid_argument&) {
+            throw InputException(1, "Error: not a valid integer. Please enter an integer.");
+        } catch (const out_of_range&) {
+            throw InputException(1, "Error: number is too large. Please enter a smaller integer.");
         }
     }
 }
 
 double InputUtils::readDouble(istream& input, const string& prompt) {
-    double value;
+    string line;
     cout << prompt;
     
     while (true) {
-        if (input >> value) {
-            clearInputBuffer(input);
+        getline(input, line);
+        
+        if (line.empty()) {
+            throw InputException(2, "Error: empty input. Please enter a number.");
+        }
+        
+        // Проверяем, что строка содержит только число (возможно с пробелами)
+        size_t firstNonSpace = line.find_first_not_of(" \t");
+        size_t lastNonSpace = line.find_last_not_of(" \t");
+        
+        if (firstNonSpace == string::npos) {
+            throw InputException(2, "Error: empty input. Please enter a number.");
+        }
+        
+        string trimmed = line.substr(firstNonSpace, lastNonSpace - firstNonSpace + 1);
+        
+        // Проверяем, что все символы - цифры, точка или знак минуса
+        bool isValid = true;
+        bool hasDot = false;
+        for (size_t i = 0; i < trimmed.length(); ++i) {
+            if (i == 0 && trimmed[i] == '-') {
+                continue; // Минус в начале допустим
+            }
+            if (trimmed[i] == '.' || trimmed[i] == ',') {
+                if (hasDot) {
+                    isValid = false; // Две точки недопустимы
+                    break;
+                }
+                hasDot = true;
+                if (trimmed[i] == ',') {
+                    trimmed[i] = '.'; // Заменяем запятую на точку
+                }
+            } else if (trimmed[i] < '0' || trimmed[i] > '9') {
+                isValid = false;
+                break;
+            }
+        }
+        
+        if (!isValid) {
+            throw InputException(2, "Error: invalid input. Please enter only a number (no letters or special characters).");
+        }
+        
+        try {
+            double value = stod(trimmed);
             return value;
-        } else {
-            clearInputBuffer(input);
-            throw InputException(2, "Error: not a number. Please enter a floating point number.");
+        } catch (const invalid_argument&) {
+            throw InputException(2, "Error: not a valid number. Please enter a number.");
+        } catch (const out_of_range&) {
+            throw InputException(2, "Error: number is too large. Please enter a smaller number.");
         }
     }
 }
@@ -165,6 +241,17 @@ string InputUtils::readStringWithLimit(istream& input, const string& prompt, int
     
     if (value.length() > maxLength) {
         throw InputException(11, "Error: string too long. Maximum length: " + to_string(maxLength) + " characters.");
+    }
+    
+    return value;
+}
+
+int InputUtils::readIntInRange(istream& input, const string& prompt, int min, int max) {
+    int value = readInt(input, prompt);
+    
+    if (value < min || value > max) {
+        throw InputException(12, "Error: number out of range. Please enter a number between " + 
+                            to_string(min) + " and " + to_string(max) + ".");
     }
     
     return value;

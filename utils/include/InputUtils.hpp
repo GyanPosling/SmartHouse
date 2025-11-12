@@ -7,10 +7,13 @@ using namespace std;
 
 class InputUtils {
 public:
-    // Функция для безопасного ввода числа (int)
+    // Функция для безопасного ввода числа (int) с проверкой на смешанный ввод
     static int readInt(istream& input, const string& prompt);
     
-    // Функция для безопасного ввода числа (double)
+    // Функция для безопасного ввода числа (int) с диапазоном
+    static int readIntInRange(istream& input, const string& prompt, int min, int max);
+    
+    // Функция для безопасного ввода числа (double) с проверкой на смешанный ввод
     static double readDouble(istream& input, const string& prompt);
     
     // Функция для безопасного ввода строки (только английские буквы)

@@ -36,6 +36,14 @@ void SmartLight::update(double temperature, double humidity, double co2, int hou
     }
 }
 
+bool SmartLight::operator==(const SmartLight& other) const {
+    return SmartDevice::operator==(other);
+}
+
+bool SmartLight::operator<(const SmartLight& other) const {
+    return SmartDevice::operator<(other);
+}
+
 string SmartLight::getDeviceInfo() const {
     return SmartDevice::getDeviceInfo() + 
            ", Type: Smart Light" + 

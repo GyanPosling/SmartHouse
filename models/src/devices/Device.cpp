@@ -1,7 +1,12 @@
 #include "../../include/devices/Device.hpp"
-#include "../../utils/include/InputUtils.hpp"
 #include "../../exceptions/include/InputException.hpp"
+#include <string>
+#include <utility>
 #include <sstream>
+using namespace std;
+
+// Инициализация статической переменной
+DeviceSearchField Device::currentSearchMode = DeviceSearchField::ID;
 
 Device::Device() 
     : id(0), deviceName(""), location(""), powerLevel(0), isOn(false) {}
@@ -80,7 +85,25 @@ string Device::getDeviceInfo() const {
            ", On: " + (isOn ? "Yes" : "No");
 }
 
+void Device::setSearchMode(DeviceSearchField mode) {
+    currentSearchMode = mode;
+}
+
+DeviceSearchField Device::getSearchMode() {
+    return currentSearchMode;
+}
+
 bool Device::operator==(const Device& other) const {
+    if (currentSearchMode == DeviceSearchField::ID) {
+        return id == other.id;
+    } else if (currentSearchMode == DeviceSearchField::DEVICE_NAME) {
+        return deviceName == other.deviceName;
+    } else if (currentSearchMode == DeviceSearchField::LOCATION) {
+        return location == other.location;
+    } else if (currentSearchMode == DeviceSearchField::POWER_LEVEL) {
+        return powerLevel == other.powerLevel;
+    }
+    // Для MODE будет обработано в SmartDevice
     return id == other.id;
 }
 
@@ -89,6 +112,16 @@ bool Device::operator!=(const Device& other) const {
 }
 
 bool Device::operator<(const Device& other) const {
+    if (currentSearchMode == DeviceSearchField::ID) {
+        return id < other.id;
+    } else if (currentSearchMode == DeviceSearchField::DEVICE_NAME) {
+        return deviceName < other.deviceName;
+    } else if (currentSearchMode == DeviceSearchField::LOCATION) {
+        return location < other.location;
+    } else if (currentSearchMode == DeviceSearchField::POWER_LEVEL) {
+        return powerLevel < other.powerLevel;
+    }
+    // Для MODE будет обработано в SmartDevice
     return id < other.id;
 }
 
@@ -104,35 +137,6 @@ bool Device::operator>=(const Device& other) const {
     return id >= other.id;
 }
 
-bool Device::compareByField(const Device& other, DeviceSearchField field) const {
-    switch (field) {
-        case DeviceSearchField::ID:
-            return id == other.id;
-        case DeviceSearchField::DEVICE_NAME:
-            return deviceName == other.deviceName;
-        case DeviceSearchField::LOCATION:
-            return location == other.location;
-        case DeviceSearchField::POWER_LEVEL:
-            return powerLevel == other.powerLevel;
-        default:
-            return false;
-    }
-}
-
-bool Device::compareBySortField(const Device& other, DeviceSortField field) const {
-    switch (field) {
-        case DeviceSortField::ID:
-            return id < other.id;
-        case DeviceSortField::DEVICE_NAME:
-            return deviceName < other.deviceName;
-        case DeviceSortField::LOCATION:
-            return location < other.location;
-        case DeviceSortField::POWER_LEVEL:
-            return powerLevel < other.powerLevel;
-        default:
-            return false;
-    }
-}
 
 ostream& operator<<(ostream& os, const Device& device) {
     os << device.id << "|" << device.deviceName << "|" << device.location 

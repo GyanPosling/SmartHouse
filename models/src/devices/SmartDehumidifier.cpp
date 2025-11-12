@@ -48,6 +48,14 @@ void SmartDehumidifier::update(double temperature, double humidity, double co2, 
     }
 }
 
+bool SmartDehumidifier::operator==(const SmartDehumidifier& other) const {
+    return SmartDevice::operator==(other);
+}
+
+bool SmartDehumidifier::operator<(const SmartDehumidifier& other) const {
+    return SmartDevice::operator<(other);
+}
+
 string SmartDehumidifier::getDeviceInfo() const {
     return SmartDevice::getDeviceInfo() + 
            ", Type: Dehumidifier" + 

@@ -45,6 +45,14 @@ void SmartFan::update(double temperature, double humidity, double co2, int hour)
     }
 }
 
+bool SmartFan::operator==(const SmartFan& other) const {
+    return SmartDevice::operator==(other);
+}
+
+bool SmartFan::operator<(const SmartFan& other) const {
+    return SmartDevice::operator<(other);
+}
+
 string SmartFan::getDeviceInfo() const {
     return SmartDevice::getDeviceInfo() + 
            ", Type: Fan" + 

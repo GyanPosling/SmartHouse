@@ -145,4 +145,6 @@ CMakeFiles/smartHouse.dir/models/src/devices/SmartDevice.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/istream \
  C:/mingw64/include/c++/14.2.0/bits/istream.tcc \
  C:/mingw64/include/c++/14.2.0/sstream \
- C:/mingw64/include/c++/14.2.0/bits/sstream.tcc
+ C:/mingw64/include/c++/14.2.0/bits/sstream.tcc \
+ C:/mingw64/include/c++/14.2.0/utility \
+ C:/mingw64/include/c++/14.2.0/bits/stl_relops.h

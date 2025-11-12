@@ -656,29 +656,29 @@ services/src/AuthenticationService.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/services/src/AuthenticationService.cpp.s
 .PHONY : services/src/AuthenticationService.cpp.s
 
-services/src/AutomationService.obj: services/src/AutomationService.cpp.obj
-.PHONY : services/src/AutomationService.obj
+services/src/ClimateData.obj: services/src/ClimateData.cpp.obj
+.PHONY : services/src/ClimateData.obj
 
 # target to build an object file
-services/src/AutomationService.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/services/src/AutomationService.cpp.obj
-.PHONY : services/src/AutomationService.cpp.obj
+services/src/ClimateData.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/services/src/ClimateData.cpp.obj
+.PHONY : services/src/ClimateData.cpp.obj
 
-services/src/AutomationService.i: services/src/AutomationService.cpp.i
-.PHONY : services/src/AutomationService.i
+services/src/ClimateData.i: services/src/ClimateData.cpp.i
+.PHONY : services/src/ClimateData.i
 
 # target to preprocess a source file
-services/src/AutomationService.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/services/src/AutomationService.cpp.i
-.PHONY : services/src/AutomationService.cpp.i
+services/src/ClimateData.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/services/src/ClimateData.cpp.i
+.PHONY : services/src/ClimateData.cpp.i
 
-services/src/AutomationService.s: services/src/AutomationService.cpp.s
-.PHONY : services/src/AutomationService.s
+services/src/ClimateData.s: services/src/ClimateData.cpp.s
+.PHONY : services/src/ClimateData.s
 
 # target to generate assembly for a file
-services/src/AutomationService.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/services/src/AutomationService.cpp.s
-.PHONY : services/src/AutomationService.cpp.s
+services/src/ClimateData.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/services/src/ClimateData.cpp.s
+.PHONY : services/src/ClimateData.cpp.s
 
 services/src/ClimateFileManager.obj: services/src/ClimateFileManager.cpp.obj
 .PHONY : services/src/ClimateFileManager.obj
@@ -800,6 +800,30 @@ utils/src/InputUtils.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/utils/src/InputUtils.cpp.s
 .PHONY : utils/src/InputUtils.cpp.s
 
+utils/src/Menu.obj: utils/src/Menu.cpp.obj
+.PHONY : utils/src/Menu.obj
+
+# target to build an object file
+utils/src/Menu.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/utils/src/Menu.cpp.obj
+.PHONY : utils/src/Menu.cpp.obj
+
+utils/src/Menu.i: utils/src/Menu.cpp.i
+.PHONY : utils/src/Menu.i
+
+# target to preprocess a source file
+utils/src/Menu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/utils/src/Menu.cpp.i
+.PHONY : utils/src/Menu.cpp.i
+
+utils/src/Menu.s: utils/src/Menu.cpp.s
+.PHONY : utils/src/Menu.s
+
+# target to generate assembly for a file
+utils/src/Menu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/utils/src/Menu.cpp.s
+.PHONY : utils/src/Menu.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -875,9 +899,9 @@ help:
 	@echo ... services/src/AuthenticationService.obj
 	@echo ... services/src/AuthenticationService.i
 	@echo ... services/src/AuthenticationService.s
-	@echo ... services/src/AutomationService.obj
-	@echo ... services/src/AutomationService.i
-	@echo ... services/src/AutomationService.s
+	@echo ... services/src/ClimateData.obj
+	@echo ... services/src/ClimateData.i
+	@echo ... services/src/ClimateData.s
 	@echo ... services/src/ClimateFileManager.obj
 	@echo ... services/src/ClimateFileManager.i
 	@echo ... services/src/ClimateFileManager.s
@@ -893,6 +917,9 @@ help:
 	@echo ... utils/src/InputUtils.obj
 	@echo ... utils/src/InputUtils.i
 	@echo ... utils/src/InputUtils.s
+	@echo ... utils/src/Menu.obj
+	@echo ... utils/src/Menu.i
+	@echo ... utils/src/Menu.s
 .PHONY : help
 
 

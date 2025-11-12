@@ -4,9 +4,9 @@
 #include "../../models/include/EnvironmentSimulator.hpp"
 #include "../../repositories/include/DeviceRepository.hpp"
 #include "../../repositories/include/SensorRepository.hpp"
-#include "../../services/include/AutomationService.hpp"
 #include <memory>
 #include <vector>
+#include <ctime>
 using namespace std;
 
 class DeviceService {
@@ -15,7 +15,6 @@ private:
     unique_ptr<DeviceRepository> deviceRepository;
     unique_ptr<SensorRepository> sensorRepository;
     shared_ptr<EnvironmentSimulator> environmentSimulator;
-    unique_ptr<AutomationService> automationService;
 
 public:
     DeviceService();

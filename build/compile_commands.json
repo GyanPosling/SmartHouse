@@ -31,6 +31,12 @@
 },
 {
   "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\utils\\src\\Menu.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\utils\\src\\Menu.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/utils/src/Menu.cpp",
+  "output": "CMakeFiles/smartHouse.dir/utils/src/Menu.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
   "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\models\\src\\Sensor.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\models\\src\\Sensor.cpp",
   "file": "D:/programming/C++programming/PnaYAVU/kursavaya/models/src/Sensor.cpp",
   "output": "CMakeFiles/smartHouse.dir/models/src/Sensor.cpp.obj"
@@ -145,12 +151,6 @@
 },
 {
   "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
-  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\services\\src\\AutomationService.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\services\\src\\AutomationService.cpp",
-  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/services/src/AutomationService.cpp",
-  "output": "CMakeFiles/smartHouse.dir/services/src/AutomationService.cpp.obj"
-},
-{
-  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
   "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\services\\src\\ClimateNormalizer.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\services\\src\\ClimateNormalizer.cpp",
   "file": "D:/programming/C++programming/PnaYAVU/kursavaya/services/src/ClimateNormalizer.cpp",
   "output": "CMakeFiles/smartHouse.dir/services/src/ClimateNormalizer.cpp.obj"
@@ -160,6 +160,12 @@
   "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\services\\src\\ClimateFileManager.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\services\\src\\ClimateFileManager.cpp",
   "file": "D:/programming/C++programming/PnaYAVU/kursavaya/services/src/ClimateFileManager.cpp",
   "output": "CMakeFiles/smartHouse.dir/services/src/ClimateFileManager.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\services\\src\\ClimateData.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\services\\src\\ClimateData.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/services/src/ClimateData.cpp",
+  "output": "CMakeFiles/smartHouse.dir/services/src/ClimateData.cpp.obj"
 },
 {
   "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",

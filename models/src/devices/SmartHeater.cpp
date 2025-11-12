@@ -48,6 +48,14 @@ void SmartHeater::update(double temperature, double humidity, double co2, int ho
     }
 }
 
+bool SmartHeater::operator==(const SmartHeater& other) const {
+    return SmartDevice::operator==(other);
+}
+
+bool SmartHeater::operator<(const SmartHeater& other) const {
+    return SmartDevice::operator<(other);
+}
+
 string SmartHeater::getDeviceInfo() const {
     return SmartDevice::getDeviceInfo() + 
            ", Type: Heater" + 

@@ -35,14 +35,25 @@ void SmartAirConditioner::update(double temperature, double humidity, double co2
         return;
     }
     
-    // Автоматический режим - кондиционер работает для CO2
-    if (co2 > targetCO2 + tolerance) {
-        // CO2 выше нормы - включаем кондиционер
+    // Автоматический режим - кондиционер работает для температуры
+    // Кондиционер должен снижать температуру при высокой температуре
+    // Используем targetCO2 как целевую температуру (для обратной совместимости)
+    double targetTemp = targetCO2; // В данном случае targetCO2 используется как целевая температура
+    if (temperature > targetTemp + tolerance) {
+        // Температура выше нормы - включаем кондиционер
         turnOn();
-    } else if (co2 <= targetCO2 - tolerance) {
-        // CO2 в норме - выключаем
+    } else if (temperature <= targetTemp - tolerance) {
+        // Температура в норме - выключаем
         turnOff();
     }
+}
+
+bool SmartAirConditioner::operator==(const SmartAirConditioner& other) const {
+    return SmartDevice::operator==(other);
+}
+
+bool SmartAirConditioner::operator<(const SmartAirConditioner& other) const {
+    return SmartDevice::operator<(other);
 }
 
 string SmartAirConditioner::getDeviceInfo() const {

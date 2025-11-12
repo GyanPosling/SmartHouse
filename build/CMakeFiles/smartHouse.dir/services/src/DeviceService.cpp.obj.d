@@ -148,6 +148,8 @@ CMakeFiles/smartHouse.dir/services/src/DeviceService.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/bits/istream.tcc \
  C:/mingw64/include/c++/14.2.0/sstream \
  C:/mingw64/include/c++/14.2.0/bits/sstream.tcc \
+ C:/mingw64/include/c++/14.2.0/utility \
+ C:/mingw64/include/c++/14.2.0/bits/stl_relops.h \
  D:/programming/C++programming/PnaYAVU/kursavaya/exceptions/include/ContainerException.hpp \
  D:/programming/C++programming/PnaYAVU/kursavaya/exceptions/include/Exception.hpp \
  C:/mingw64/include/c++/14.2.0/vector \
@@ -207,5 +209,4 @@ CMakeFiles/smartHouse.dir/services/src/DeviceService.cpp.obj: \
  D:/programming/C++programming/PnaYAVU/kursavaya/models/include/Sensor.hpp \
  D:/programming/C++programming/PnaYAVU/kursavaya/repositories/include/DeviceRepository.hpp \
  D:/programming/C++programming/PnaYAVU/kursavaya/exceptions/include/FileException.hpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/repositories/include/SensorRepository.hpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/services/include/AutomationService.hpp
+ D:/programming/C++programming/PnaYAVU/kursavaya/repositories/include/SensorRepository.hpp

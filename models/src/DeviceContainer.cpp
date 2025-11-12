@@ -1,6 +1,10 @@
 #include "../include/DeviceContainer.hpp"
 #include "../../exceptions/include/ContainerException.hpp"
+#include "../../models/include/devices/Device.hpp"
+#include "../../models/include/devices/SmartDevice.hpp"
 #include <sstream>
+#include <string>
+using namespace std;
 
 DeviceContainer::DeviceContainer() {}
 
@@ -36,39 +40,45 @@ shared_ptr<SmartDevice> DeviceContainer::findDeviceById(int deviceId) const {
 vector<shared_ptr<SmartDevice>> DeviceContainer::searchByField(DeviceSearchField field, const string& value) const {
     vector<shared_ptr<SmartDevice>> results;
     
+    // Устанавливаем режим поиска
+    Device::setSearchMode(field);
+    
+    // Создаем временное устройство для сравнения
+    // Для поиска по строковым полям создаем устройство с нужным значением
+    Device searchDevice;
+    switch (field) {
+        case DeviceSearchField::ID:
+            searchDevice.setId(stoi(value));
+            break;
+        case DeviceSearchField::DEVICE_NAME:
+            searchDevice.setDeviceName(value);
+            break;
+        case DeviceSearchField::LOCATION:
+            searchDevice.setLocation(value);
+            break;
+        case DeviceSearchField::POWER_LEVEL:
+            searchDevice.setPowerLevel(stoi(value));
+            break;
+        case DeviceSearchField::MODE:
+            // Для MODE будет обработано в SmartDevice
+            break;
+    }
+    
     for (const auto& device : devices) {
-        bool match = false;
-        
-        switch (field) {
-            case DeviceSearchField::ID:
-                if (to_string(device->getId()) == value) {
-                    match = true;
-                }
-                break;
-            case DeviceSearchField::DEVICE_NAME:
-                if (device->getDeviceName() == value) {
-                    match = true;
-                }
-                break;
-            case DeviceSearchField::LOCATION:
-                if (device->getLocation() == value) {
-                    match = true;
-                }
-                break;
-            case DeviceSearchField::MODE:
-                if (device->getModeString() == value) {
-                    match = true;
-                }
-                break;
-            case DeviceSearchField::POWER_LEVEL:
-                if (to_string(device->getPowerLevel()) == value) {
-                    match = true;
-                }
-                break;
-        }
-        
-        if (match) {
-            results.push_back(device);
+        // Используем перегрузку == для поиска
+        if (field == DeviceSearchField::MODE) {
+            // Для MODE проверяем через SmartDevice
+            SmartDevice* sd = dynamic_cast<SmartDevice*>(device.get());
+            if (sd && sd->getModeString() == value) {
+                results.push_back(device);
+            }
+        } else {
+            // Для остальных полей используем базовый класс
+            // Приводим SmartDevice к Device для сравнения
+            Device* baseDevice = dynamic_cast<Device*>(device.get());
+            if (baseDevice && *baseDevice == searchDevice) {
+                results.push_back(device);
+            }
         }
     }
     
@@ -76,22 +86,35 @@ vector<shared_ptr<SmartDevice>> DeviceContainer::searchByField(DeviceSearchField
 }
 
 void DeviceContainer::sortByField(DeviceSortField field) {
+    // Преобразуем DeviceSortField в DeviceSearchField для установки режима
+    DeviceSearchField searchField;
+    switch (field) {
+        case DeviceSortField::ID:
+            searchField = DeviceSearchField::ID;
+            break;
+        case DeviceSortField::DEVICE_NAME:
+            searchField = DeviceSearchField::DEVICE_NAME;
+            break;
+        case DeviceSortField::LOCATION:
+            searchField = DeviceSearchField::LOCATION;
+            break;
+        case DeviceSortField::MODE:
+            searchField = DeviceSearchField::MODE;
+            break;
+        case DeviceSortField::POWER_LEVEL:
+            searchField = DeviceSearchField::POWER_LEVEL;
+            break;
+        default:
+            searchField = DeviceSearchField::ID;
+    }
+    
+    // Устанавливаем режим сортировки
+    Device::setSearchMode(searchField);
+    
+    // Используем перегрузку < для сортировки
     sort(devices.begin(), devices.end(),
-        [field](const shared_ptr<SmartDevice>& a, const shared_ptr<SmartDevice>& b) {
-            switch (field) {
-                case DeviceSortField::ID:
-                    return a->getId() < b->getId();
-                case DeviceSortField::DEVICE_NAME:
-                    return a->getDeviceName() < b->getDeviceName();
-                case DeviceSortField::LOCATION:
-                    return a->getLocation() < b->getLocation();
-                case DeviceSortField::MODE:
-                    return static_cast<int>(a->getMode()) < static_cast<int>(b->getMode());
-                case DeviceSortField::POWER_LEVEL:
-                    return a->getPowerLevel() < b->getPowerLevel();
-                default:
-                    return false;
-            }
+        [](const shared_ptr<SmartDevice>& a, const shared_ptr<SmartDevice>& b) {
+            return *a < *b;
         });
 }
 
@@ -122,7 +145,7 @@ shared_ptr<SmartDevice> DeviceContainer::operator[](size_t index) const {
     return devices[index];
 }
 
-// Iterator implementation
+
 DeviceContainer::Iterator::Iterator(vector<shared_ptr<SmartDevice>>::iterator iterator) : it(iterator) {}
 
 DeviceContainer::Iterator& DeviceContainer::Iterator::operator++() {

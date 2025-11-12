@@ -1,9 +1,12 @@
 #include "../include/User.hpp"
 
-User::User() : id(0), username(""), password("") {}
+User::User() : id(0), username(""), password(""), birthday("") {}
 
 User::User(int userId, const std::string& name, const std::string& userPassword)
-    : id(userId), username(name), password(userPassword) {}
+    : id(userId), username(name), password(userPassword), birthday("") {}
+
+User::User(int userId, const std::string& name, const std::string& userPassword, const std::string& userBirthday)
+    : id(userId), username(name), password(userPassword), birthday(userBirthday) {}
 
 int User::getId() const {
     return id;
@@ -27,6 +30,14 @@ std::string User::getPassword() const {
 
 void User::setPassword(const std::string& userPassword) {
     password = userPassword;
+}
+
+std::string User::getBirthday() const {
+    return birthday;
+}
+
+void User::setBirthday(const std::string& userBirthday) {
+    birthday = userBirthday;
 }
 
 bool User::checkPassword(const std::string& userPassword) const {

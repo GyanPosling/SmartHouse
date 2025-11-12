@@ -48,6 +48,14 @@ void SmartHumidifier::update(double temperature, double humidity, double co2, in
     }
 }
 
+bool SmartHumidifier::operator==(const SmartHumidifier& other) const {
+    return SmartDevice::operator==(other);
+}
+
+bool SmartHumidifier::operator<(const SmartHumidifier& other) const {
+    return SmartDevice::operator<(other);
+}
+
 string SmartHumidifier::getDeviceInfo() const {
     return SmartDevice::getDeviceInfo() + 
            ", Type: Humidifier" + 

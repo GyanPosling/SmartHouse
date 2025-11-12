@@ -147,6 +147,8 @@ CMakeFiles/smartHouse.dir/repositories/src/DeviceRepository.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/bits/istream.tcc \
  C:/mingw64/include/c++/14.2.0/sstream \
  C:/mingw64/include/c++/14.2.0/bits/sstream.tcc \
+ C:/mingw64/include/c++/14.2.0/utility \
+ C:/mingw64/include/c++/14.2.0/bits/stl_relops.h \
  D:/programming/C++programming/PnaYAVU/kursavaya/exceptions/include/FileException.hpp \
  D:/programming/C++programming/PnaYAVU/kursavaya/exceptions/include/Exception.hpp \
  C:/mingw64/include/c++/14.2.0/vector \

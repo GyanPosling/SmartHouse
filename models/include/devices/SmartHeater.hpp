@@ -18,6 +18,10 @@ public:
     double getTolerance() const;
     void setTolerance(double deviceTolerance);
     
+    // Перегрузка операторов - вызывают методы базового класса
+    bool operator==(const SmartHeater& other) const;
+    bool operator<(const SmartHeater& other) const;
+    
     void update(double temperature, double humidity, double co2, int hour) override;
     string getDeviceInfo() const override;
 };
