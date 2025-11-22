@@ -1,8 +1,4 @@
-1|anton|123
-2|gurich|kozel_CRUD
-3|anton |122
-4|hello|hello
-5|avon|zz
-6|d|d
-7|1|1
-8|12|12
+2|a|a|01/01/1900
+3|anton|password|12/12/2000
+4|avelina|avelina|14/12/2006
+5|zxc|zxc|12/12/2006

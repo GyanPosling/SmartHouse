@@ -1,4 +1,7 @@
 #include "../../include/devices/SmartAirConditioner.hpp"
+#include "../../exceptions/include/InputHandler.hpp"
+#include <iomanip>
+using namespace std;
 
 SmartAirConditioner::SmartAirConditioner() 
     : SmartDevice(), targetCO2(400.0), tolerance(50.0) {}
@@ -24,30 +27,6 @@ void SmartAirConditioner::setTolerance(double deviceTolerance) {
     tolerance = deviceTolerance;
 }
 
-void SmartAirConditioner::update(double temperature, double humidity, double co2, int hour) {
-    if (mode == DeviceMode::MANUAL) {
-        // В ручном режиме устройство работает пока пользователь не выключит
-        return;
-    }
-    
-    if (mode == DeviceMode::OFF) {
-        turnOff();
-        return;
-    }
-    
-    // Автоматический режим - кондиционер работает для температуры
-    // Кондиционер должен снижать температуру при высокой температуре
-    // Используем targetCO2 как целевую температуру (для обратной совместимости)
-    double targetTemp = targetCO2; // В данном случае targetCO2 используется как целевая температура
-    if (temperature > targetTemp + tolerance) {
-        // Температура выше нормы - включаем кондиционер
-        turnOn();
-    } else if (temperature <= targetTemp - tolerance) {
-        // Температура в норме - выключаем
-        turnOff();
-    }
-}
-
 bool SmartAirConditioner::operator==(const SmartAirConditioner& other) const {
     return SmartDevice::operator==(other);
 }
@@ -61,5 +40,65 @@ string SmartAirConditioner::getDeviceInfo() const {
            ", Type: Air Conditioner" + 
            ", Target CO2: " + to_string(targetCO2) + " ppm" +
            ", Tolerance: ±" + to_string(tolerance) + " ppm";
+}
+
+ostream& operator<<(ostream& os, const SmartAirConditioner& device) {
+    os << static_cast<const SmartDevice&>(device) << "|" << device.targetCO2 << "|" << device.tolerance;
+    return os;
+}
+
+istream& operator>>(istream& is, SmartAirConditioner& device) {
+    is >> static_cast<SmartDevice&>(device);
+    
+    bool success = false;
+    while (!success) {
+        try {
+            safeInputDouble(is, device.targetCO2, 0, 10000, "Enter target CO2: ");
+            success = true;
+        } catch (const InputException& e) {
+            cout << "Error: " << e.what() << endl;
+        }
+    }
+    
+    success = false;
+    while (!success) {
+        try {
+            safeInputDouble(is, device.tolerance, 0, 1000, "Enter tolerance: ");
+            success = true;
+        } catch (const InputException& e) {
+            cout << "Error: " << e.what() << endl;
+        }
+    }
+    
+    return is;
+}
+
+void SmartAirConditioner::printHeader() const {
+    cout << left;
+    cout << "| " << setw(5) << "ID" << " | " << setw(15) << "Device Name" << " | " << setw(15) << "Location" << " | " << setw(12) << "Power Level" << " | " << setw(8) << "Status" << " | " << setw(10) << "Mode" << " | " << setw(12) << "Target CO2" << " | " << setw(10) << "Tolerance" << " |" << endl;
+}
+
+void SmartAirConditioner::printTable() const {
+    cout << left;
+    cout << "| " << setw(5) << id << " | " << setw(15) << deviceName << " | " << setw(15) << location << " | " << setw(12) << powerLevel << " | " << setw(8) << (isOn ? "On" : "Off") << " | " << setw(10) << getModeString() << " | " << setw(12) << targetCO2 << " | " << setw(10) << tolerance << " |" << endl;
+}
+
+void SmartAirConditioner::updateField(int fieldChoice) {
+    double num;
+    if(fieldChoice <= 5) {
+        SmartDevice::updateField(fieldChoice);
+        return;
+    }
+    
+    switch(fieldChoice) {
+        case 6:
+            safeInputDouble(cin, num, 0, 10000, "New target CO2: ");
+            setTargetCO2(num);
+            break;
+        case 7:
+            safeInputDouble(cin, num, 0, 1000, "New tolerance: ");
+            setTolerance(num);
+            break;
+    }
 }
 

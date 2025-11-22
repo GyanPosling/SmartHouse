@@ -1,8 +1,6 @@
 #include "../../include/devices/Device.hpp"
-#include "../../exceptions/include/InputException.hpp"
-#include <string>
-#include <utility>
-#include <sstream>
+#include "../../exceptions/include/InputHandler.hpp"
+#include <iomanip>
 using namespace std;
 
 // Инициализация статической переменной
@@ -145,27 +143,74 @@ ostream& operator<<(ostream& os, const Device& device) {
 }
 
 istream& operator>>(istream& is, Device& device) {
-    string line;
-    if (getline(is, line)) {
-        istringstream iss(line);
-        string token;
-        
+    bool success = false;
+    while (!success) {
         try {
-            if (getline(iss, token, '|')) {
-                device.id = stoi(token);
-            }
-            if (getline(iss, token, '|')) {
-                device.deviceName = token;
-            }
-            if (getline(iss, token, '|')) {
-                device.location = token;
-            }
-            if (getline(iss, token, '|')) {
-                device.powerLevel = stoi(token);
-            }
-        } catch (const exception& e) {
-            throw InputException(12, "Error reading device from stream: " + string(e.what()));
+            safeInputInt(is, device.id, 0, 999999, "Enter device ID: ");
+            success = true;
+        } catch (const InputException& e) {
+            cout << "Error: " << e.what() << endl;
         }
     }
+    
+    success = false;
+    while (!success) {
+        try {
+            safeInputText(is, device.deviceName, "Enter device name: ");
+            success = true;
+        } catch (const InputException& e) {
+            cout << "Error: " << e.what() << endl;
+        }
+    }
+    
+    success = false;
+    while (!success) {
+        try {
+            safeInputText(is, device.location, "Enter location: ");
+            success = true;
+        } catch (const InputException& e) {
+            cout << "Error: " << e.what() << endl;
+        }
+    }
+    
+    success = false;
+    while (!success) {
+        try {
+            safeInputInt(is, device.powerLevel, 0, 100, "Enter power level (0-100): ");
+            success = true;
+        } catch (const InputException& e) {
+            cout << "Error: " << e.what() << endl;
+        }
+    }
+    
     return is;
+}
+
+void Device::printHeader() const {
+    cout << left;
+    cout << "| " << setw(5) << "ID" << " | " << setw(15) << "Device Name" << " | " << setw(15) << "Location" << " | " << setw(12) << "Power Level" << " | " << setw(8) << "Status" << " |" << endl;
+}
+
+void Device::printTable() const {
+    cout << left;
+    cout << "| " << setw(5) << id << " | " << setw(15) << deviceName << " | " << setw(15) << location << " | " << setw(12) << powerLevel << " | " << setw(8) << (isOn ? "On" : "Off") << " |" << endl;
+}
+
+void Device::updateField(int fieldChoice) {
+    string str;
+    int num;
+    switch(fieldChoice) {
+        case 1:
+            safeInputInt(cin, id, 0, 999999, "New device ID: ");
+            break;
+        case 2:
+            safeInputText(cin, deviceName, "New device name: ");
+            break;
+        case 3:
+            safeInputText(cin, location, "New location: ");
+            break;
+        case 4:
+            safeInputInt(cin, powerLevel, 0, 100, "New power level (0-100): ");
+            break;
+    }
 }

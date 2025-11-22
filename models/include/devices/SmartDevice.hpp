@@ -22,7 +22,13 @@ public:
     bool operator==(const SmartDevice& other) const;
     bool operator<(const SmartDevice& other) const;
     
-    virtual void update(double temperature, double humidity, double co2, int hour) = 0;
+    friend ostream& operator<<(ostream& os, const SmartDevice& device);
+    friend istream& operator>>(istream& is, SmartDevice& device);
+    
     string getDeviceInfo() const override;
+    
+    void printHeader() const override;
+    void printTable() const override;
+    void updateField(int fieldChoice) override;
 };
 

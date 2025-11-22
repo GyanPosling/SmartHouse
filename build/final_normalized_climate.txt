@@ -1,9 +1,9 @@
 === CLIMATE NORMALIZATION REPORT ===
 
 ORIGINAL VALUES:
-Temperature: 20.00°C
-Humidity: 45.00%
-CO2: 400.00 ppm
+Temperature: 12.00°C
+Humidity: 12.00%
+CO2: 12.00 ppm
 
 NORMALIZED VALUES:
 Temperature: 20.00°C

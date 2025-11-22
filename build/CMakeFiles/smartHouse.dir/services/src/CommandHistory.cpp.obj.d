@@ -1,6 +1,7 @@
 CMakeFiles/smartHouse.dir/services/src/CommandHistory.cpp.obj: \
  D:\programming\C++programming\PnaYAVU\kursavaya\services\src\CommandHistory.cpp \
  D:/programming/C++programming/PnaYAVU/kursavaya/services/include/CommandHistory.hpp \
+ D:/programming/C++programming/PnaYAVU/kursavaya/models/include/Command.hpp \
  C:/mingw64/include/c++/14.2.0/vector \
  C:/mingw64/include/c++/14.2.0/bits/requires_hosted.h \
  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \

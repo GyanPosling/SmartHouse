@@ -128,56 +128,41 @@ CMakeFiles/smartHouse.dir/exceptions/src/ContainerException.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/smartHouse.dir/exceptions/src/ContainerException.cpp.s"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\programming\C++programming\PnaYAVU\kursavaya\exceptions\src\ContainerException.cpp -o CMakeFiles\smartHouse.dir\exceptions\src\ContainerException.cpp.s
 
-CMakeFiles/smartHouse.dir/utils/src/InputUtils.cpp.obj: CMakeFiles/smartHouse.dir/flags.make
-CMakeFiles/smartHouse.dir/utils/src/InputUtils.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
-CMakeFiles/smartHouse.dir/utils/src/InputUtils.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/utils/src/InputUtils.cpp
-CMakeFiles/smartHouse.dir/utils/src/InputUtils.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/smartHouse.dir/utils/src/InputUtils.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/utils/src/InputUtils.cpp.obj -MF CMakeFiles\smartHouse.dir\utils\src\InputUtils.cpp.obj.d -o CMakeFiles\smartHouse.dir\utils\src\InputUtils.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\utils\src\InputUtils.cpp
+CMakeFiles/smartHouse.dir/exceptions/src/Date.cpp.obj: CMakeFiles/smartHouse.dir/flags.make
+CMakeFiles/smartHouse.dir/exceptions/src/Date.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
+CMakeFiles/smartHouse.dir/exceptions/src/Date.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/exceptions/src/Date.cpp
+CMakeFiles/smartHouse.dir/exceptions/src/Date.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/smartHouse.dir/exceptions/src/Date.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/exceptions/src/Date.cpp.obj -MF CMakeFiles\smartHouse.dir\exceptions\src\Date.cpp.obj.d -o CMakeFiles\smartHouse.dir\exceptions\src\Date.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\exceptions\src\Date.cpp
 
-CMakeFiles/smartHouse.dir/utils/src/InputUtils.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/smartHouse.dir/utils/src/InputUtils.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\programming\C++programming\PnaYAVU\kursavaya\utils\src\InputUtils.cpp > CMakeFiles\smartHouse.dir\utils\src\InputUtils.cpp.i
+CMakeFiles/smartHouse.dir/exceptions/src/Date.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/smartHouse.dir/exceptions/src/Date.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\programming\C++programming\PnaYAVU\kursavaya\exceptions\src\Date.cpp > CMakeFiles\smartHouse.dir\exceptions\src\Date.cpp.i
 
-CMakeFiles/smartHouse.dir/utils/src/InputUtils.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/smartHouse.dir/utils/src/InputUtils.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\programming\C++programming\PnaYAVU\kursavaya\utils\src\InputUtils.cpp -o CMakeFiles\smartHouse.dir\utils\src\InputUtils.cpp.s
+CMakeFiles/smartHouse.dir/exceptions/src/Date.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/smartHouse.dir/exceptions/src/Date.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\programming\C++programming\PnaYAVU\kursavaya\exceptions\src\Date.cpp -o CMakeFiles\smartHouse.dir\exceptions\src\Date.cpp.s
 
-CMakeFiles/smartHouse.dir/utils/src/Menu.cpp.obj: CMakeFiles/smartHouse.dir/flags.make
-CMakeFiles/smartHouse.dir/utils/src/Menu.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
-CMakeFiles/smartHouse.dir/utils/src/Menu.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/utils/src/Menu.cpp
-CMakeFiles/smartHouse.dir/utils/src/Menu.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/smartHouse.dir/utils/src/Menu.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/utils/src/Menu.cpp.obj -MF CMakeFiles\smartHouse.dir\utils\src\Menu.cpp.obj.d -o CMakeFiles\smartHouse.dir\utils\src\Menu.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\utils\src\Menu.cpp
+CMakeFiles/smartHouse.dir/exceptions/src/InputHandler.cpp.obj: CMakeFiles/smartHouse.dir/flags.make
+CMakeFiles/smartHouse.dir/exceptions/src/InputHandler.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
+CMakeFiles/smartHouse.dir/exceptions/src/InputHandler.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/exceptions/src/InputHandler.cpp
+CMakeFiles/smartHouse.dir/exceptions/src/InputHandler.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/smartHouse.dir/exceptions/src/InputHandler.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/exceptions/src/InputHandler.cpp.obj -MF CMakeFiles\smartHouse.dir\exceptions\src\InputHandler.cpp.obj.d -o CMakeFiles\smartHouse.dir\exceptions\src\InputHandler.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\exceptions\src\InputHandler.cpp
 
-CMakeFiles/smartHouse.dir/utils/src/Menu.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/smartHouse.dir/utils/src/Menu.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\programming\C++programming\PnaYAVU\kursavaya\utils\src\Menu.cpp > CMakeFiles\smartHouse.dir\utils\src\Menu.cpp.i
+CMakeFiles/smartHouse.dir/exceptions/src/InputHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/smartHouse.dir/exceptions/src/InputHandler.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\programming\C++programming\PnaYAVU\kursavaya\exceptions\src\InputHandler.cpp > CMakeFiles\smartHouse.dir\exceptions\src\InputHandler.cpp.i
 
-CMakeFiles/smartHouse.dir/utils/src/Menu.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/smartHouse.dir/utils/src/Menu.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\programming\C++programming\PnaYAVU\kursavaya\utils\src\Menu.cpp -o CMakeFiles\smartHouse.dir\utils\src\Menu.cpp.s
-
-CMakeFiles/smartHouse.dir/models/src/Sensor.cpp.obj: CMakeFiles/smartHouse.dir/flags.make
-CMakeFiles/smartHouse.dir/models/src/Sensor.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
-CMakeFiles/smartHouse.dir/models/src/Sensor.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/models/src/Sensor.cpp
-CMakeFiles/smartHouse.dir/models/src/Sensor.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/smartHouse.dir/models/src/Sensor.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/models/src/Sensor.cpp.obj -MF CMakeFiles\smartHouse.dir\models\src\Sensor.cpp.obj.d -o CMakeFiles\smartHouse.dir\models\src\Sensor.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\models\src\Sensor.cpp
-
-CMakeFiles/smartHouse.dir/models/src/Sensor.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/smartHouse.dir/models/src/Sensor.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\programming\C++programming\PnaYAVU\kursavaya\models\src\Sensor.cpp > CMakeFiles\smartHouse.dir\models\src\Sensor.cpp.i
-
-CMakeFiles/smartHouse.dir/models/src/Sensor.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/smartHouse.dir/models/src/Sensor.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\programming\C++programming\PnaYAVU\kursavaya\models\src\Sensor.cpp -o CMakeFiles\smartHouse.dir\models\src\Sensor.cpp.s
+CMakeFiles/smartHouse.dir/exceptions/src/InputHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/smartHouse.dir/exceptions/src/InputHandler.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\programming\C++programming\PnaYAVU\kursavaya\exceptions\src\InputHandler.cpp -o CMakeFiles\smartHouse.dir\exceptions\src\InputHandler.cpp.s
 
 CMakeFiles/smartHouse.dir/models/src/User.cpp.obj: CMakeFiles/smartHouse.dir/flags.make
 CMakeFiles/smartHouse.dir/models/src/User.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
 CMakeFiles/smartHouse.dir/models/src/User.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/models/src/User.cpp
 CMakeFiles/smartHouse.dir/models/src/User.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/smartHouse.dir/models/src/User.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/smartHouse.dir/models/src/User.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/models/src/User.cpp.obj -MF CMakeFiles\smartHouse.dir\models\src\User.cpp.obj.d -o CMakeFiles\smartHouse.dir\models\src\User.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\models\src\User.cpp
 
 CMakeFiles/smartHouse.dir/models/src/User.cpp.i: cmake_force
@@ -188,41 +173,11 @@ CMakeFiles/smartHouse.dir/models/src/User.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/smartHouse.dir/models/src/User.cpp.s"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\programming\C++programming\PnaYAVU\kursavaya\models\src\User.cpp -o CMakeFiles\smartHouse.dir\models\src\User.cpp.s
 
-CMakeFiles/smartHouse.dir/models/src/SmartHome.cpp.obj: CMakeFiles/smartHouse.dir/flags.make
-CMakeFiles/smartHouse.dir/models/src/SmartHome.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
-CMakeFiles/smartHouse.dir/models/src/SmartHome.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/models/src/SmartHome.cpp
-CMakeFiles/smartHouse.dir/models/src/SmartHome.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/smartHouse.dir/models/src/SmartHome.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/models/src/SmartHome.cpp.obj -MF CMakeFiles\smartHouse.dir\models\src\SmartHome.cpp.obj.d -o CMakeFiles\smartHouse.dir\models\src\SmartHome.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\models\src\SmartHome.cpp
-
-CMakeFiles/smartHouse.dir/models/src/SmartHome.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/smartHouse.dir/models/src/SmartHome.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\programming\C++programming\PnaYAVU\kursavaya\models\src\SmartHome.cpp > CMakeFiles\smartHouse.dir\models\src\SmartHome.cpp.i
-
-CMakeFiles/smartHouse.dir/models/src/SmartHome.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/smartHouse.dir/models/src/SmartHome.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\programming\C++programming\PnaYAVU\kursavaya\models\src\SmartHome.cpp -o CMakeFiles\smartHouse.dir\models\src\SmartHome.cpp.s
-
-CMakeFiles/smartHouse.dir/models/src/EnvironmentSimulator.cpp.obj: CMakeFiles/smartHouse.dir/flags.make
-CMakeFiles/smartHouse.dir/models/src/EnvironmentSimulator.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
-CMakeFiles/smartHouse.dir/models/src/EnvironmentSimulator.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/models/src/EnvironmentSimulator.cpp
-CMakeFiles/smartHouse.dir/models/src/EnvironmentSimulator.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/smartHouse.dir/models/src/EnvironmentSimulator.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/models/src/EnvironmentSimulator.cpp.obj -MF CMakeFiles\smartHouse.dir\models\src\EnvironmentSimulator.cpp.obj.d -o CMakeFiles\smartHouse.dir\models\src\EnvironmentSimulator.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\models\src\EnvironmentSimulator.cpp
-
-CMakeFiles/smartHouse.dir/models/src/EnvironmentSimulator.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/smartHouse.dir/models/src/EnvironmentSimulator.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\programming\C++programming\PnaYAVU\kursavaya\models\src\EnvironmentSimulator.cpp > CMakeFiles\smartHouse.dir\models\src\EnvironmentSimulator.cpp.i
-
-CMakeFiles/smartHouse.dir/models/src/EnvironmentSimulator.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/smartHouse.dir/models/src/EnvironmentSimulator.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\programming\C++programming\PnaYAVU\kursavaya\models\src\EnvironmentSimulator.cpp -o CMakeFiles\smartHouse.dir\models\src\EnvironmentSimulator.cpp.s
-
 CMakeFiles/smartHouse.dir/models/src/devices/Device.cpp.obj: CMakeFiles/smartHouse.dir/flags.make
 CMakeFiles/smartHouse.dir/models/src/devices/Device.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
 CMakeFiles/smartHouse.dir/models/src/devices/Device.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/models/src/devices/Device.cpp
 CMakeFiles/smartHouse.dir/models/src/devices/Device.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/smartHouse.dir/models/src/devices/Device.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/smartHouse.dir/models/src/devices/Device.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/models/src/devices/Device.cpp.obj -MF CMakeFiles\smartHouse.dir\models\src\devices\Device.cpp.obj.d -o CMakeFiles\smartHouse.dir\models\src\devices\Device.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\models\src\devices\Device.cpp
 
 CMakeFiles/smartHouse.dir/models/src/devices/Device.cpp.i: cmake_force
@@ -237,7 +192,7 @@ CMakeFiles/smartHouse.dir/models/src/devices/SmartDevice.cpp.obj: CMakeFiles/sma
 CMakeFiles/smartHouse.dir/models/src/devices/SmartDevice.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
 CMakeFiles/smartHouse.dir/models/src/devices/SmartDevice.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/models/src/devices/SmartDevice.cpp
 CMakeFiles/smartHouse.dir/models/src/devices/SmartDevice.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/smartHouse.dir/models/src/devices/SmartDevice.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/smartHouse.dir/models/src/devices/SmartDevice.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/models/src/devices/SmartDevice.cpp.obj -MF CMakeFiles\smartHouse.dir\models\src\devices\SmartDevice.cpp.obj.d -o CMakeFiles\smartHouse.dir\models\src\devices\SmartDevice.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\models\src\devices\SmartDevice.cpp
 
 CMakeFiles/smartHouse.dir/models/src/devices/SmartDevice.cpp.i: cmake_force
@@ -252,7 +207,7 @@ CMakeFiles/smartHouse.dir/models/src/devices/SmartAirConditioner.cpp.obj: CMakeF
 CMakeFiles/smartHouse.dir/models/src/devices/SmartAirConditioner.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
 CMakeFiles/smartHouse.dir/models/src/devices/SmartAirConditioner.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/models/src/devices/SmartAirConditioner.cpp
 CMakeFiles/smartHouse.dir/models/src/devices/SmartAirConditioner.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/smartHouse.dir/models/src/devices/SmartAirConditioner.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/smartHouse.dir/models/src/devices/SmartAirConditioner.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/models/src/devices/SmartAirConditioner.cpp.obj -MF CMakeFiles\smartHouse.dir\models\src\devices\SmartAirConditioner.cpp.obj.d -o CMakeFiles\smartHouse.dir\models\src\devices\SmartAirConditioner.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\models\src\devices\SmartAirConditioner.cpp
 
 CMakeFiles/smartHouse.dir/models/src/devices/SmartAirConditioner.cpp.i: cmake_force
@@ -267,7 +222,7 @@ CMakeFiles/smartHouse.dir/models/src/devices/SmartHeater.cpp.obj: CMakeFiles/sma
 CMakeFiles/smartHouse.dir/models/src/devices/SmartHeater.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
 CMakeFiles/smartHouse.dir/models/src/devices/SmartHeater.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/models/src/devices/SmartHeater.cpp
 CMakeFiles/smartHouse.dir/models/src/devices/SmartHeater.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/smartHouse.dir/models/src/devices/SmartHeater.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/smartHouse.dir/models/src/devices/SmartHeater.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/models/src/devices/SmartHeater.cpp.obj -MF CMakeFiles\smartHouse.dir\models\src\devices\SmartHeater.cpp.obj.d -o CMakeFiles\smartHouse.dir\models\src\devices\SmartHeater.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\models\src\devices\SmartHeater.cpp
 
 CMakeFiles/smartHouse.dir/models/src/devices/SmartHeater.cpp.i: cmake_force
@@ -282,7 +237,7 @@ CMakeFiles/smartHouse.dir/models/src/devices/SmartHumidifier.cpp.obj: CMakeFiles
 CMakeFiles/smartHouse.dir/models/src/devices/SmartHumidifier.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
 CMakeFiles/smartHouse.dir/models/src/devices/SmartHumidifier.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/models/src/devices/SmartHumidifier.cpp
 CMakeFiles/smartHouse.dir/models/src/devices/SmartHumidifier.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/smartHouse.dir/models/src/devices/SmartHumidifier.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/smartHouse.dir/models/src/devices/SmartHumidifier.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/models/src/devices/SmartHumidifier.cpp.obj -MF CMakeFiles\smartHouse.dir\models\src\devices\SmartHumidifier.cpp.obj.d -o CMakeFiles\smartHouse.dir\models\src\devices\SmartHumidifier.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\models\src\devices\SmartHumidifier.cpp
 
 CMakeFiles/smartHouse.dir/models/src/devices/SmartHumidifier.cpp.i: cmake_force
@@ -297,7 +252,7 @@ CMakeFiles/smartHouse.dir/models/src/devices/SmartDehumidifier.cpp.obj: CMakeFil
 CMakeFiles/smartHouse.dir/models/src/devices/SmartDehumidifier.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
 CMakeFiles/smartHouse.dir/models/src/devices/SmartDehumidifier.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/models/src/devices/SmartDehumidifier.cpp
 CMakeFiles/smartHouse.dir/models/src/devices/SmartDehumidifier.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/smartHouse.dir/models/src/devices/SmartDehumidifier.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/smartHouse.dir/models/src/devices/SmartDehumidifier.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/models/src/devices/SmartDehumidifier.cpp.obj -MF CMakeFiles\smartHouse.dir\models\src\devices\SmartDehumidifier.cpp.obj.d -o CMakeFiles\smartHouse.dir\models\src\devices\SmartDehumidifier.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\models\src\devices\SmartDehumidifier.cpp
 
 CMakeFiles/smartHouse.dir/models/src/devices/SmartDehumidifier.cpp.i: cmake_force
@@ -312,7 +267,7 @@ CMakeFiles/smartHouse.dir/models/src/devices/SmartFan.cpp.obj: CMakeFiles/smartH
 CMakeFiles/smartHouse.dir/models/src/devices/SmartFan.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
 CMakeFiles/smartHouse.dir/models/src/devices/SmartFan.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/models/src/devices/SmartFan.cpp
 CMakeFiles/smartHouse.dir/models/src/devices/SmartFan.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/smartHouse.dir/models/src/devices/SmartFan.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/smartHouse.dir/models/src/devices/SmartFan.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/models/src/devices/SmartFan.cpp.obj -MF CMakeFiles\smartHouse.dir\models\src\devices\SmartFan.cpp.obj.d -o CMakeFiles\smartHouse.dir\models\src\devices\SmartFan.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\models\src\devices\SmartFan.cpp
 
 CMakeFiles/smartHouse.dir/models/src/devices/SmartFan.cpp.i: cmake_force
@@ -327,7 +282,7 @@ CMakeFiles/smartHouse.dir/models/src/devices/SmartLight.cpp.obj: CMakeFiles/smar
 CMakeFiles/smartHouse.dir/models/src/devices/SmartLight.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
 CMakeFiles/smartHouse.dir/models/src/devices/SmartLight.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/models/src/devices/SmartLight.cpp
 CMakeFiles/smartHouse.dir/models/src/devices/SmartLight.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/smartHouse.dir/models/src/devices/SmartLight.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/smartHouse.dir/models/src/devices/SmartLight.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/models/src/devices/SmartLight.cpp.obj -MF CMakeFiles\smartHouse.dir\models\src\devices\SmartLight.cpp.obj.d -o CMakeFiles\smartHouse.dir\models\src\devices\SmartLight.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\models\src\devices\SmartLight.cpp
 
 CMakeFiles/smartHouse.dir/models/src/devices/SmartLight.cpp.i: cmake_force
@@ -338,71 +293,26 @@ CMakeFiles/smartHouse.dir/models/src/devices/SmartLight.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/smartHouse.dir/models/src/devices/SmartLight.cpp.s"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\programming\C++programming\PnaYAVU\kursavaya\models\src\devices\SmartLight.cpp -o CMakeFiles\smartHouse.dir\models\src\devices\SmartLight.cpp.s
 
-CMakeFiles/smartHouse.dir/models/src/DeviceContainer.cpp.obj: CMakeFiles/smartHouse.dir/flags.make
-CMakeFiles/smartHouse.dir/models/src/DeviceContainer.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
-CMakeFiles/smartHouse.dir/models/src/DeviceContainer.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/models/src/DeviceContainer.cpp
-CMakeFiles/smartHouse.dir/models/src/DeviceContainer.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/smartHouse.dir/models/src/DeviceContainer.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/models/src/DeviceContainer.cpp.obj -MF CMakeFiles\smartHouse.dir\models\src\DeviceContainer.cpp.obj.d -o CMakeFiles\smartHouse.dir\models\src\DeviceContainer.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\models\src\DeviceContainer.cpp
+CMakeFiles/smartHouse.dir/repositories/src/FileRepository.cpp.obj: CMakeFiles/smartHouse.dir/flags.make
+CMakeFiles/smartHouse.dir/repositories/src/FileRepository.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
+CMakeFiles/smartHouse.dir/repositories/src/FileRepository.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/repositories/src/FileRepository.cpp
+CMakeFiles/smartHouse.dir/repositories/src/FileRepository.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/smartHouse.dir/repositories/src/FileRepository.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/repositories/src/FileRepository.cpp.obj -MF CMakeFiles\smartHouse.dir\repositories\src\FileRepository.cpp.obj.d -o CMakeFiles\smartHouse.dir\repositories\src\FileRepository.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\repositories\src\FileRepository.cpp
 
-CMakeFiles/smartHouse.dir/models/src/DeviceContainer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/smartHouse.dir/models/src/DeviceContainer.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\programming\C++programming\PnaYAVU\kursavaya\models\src\DeviceContainer.cpp > CMakeFiles\smartHouse.dir\models\src\DeviceContainer.cpp.i
+CMakeFiles/smartHouse.dir/repositories/src/FileRepository.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/smartHouse.dir/repositories/src/FileRepository.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\programming\C++programming\PnaYAVU\kursavaya\repositories\src\FileRepository.cpp > CMakeFiles\smartHouse.dir\repositories\src\FileRepository.cpp.i
 
-CMakeFiles/smartHouse.dir/models/src/DeviceContainer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/smartHouse.dir/models/src/DeviceContainer.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\programming\C++programming\PnaYAVU\kursavaya\models\src\DeviceContainer.cpp -o CMakeFiles\smartHouse.dir\models\src\DeviceContainer.cpp.s
-
-CMakeFiles/smartHouse.dir/repositories/src/UserRepository.cpp.obj: CMakeFiles/smartHouse.dir/flags.make
-CMakeFiles/smartHouse.dir/repositories/src/UserRepository.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
-CMakeFiles/smartHouse.dir/repositories/src/UserRepository.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/repositories/src/UserRepository.cpp
-CMakeFiles/smartHouse.dir/repositories/src/UserRepository.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/smartHouse.dir/repositories/src/UserRepository.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/repositories/src/UserRepository.cpp.obj -MF CMakeFiles\smartHouse.dir\repositories\src\UserRepository.cpp.obj.d -o CMakeFiles\smartHouse.dir\repositories\src\UserRepository.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\repositories\src\UserRepository.cpp
-
-CMakeFiles/smartHouse.dir/repositories/src/UserRepository.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/smartHouse.dir/repositories/src/UserRepository.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\programming\C++programming\PnaYAVU\kursavaya\repositories\src\UserRepository.cpp > CMakeFiles\smartHouse.dir\repositories\src\UserRepository.cpp.i
-
-CMakeFiles/smartHouse.dir/repositories/src/UserRepository.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/smartHouse.dir/repositories/src/UserRepository.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\programming\C++programming\PnaYAVU\kursavaya\repositories\src\UserRepository.cpp -o CMakeFiles\smartHouse.dir\repositories\src\UserRepository.cpp.s
-
-CMakeFiles/smartHouse.dir/repositories/src/DeviceRepository.cpp.obj: CMakeFiles/smartHouse.dir/flags.make
-CMakeFiles/smartHouse.dir/repositories/src/DeviceRepository.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
-CMakeFiles/smartHouse.dir/repositories/src/DeviceRepository.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/repositories/src/DeviceRepository.cpp
-CMakeFiles/smartHouse.dir/repositories/src/DeviceRepository.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/smartHouse.dir/repositories/src/DeviceRepository.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/repositories/src/DeviceRepository.cpp.obj -MF CMakeFiles\smartHouse.dir\repositories\src\DeviceRepository.cpp.obj.d -o CMakeFiles\smartHouse.dir\repositories\src\DeviceRepository.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\repositories\src\DeviceRepository.cpp
-
-CMakeFiles/smartHouse.dir/repositories/src/DeviceRepository.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/smartHouse.dir/repositories/src/DeviceRepository.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\programming\C++programming\PnaYAVU\kursavaya\repositories\src\DeviceRepository.cpp > CMakeFiles\smartHouse.dir\repositories\src\DeviceRepository.cpp.i
-
-CMakeFiles/smartHouse.dir/repositories/src/DeviceRepository.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/smartHouse.dir/repositories/src/DeviceRepository.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\programming\C++programming\PnaYAVU\kursavaya\repositories\src\DeviceRepository.cpp -o CMakeFiles\smartHouse.dir\repositories\src\DeviceRepository.cpp.s
-
-CMakeFiles/smartHouse.dir/repositories/src/SensorRepository.cpp.obj: CMakeFiles/smartHouse.dir/flags.make
-CMakeFiles/smartHouse.dir/repositories/src/SensorRepository.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
-CMakeFiles/smartHouse.dir/repositories/src/SensorRepository.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/repositories/src/SensorRepository.cpp
-CMakeFiles/smartHouse.dir/repositories/src/SensorRepository.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/smartHouse.dir/repositories/src/SensorRepository.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/repositories/src/SensorRepository.cpp.obj -MF CMakeFiles\smartHouse.dir\repositories\src\SensorRepository.cpp.obj.d -o CMakeFiles\smartHouse.dir\repositories\src\SensorRepository.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\repositories\src\SensorRepository.cpp
-
-CMakeFiles/smartHouse.dir/repositories/src/SensorRepository.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/smartHouse.dir/repositories/src/SensorRepository.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\programming\C++programming\PnaYAVU\kursavaya\repositories\src\SensorRepository.cpp > CMakeFiles\smartHouse.dir\repositories\src\SensorRepository.cpp.i
-
-CMakeFiles/smartHouse.dir/repositories/src/SensorRepository.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/smartHouse.dir/repositories/src/SensorRepository.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\programming\C++programming\PnaYAVU\kursavaya\repositories\src\SensorRepository.cpp -o CMakeFiles\smartHouse.dir\repositories\src\SensorRepository.cpp.s
+CMakeFiles/smartHouse.dir/repositories/src/FileRepository.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/smartHouse.dir/repositories/src/FileRepository.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\programming\C++programming\PnaYAVU\kursavaya\repositories\src\FileRepository.cpp -o CMakeFiles\smartHouse.dir\repositories\src\FileRepository.cpp.s
 
 CMakeFiles/smartHouse.dir/services/src/AuthenticationService.cpp.obj: CMakeFiles/smartHouse.dir/flags.make
 CMakeFiles/smartHouse.dir/services/src/AuthenticationService.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
 CMakeFiles/smartHouse.dir/services/src/AuthenticationService.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/services/src/AuthenticationService.cpp
 CMakeFiles/smartHouse.dir/services/src/AuthenticationService.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/smartHouse.dir/services/src/AuthenticationService.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/smartHouse.dir/services/src/AuthenticationService.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/services/src/AuthenticationService.cpp.obj -MF CMakeFiles\smartHouse.dir\services\src\AuthenticationService.cpp.obj.d -o CMakeFiles\smartHouse.dir\services\src\AuthenticationService.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\services\src\AuthenticationService.cpp
 
 CMakeFiles/smartHouse.dir/services/src/AuthenticationService.cpp.i: cmake_force
@@ -417,7 +327,7 @@ CMakeFiles/smartHouse.dir/services/src/DeviceService.cpp.obj: CMakeFiles/smartHo
 CMakeFiles/smartHouse.dir/services/src/DeviceService.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
 CMakeFiles/smartHouse.dir/services/src/DeviceService.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/services/src/DeviceService.cpp
 CMakeFiles/smartHouse.dir/services/src/DeviceService.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/smartHouse.dir/services/src/DeviceService.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/smartHouse.dir/services/src/DeviceService.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/services/src/DeviceService.cpp.obj -MF CMakeFiles\smartHouse.dir\services\src\DeviceService.cpp.obj.d -o CMakeFiles\smartHouse.dir\services\src\DeviceService.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\services\src\DeviceService.cpp
 
 CMakeFiles/smartHouse.dir/services/src/DeviceService.cpp.i: cmake_force
@@ -432,7 +342,7 @@ CMakeFiles/smartHouse.dir/services/src/CommandHistory.cpp.obj: CMakeFiles/smartH
 CMakeFiles/smartHouse.dir/services/src/CommandHistory.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
 CMakeFiles/smartHouse.dir/services/src/CommandHistory.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/services/src/CommandHistory.cpp
 CMakeFiles/smartHouse.dir/services/src/CommandHistory.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/smartHouse.dir/services/src/CommandHistory.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/smartHouse.dir/services/src/CommandHistory.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/services/src/CommandHistory.cpp.obj -MF CMakeFiles\smartHouse.dir\services\src\CommandHistory.cpp.obj.d -o CMakeFiles\smartHouse.dir\services\src\CommandHistory.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\services\src\CommandHistory.cpp
 
 CMakeFiles/smartHouse.dir/services/src/CommandHistory.cpp.i: cmake_force
@@ -447,7 +357,7 @@ CMakeFiles/smartHouse.dir/services/src/ClimateNormalizer.cpp.obj: CMakeFiles/sma
 CMakeFiles/smartHouse.dir/services/src/ClimateNormalizer.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
 CMakeFiles/smartHouse.dir/services/src/ClimateNormalizer.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/services/src/ClimateNormalizer.cpp
 CMakeFiles/smartHouse.dir/services/src/ClimateNormalizer.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/smartHouse.dir/services/src/ClimateNormalizer.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/smartHouse.dir/services/src/ClimateNormalizer.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/services/src/ClimateNormalizer.cpp.obj -MF CMakeFiles\smartHouse.dir\services\src\ClimateNormalizer.cpp.obj.d -o CMakeFiles\smartHouse.dir\services\src\ClimateNormalizer.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\services\src\ClimateNormalizer.cpp
 
 CMakeFiles/smartHouse.dir/services/src/ClimateNormalizer.cpp.i: cmake_force
@@ -458,26 +368,11 @@ CMakeFiles/smartHouse.dir/services/src/ClimateNormalizer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/smartHouse.dir/services/src/ClimateNormalizer.cpp.s"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\programming\C++programming\PnaYAVU\kursavaya\services\src\ClimateNormalizer.cpp -o CMakeFiles\smartHouse.dir\services\src\ClimateNormalizer.cpp.s
 
-CMakeFiles/smartHouse.dir/services/src/ClimateFileManager.cpp.obj: CMakeFiles/smartHouse.dir/flags.make
-CMakeFiles/smartHouse.dir/services/src/ClimateFileManager.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
-CMakeFiles/smartHouse.dir/services/src/ClimateFileManager.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/services/src/ClimateFileManager.cpp
-CMakeFiles/smartHouse.dir/services/src/ClimateFileManager.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/smartHouse.dir/services/src/ClimateFileManager.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/services/src/ClimateFileManager.cpp.obj -MF CMakeFiles\smartHouse.dir\services\src\ClimateFileManager.cpp.obj.d -o CMakeFiles\smartHouse.dir\services\src\ClimateFileManager.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\services\src\ClimateFileManager.cpp
-
-CMakeFiles/smartHouse.dir/services/src/ClimateFileManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/smartHouse.dir/services/src/ClimateFileManager.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\programming\C++programming\PnaYAVU\kursavaya\services\src\ClimateFileManager.cpp > CMakeFiles\smartHouse.dir\services\src\ClimateFileManager.cpp.i
-
-CMakeFiles/smartHouse.dir/services/src/ClimateFileManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/smartHouse.dir/services/src/ClimateFileManager.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\programming\C++programming\PnaYAVU\kursavaya\services\src\ClimateFileManager.cpp -o CMakeFiles\smartHouse.dir\services\src\ClimateFileManager.cpp.s
-
 CMakeFiles/smartHouse.dir/services/src/ClimateData.cpp.obj: CMakeFiles/smartHouse.dir/flags.make
 CMakeFiles/smartHouse.dir/services/src/ClimateData.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
 CMakeFiles/smartHouse.dir/services/src/ClimateData.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/services/src/ClimateData.cpp
 CMakeFiles/smartHouse.dir/services/src/ClimateData.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/smartHouse.dir/services/src/ClimateData.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/smartHouse.dir/services/src/ClimateData.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/services/src/ClimateData.cpp.obj -MF CMakeFiles\smartHouse.dir\services\src\ClimateData.cpp.obj.d -o CMakeFiles\smartHouse.dir\services\src\ClimateData.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\services\src\ClimateData.cpp
 
 CMakeFiles/smartHouse.dir/services/src/ClimateData.cpp.i: cmake_force
@@ -492,7 +387,7 @@ CMakeFiles/smartHouse.dir/main/main.cpp.obj: CMakeFiles/smartHouse.dir/flags.mak
 CMakeFiles/smartHouse.dir/main/main.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
 CMakeFiles/smartHouse.dir/main/main.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/main/main.cpp
 CMakeFiles/smartHouse.dir/main/main.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/smartHouse.dir/main/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/smartHouse.dir/main/main.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/main/main.cpp.obj -MF CMakeFiles\smartHouse.dir\main\main.cpp.obj.d -o CMakeFiles\smartHouse.dir\main\main.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\main\main.cpp
 
 CMakeFiles/smartHouse.dir/main/main.cpp.i: cmake_force
@@ -503,18 +398,30 @@ CMakeFiles/smartHouse.dir/main/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/smartHouse.dir/main/main.cpp.s"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\programming\C++programming\PnaYAVU\kursavaya\main\main.cpp -o CMakeFiles\smartHouse.dir\main\main.cpp.s
 
+CMakeFiles/smartHouse.dir/main/Menu.cpp.obj: CMakeFiles/smartHouse.dir/flags.make
+CMakeFiles/smartHouse.dir/main/Menu.cpp.obj: CMakeFiles/smartHouse.dir/includes_CXX.rsp
+CMakeFiles/smartHouse.dir/main/Menu.cpp.obj: D:/programming/C++programming/PnaYAVU/kursavaya/main/Menu.cpp
+CMakeFiles/smartHouse.dir/main/Menu.cpp.obj: CMakeFiles/smartHouse.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/smartHouse.dir/main/Menu.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/smartHouse.dir/main/Menu.cpp.obj -MF CMakeFiles\smartHouse.dir\main\Menu.cpp.obj.d -o CMakeFiles\smartHouse.dir\main\Menu.cpp.obj -c D:\programming\C++programming\PnaYAVU\kursavaya\main\Menu.cpp
+
+CMakeFiles/smartHouse.dir/main/Menu.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/smartHouse.dir/main/Menu.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\programming\C++programming\PnaYAVU\kursavaya\main\Menu.cpp > CMakeFiles\smartHouse.dir\main\Menu.cpp.i
+
+CMakeFiles/smartHouse.dir/main/Menu.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/smartHouse.dir/main/Menu.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\programming\C++programming\PnaYAVU\kursavaya\main\Menu.cpp -o CMakeFiles\smartHouse.dir\main\Menu.cpp.s
+
 # Object files for target smartHouse
 smartHouse_OBJECTS = \
 "CMakeFiles/smartHouse.dir/exceptions/src/Exception.cpp.obj" \
 "CMakeFiles/smartHouse.dir/exceptions/src/InputException.cpp.obj" \
 "CMakeFiles/smartHouse.dir/exceptions/src/FileException.cpp.obj" \
 "CMakeFiles/smartHouse.dir/exceptions/src/ContainerException.cpp.obj" \
-"CMakeFiles/smartHouse.dir/utils/src/InputUtils.cpp.obj" \
-"CMakeFiles/smartHouse.dir/utils/src/Menu.cpp.obj" \
-"CMakeFiles/smartHouse.dir/models/src/Sensor.cpp.obj" \
+"CMakeFiles/smartHouse.dir/exceptions/src/Date.cpp.obj" \
+"CMakeFiles/smartHouse.dir/exceptions/src/InputHandler.cpp.obj" \
 "CMakeFiles/smartHouse.dir/models/src/User.cpp.obj" \
-"CMakeFiles/smartHouse.dir/models/src/SmartHome.cpp.obj" \
-"CMakeFiles/smartHouse.dir/models/src/EnvironmentSimulator.cpp.obj" \
 "CMakeFiles/smartHouse.dir/models/src/devices/Device.cpp.obj" \
 "CMakeFiles/smartHouse.dir/models/src/devices/SmartDevice.cpp.obj" \
 "CMakeFiles/smartHouse.dir/models/src/devices/SmartAirConditioner.cpp.obj" \
@@ -523,17 +430,14 @@ smartHouse_OBJECTS = \
 "CMakeFiles/smartHouse.dir/models/src/devices/SmartDehumidifier.cpp.obj" \
 "CMakeFiles/smartHouse.dir/models/src/devices/SmartFan.cpp.obj" \
 "CMakeFiles/smartHouse.dir/models/src/devices/SmartLight.cpp.obj" \
-"CMakeFiles/smartHouse.dir/models/src/DeviceContainer.cpp.obj" \
-"CMakeFiles/smartHouse.dir/repositories/src/UserRepository.cpp.obj" \
-"CMakeFiles/smartHouse.dir/repositories/src/DeviceRepository.cpp.obj" \
-"CMakeFiles/smartHouse.dir/repositories/src/SensorRepository.cpp.obj" \
+"CMakeFiles/smartHouse.dir/repositories/src/FileRepository.cpp.obj" \
 "CMakeFiles/smartHouse.dir/services/src/AuthenticationService.cpp.obj" \
 "CMakeFiles/smartHouse.dir/services/src/DeviceService.cpp.obj" \
 "CMakeFiles/smartHouse.dir/services/src/CommandHistory.cpp.obj" \
 "CMakeFiles/smartHouse.dir/services/src/ClimateNormalizer.cpp.obj" \
-"CMakeFiles/smartHouse.dir/services/src/ClimateFileManager.cpp.obj" \
 "CMakeFiles/smartHouse.dir/services/src/ClimateData.cpp.obj" \
-"CMakeFiles/smartHouse.dir/main/main.cpp.obj"
+"CMakeFiles/smartHouse.dir/main/main.cpp.obj" \
+"CMakeFiles/smartHouse.dir/main/Menu.cpp.obj"
 
 # External object files for target smartHouse
 smartHouse_EXTERNAL_OBJECTS =
@@ -542,12 +446,9 @@ smartHouse.exe: CMakeFiles/smartHouse.dir/exceptions/src/Exception.cpp.obj
 smartHouse.exe: CMakeFiles/smartHouse.dir/exceptions/src/InputException.cpp.obj
 smartHouse.exe: CMakeFiles/smartHouse.dir/exceptions/src/FileException.cpp.obj
 smartHouse.exe: CMakeFiles/smartHouse.dir/exceptions/src/ContainerException.cpp.obj
-smartHouse.exe: CMakeFiles/smartHouse.dir/utils/src/InputUtils.cpp.obj
-smartHouse.exe: CMakeFiles/smartHouse.dir/utils/src/Menu.cpp.obj
-smartHouse.exe: CMakeFiles/smartHouse.dir/models/src/Sensor.cpp.obj
+smartHouse.exe: CMakeFiles/smartHouse.dir/exceptions/src/Date.cpp.obj
+smartHouse.exe: CMakeFiles/smartHouse.dir/exceptions/src/InputHandler.cpp.obj
 smartHouse.exe: CMakeFiles/smartHouse.dir/models/src/User.cpp.obj
-smartHouse.exe: CMakeFiles/smartHouse.dir/models/src/SmartHome.cpp.obj
-smartHouse.exe: CMakeFiles/smartHouse.dir/models/src/EnvironmentSimulator.cpp.obj
 smartHouse.exe: CMakeFiles/smartHouse.dir/models/src/devices/Device.cpp.obj
 smartHouse.exe: CMakeFiles/smartHouse.dir/models/src/devices/SmartDevice.cpp.obj
 smartHouse.exe: CMakeFiles/smartHouse.dir/models/src/devices/SmartAirConditioner.cpp.obj
@@ -556,22 +457,19 @@ smartHouse.exe: CMakeFiles/smartHouse.dir/models/src/devices/SmartHumidifier.cpp
 smartHouse.exe: CMakeFiles/smartHouse.dir/models/src/devices/SmartDehumidifier.cpp.obj
 smartHouse.exe: CMakeFiles/smartHouse.dir/models/src/devices/SmartFan.cpp.obj
 smartHouse.exe: CMakeFiles/smartHouse.dir/models/src/devices/SmartLight.cpp.obj
-smartHouse.exe: CMakeFiles/smartHouse.dir/models/src/DeviceContainer.cpp.obj
-smartHouse.exe: CMakeFiles/smartHouse.dir/repositories/src/UserRepository.cpp.obj
-smartHouse.exe: CMakeFiles/smartHouse.dir/repositories/src/DeviceRepository.cpp.obj
-smartHouse.exe: CMakeFiles/smartHouse.dir/repositories/src/SensorRepository.cpp.obj
+smartHouse.exe: CMakeFiles/smartHouse.dir/repositories/src/FileRepository.cpp.obj
 smartHouse.exe: CMakeFiles/smartHouse.dir/services/src/AuthenticationService.cpp.obj
 smartHouse.exe: CMakeFiles/smartHouse.dir/services/src/DeviceService.cpp.obj
 smartHouse.exe: CMakeFiles/smartHouse.dir/services/src/CommandHistory.cpp.obj
 smartHouse.exe: CMakeFiles/smartHouse.dir/services/src/ClimateNormalizer.cpp.obj
-smartHouse.exe: CMakeFiles/smartHouse.dir/services/src/ClimateFileManager.cpp.obj
 smartHouse.exe: CMakeFiles/smartHouse.dir/services/src/ClimateData.cpp.obj
 smartHouse.exe: CMakeFiles/smartHouse.dir/main/main.cpp.obj
+smartHouse.exe: CMakeFiles/smartHouse.dir/main/Menu.cpp.obj
 smartHouse.exe: CMakeFiles/smartHouse.dir/build.make
 smartHouse.exe: CMakeFiles/smartHouse.dir/linkLibs.rsp
 smartHouse.exe: CMakeFiles/smartHouse.dir/objects1.rsp
 smartHouse.exe: CMakeFiles/smartHouse.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Linking CXX executable smartHouse.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\programming\C++programming\PnaYAVU\kursavaya\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX executable smartHouse.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\smartHouse.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

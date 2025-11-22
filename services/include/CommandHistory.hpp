@@ -1,14 +1,8 @@
 #pragma once
+#include "../../models/include/Command.hpp"
 #include <vector>
 #include <functional>
 #include <memory>
-
-class Command {
-public:
-    virtual ~Command() = default;
-    virtual void execute() = 0;
-    virtual void undo() = 0;
-};
 
 class CommandHistory {
 private:

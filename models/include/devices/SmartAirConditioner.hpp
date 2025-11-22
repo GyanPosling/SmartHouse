@@ -21,8 +21,13 @@ public:
     // Перегрузка операторов - вызывают методы базового класса
     bool operator==(const SmartAirConditioner& other) const;
     bool operator<(const SmartAirConditioner& other) const;
+    friend ostream& operator<<(ostream& os, const SmartAirConditioner& device);
+    friend istream& operator>>(istream& is, SmartAirConditioner& device);
     
-    void update(double temperature, double humidity, double co2, int hour) override;
     string getDeviceInfo() const override;
+    
+    void printHeader() const override;
+    void printTable() const override;
+    void updateField(int fieldChoice) override;
 };
 

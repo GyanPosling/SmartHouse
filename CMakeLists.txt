@@ -10,20 +10,13 @@ set(EXCEPTIONS_SOURCES
     exceptions/src/InputException.cpp
     exceptions/src/FileException.cpp
     exceptions/src/ContainerException.cpp
-)
-
-# Утилиты
-set(UTILS_SOURCES
-    utils/src/InputUtils.cpp
-    utils/src/Menu.cpp
+    exceptions/src/Date.cpp
+    exceptions/src/InputHandler.cpp
 )
 
 # Модели
 set(MODELS_SOURCES
-    models/src/Sensor.cpp
     models/src/User.cpp
-    models/src/SmartHome.cpp
-    models/src/EnvironmentSimulator.cpp
     models/src/devices/Device.cpp
     models/src/devices/SmartDevice.cpp
     models/src/devices/SmartAirConditioner.cpp
@@ -32,14 +25,11 @@ set(MODELS_SOURCES
     models/src/devices/SmartDehumidifier.cpp
     models/src/devices/SmartFan.cpp
     models/src/devices/SmartLight.cpp
-    models/src/DeviceContainer.cpp
 )
 
 # Репозитории
 set(REPOSITORIES_SOURCES
-    repositories/src/UserRepository.cpp
-    repositories/src/DeviceRepository.cpp
-    repositories/src/SensorRepository.cpp
+    repositories/src/FileRepository.cpp
 )
 
 # Сервисы
@@ -48,18 +38,17 @@ set(SERVICES_SOURCES
     services/src/DeviceService.cpp
     services/src/CommandHistory.cpp
     services/src/ClimateNormalizer.cpp
-    services/src/ClimateFileManager.cpp
     services/src/ClimateData.cpp
 )
 
 # Все исходные файлы
 set(ALL_SOURCES
     ${EXCEPTIONS_SOURCES}
-    ${UTILS_SOURCES}
     ${MODELS_SOURCES}
     ${REPOSITORIES_SOURCES}
     ${SERVICES_SOURCES}
     main/main.cpp
+    main/Menu.cpp
 )
 
 # Исполняемый файл
@@ -68,7 +57,6 @@ add_executable(smartHouse ${ALL_SOURCES})
 # Включаемые директории
 target_include_directories(smartHouse PRIVATE
     exceptions/include
-    utils/include
     models/include
     repositories/include
     services/include

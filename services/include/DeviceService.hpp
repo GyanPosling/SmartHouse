@@ -1,20 +1,24 @@
 #pragma once
-#include "../../models/include/DeviceContainer.hpp"
 #include "../../models/include/devices/SmartDevice.hpp"
-#include "../../models/include/EnvironmentSimulator.hpp"
-#include "../../repositories/include/DeviceRepository.hpp"
-#include "../../repositories/include/SensorRepository.hpp"
+#include "../../models/include/devices/SmartAirConditioner.hpp"
+#include "../../models/include/devices/SmartHeater.hpp"
+#include "../../models/include/devices/SmartHumidifier.hpp"
+#include "../../models/include/devices/SmartDehumidifier.hpp"
+#include "../../models/include/devices/SmartFan.hpp"
+#include "../../models/include/devices/SmartLight.hpp"
+#include "../../exceptions/include/FileException.hpp"
 #include <memory>
 #include <vector>
-#include <ctime>
+#include <algorithm>
+#include <fstream>
+#include <sstream>
+#include <string>
 using namespace std;
 
 class DeviceService {
 private:
-    DeviceContainer deviceContainer;
-    unique_ptr<DeviceRepository> deviceRepository;
-    unique_ptr<SensorRepository> sensorRepository;
-    shared_ptr<EnvironmentSimulator> environmentSimulator;
+    vector<shared_ptr<SmartDevice>> devices;
+    string filename;
 
 public:
     DeviceService();
@@ -28,11 +32,6 @@ public:
     vector<shared_ptr<SmartDevice>> searchDevices(DeviceSearchField field, const string& value);
     void sortDevices(DeviceSortField field);
     
-    void updateAllDevices();
     void saveAllDevices();
     void loadAllDevices();
-    
-    double getCurrentTemperature() const;
-    double getCurrentHumidity() const;
-    double getCurrentCO2() const;
 };

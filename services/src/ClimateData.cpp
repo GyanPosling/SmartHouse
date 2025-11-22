@@ -1,4 +1,6 @@
 #include "../include/ClimateData.hpp"
+#include "../exceptions/include/InputHandler.hpp"
+#include <sstream>
 
 ClimateData::ClimateData() : temperature(20.0), humidity(50.0), co2(500.0) {}
 
@@ -44,4 +46,76 @@ bool ClimateData::isCO2Normal() const {
 bool ClimateData::isAllNormal() const {
     return isTemperatureNormal() && isHumidityNormal() && isCO2Normal();
 }
+
+ostream& operator<<(ostream& os, const ClimateData& data) {
+    os << data.temperature << "\n" << data.humidity << "\n" << data.co2;
+    return os;
+}
+
+istream& operator>>(istream& is, ClimateData& data) {
+    bool isCin = (&is == &cin);
+    
+    if (isCin) {
+        bool success = false;
+        while (!success) {
+            try {
+                safeInputDouble(is, data.temperature, -100.0, 100.0, "Enter temperature: ");
+                success = true;
+            } catch (const InputException& e) {
+                cout << "Error: " << e.what() << endl;
+            }
+        }
+        
+        success = false;
+        while (!success) {
+            try {
+                safeInputDouble(is, data.humidity, 0.0, 100.0, "Enter humidity: ");
+                success = true;
+            } catch (const InputException& e) {
+                cout << "Error: " << e.what() << endl;
+            }
+        }
+        
+        success = false;
+        while (!success) {
+            try {
+                safeInputDouble(is, data.co2, 0.0, 10000.0, "Enter CO2 level: ");
+                success = true;
+            } catch (const InputException& e) {
+                cout << "Error: " << e.what() << endl;
+            }
+        }
+    } else {
+        string line;
+        if (getline(is, line)) {
+            try {
+                data.temperature = stod(line);
+            } catch (...) {
+                is.setstate(ios::failbit);
+                return is;
+            }
+        }
+        if (getline(is, line)) {
+            try {
+                data.humidity = stod(line);
+            } catch (...) {
+                is.setstate(ios::failbit);
+                return is;
+            }
+        }
+        if (getline(is, line)) {
+            try {
+                data.co2 = stod(line);
+            } catch (...) {
+                is.setstate(ios::failbit);
+                return is;
+            }
+        }
+    }
+    
+    return is;
+}
+
+
+
 

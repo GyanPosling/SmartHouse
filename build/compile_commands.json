@@ -25,39 +25,21 @@
 },
 {
   "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
-  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\utils\\src\\InputUtils.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\utils\\src\\InputUtils.cpp",
-  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/utils/src/InputUtils.cpp",
-  "output": "CMakeFiles/smartHouse.dir/utils/src/InputUtils.cpp.obj"
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\exceptions\\src\\Date.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\exceptions\\src\\Date.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/exceptions/src/Date.cpp",
+  "output": "CMakeFiles/smartHouse.dir/exceptions/src/Date.cpp.obj"
 },
 {
   "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
-  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\utils\\src\\Menu.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\utils\\src\\Menu.cpp",
-  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/utils/src/Menu.cpp",
-  "output": "CMakeFiles/smartHouse.dir/utils/src/Menu.cpp.obj"
-},
-{
-  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
-  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\models\\src\\Sensor.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\models\\src\\Sensor.cpp",
-  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/models/src/Sensor.cpp",
-  "output": "CMakeFiles/smartHouse.dir/models/src/Sensor.cpp.obj"
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\exceptions\\src\\InputHandler.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\exceptions\\src\\InputHandler.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/exceptions/src/InputHandler.cpp",
+  "output": "CMakeFiles/smartHouse.dir/exceptions/src/InputHandler.cpp.obj"
 },
 {
   "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
   "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\models\\src\\User.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\models\\src\\User.cpp",
   "file": "D:/programming/C++programming/PnaYAVU/kursavaya/models/src/User.cpp",
   "output": "CMakeFiles/smartHouse.dir/models/src/User.cpp.obj"
-},
-{
-  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
-  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\models\\src\\SmartHome.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\models\\src\\SmartHome.cpp",
-  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/models/src/SmartHome.cpp",
-  "output": "CMakeFiles/smartHouse.dir/models/src/SmartHome.cpp.obj"
-},
-{
-  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
-  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\models\\src\\EnvironmentSimulator.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\models\\src\\EnvironmentSimulator.cpp",
-  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/models/src/EnvironmentSimulator.cpp",
-  "output": "CMakeFiles/smartHouse.dir/models/src/EnvironmentSimulator.cpp.obj"
 },
 {
   "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
@@ -109,27 +91,9 @@
 },
 {
   "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
-  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\models\\src\\DeviceContainer.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\models\\src\\DeviceContainer.cpp",
-  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/models/src/DeviceContainer.cpp",
-  "output": "CMakeFiles/smartHouse.dir/models/src/DeviceContainer.cpp.obj"
-},
-{
-  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
-  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\repositories\\src\\UserRepository.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\repositories\\src\\UserRepository.cpp",
-  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/repositories/src/UserRepository.cpp",
-  "output": "CMakeFiles/smartHouse.dir/repositories/src/UserRepository.cpp.obj"
-},
-{
-  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
-  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\repositories\\src\\DeviceRepository.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\repositories\\src\\DeviceRepository.cpp",
-  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/repositories/src/DeviceRepository.cpp",
-  "output": "CMakeFiles/smartHouse.dir/repositories/src/DeviceRepository.cpp.obj"
-},
-{
-  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
-  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\repositories\\src\\SensorRepository.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\repositories\\src\\SensorRepository.cpp",
-  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/repositories/src/SensorRepository.cpp",
-  "output": "CMakeFiles/smartHouse.dir/repositories/src/SensorRepository.cpp.obj"
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\repositories\\src\\FileRepository.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\repositories\\src\\FileRepository.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/repositories/src/FileRepository.cpp",
+  "output": "CMakeFiles/smartHouse.dir/repositories/src/FileRepository.cpp.obj"
 },
 {
   "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
@@ -157,12 +121,6 @@
 },
 {
   "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
-  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\services\\src\\ClimateFileManager.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\services\\src\\ClimateFileManager.cpp",
-  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/services/src/ClimateFileManager.cpp",
-  "output": "CMakeFiles/smartHouse.dir/services/src/ClimateFileManager.cpp.obj"
-},
-{
-  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
   "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\services\\src\\ClimateData.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\services\\src\\ClimateData.cpp",
   "file": "D:/programming/C++programming/PnaYAVU/kursavaya/services/src/ClimateData.cpp",
   "output": "CMakeFiles/smartHouse.dir/services/src/ClimateData.cpp.obj"
@@ -172,5 +130,11 @@
   "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\main\\main.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\main\\main.cpp",
   "file": "D:/programming/C++programming/PnaYAVU/kursavaya/main/main.cpp",
   "output": "CMakeFiles/smartHouse.dir/main/main.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\main\\Menu.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\main\\Menu.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/main/Menu.cpp",
+  "output": "CMakeFiles/smartHouse.dir/main/Menu.cpp.obj"
 }
 ]

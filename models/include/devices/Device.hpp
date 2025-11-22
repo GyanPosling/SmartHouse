@@ -76,7 +76,10 @@ public:
     bool operator<=(const Device& other) const;
     bool operator>=(const Device& other) const;
     
-    // Ввод/вывод
     friend ostream& operator<<(ostream& os, const Device& device);
     friend istream& operator>>(istream& is, Device& device);
+    
+    virtual void printHeader() const;
+    virtual void printTable() const;
+    virtual void updateField(int fieldChoice);
 };

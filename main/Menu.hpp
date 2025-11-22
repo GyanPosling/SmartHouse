@@ -1,8 +1,8 @@
 #pragma once
-#include "../../services/include/AuthenticationService.hpp"
-#include "../../services/include/DeviceService.hpp"
-#include "../../services/include/CommandHistory.hpp"
-#include "../../services/include/ClimateData.hpp"
+#include "../services/include/AuthenticationService.hpp"
+#include "../services/include/DeviceService.hpp"
+#include "../services/include/CommandHistory.hpp"
+#include "../services/include/ClimateData.hpp"
 #include <string>
 using namespace std;
 
@@ -22,16 +22,15 @@ private:
     
     void viewAllDevices();
     void addDevice();
-    void editDevice();
+    void modifyDevice();
     void deleteDevice();
     void searchDevices();
     void sortDevices();
     void viewDeviceInfo();
-    void switchDeviceMode();
-    void updateDeviceStates();
     void undo();
     void redo();
     void viewEnvironmentIndicators();
+    void viewClimateRecommendations();
     void normalizeClimate();
     
     ClimateData getClimateData();

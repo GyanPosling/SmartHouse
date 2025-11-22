@@ -152,6 +152,30 @@ exceptions/src/ContainerException.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/exceptions/src/ContainerException.cpp.s
 .PHONY : exceptions/src/ContainerException.cpp.s
 
+exceptions/src/Date.obj: exceptions/src/Date.cpp.obj
+.PHONY : exceptions/src/Date.obj
+
+# target to build an object file
+exceptions/src/Date.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/exceptions/src/Date.cpp.obj
+.PHONY : exceptions/src/Date.cpp.obj
+
+exceptions/src/Date.i: exceptions/src/Date.cpp.i
+.PHONY : exceptions/src/Date.i
+
+# target to preprocess a source file
+exceptions/src/Date.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/exceptions/src/Date.cpp.i
+.PHONY : exceptions/src/Date.cpp.i
+
+exceptions/src/Date.s: exceptions/src/Date.cpp.s
+.PHONY : exceptions/src/Date.s
+
+# target to generate assembly for a file
+exceptions/src/Date.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/exceptions/src/Date.cpp.s
+.PHONY : exceptions/src/Date.cpp.s
+
 exceptions/src/Exception.obj: exceptions/src/Exception.cpp.obj
 .PHONY : exceptions/src/Exception.obj
 
@@ -224,6 +248,54 @@ exceptions/src/InputException.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/exceptions/src/InputException.cpp.s
 .PHONY : exceptions/src/InputException.cpp.s
 
+exceptions/src/InputHandler.obj: exceptions/src/InputHandler.cpp.obj
+.PHONY : exceptions/src/InputHandler.obj
+
+# target to build an object file
+exceptions/src/InputHandler.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/exceptions/src/InputHandler.cpp.obj
+.PHONY : exceptions/src/InputHandler.cpp.obj
+
+exceptions/src/InputHandler.i: exceptions/src/InputHandler.cpp.i
+.PHONY : exceptions/src/InputHandler.i
+
+# target to preprocess a source file
+exceptions/src/InputHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/exceptions/src/InputHandler.cpp.i
+.PHONY : exceptions/src/InputHandler.cpp.i
+
+exceptions/src/InputHandler.s: exceptions/src/InputHandler.cpp.s
+.PHONY : exceptions/src/InputHandler.s
+
+# target to generate assembly for a file
+exceptions/src/InputHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/exceptions/src/InputHandler.cpp.s
+.PHONY : exceptions/src/InputHandler.cpp.s
+
+main/Menu.obj: main/Menu.cpp.obj
+.PHONY : main/Menu.obj
+
+# target to build an object file
+main/Menu.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/main/Menu.cpp.obj
+.PHONY : main/Menu.cpp.obj
+
+main/Menu.i: main/Menu.cpp.i
+.PHONY : main/Menu.i
+
+# target to preprocess a source file
+main/Menu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/main/Menu.cpp.i
+.PHONY : main/Menu.cpp.i
+
+main/Menu.s: main/Menu.cpp.s
+.PHONY : main/Menu.s
+
+# target to generate assembly for a file
+main/Menu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/main/Menu.cpp.s
+.PHONY : main/Menu.cpp.s
+
 main/main.obj: main/main.cpp.obj
 .PHONY : main/main.obj
 
@@ -247,102 +319,6 @@ main/main.s: main/main.cpp.s
 main/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/main/main.cpp.s
 .PHONY : main/main.cpp.s
-
-models/src/DeviceContainer.obj: models/src/DeviceContainer.cpp.obj
-.PHONY : models/src/DeviceContainer.obj
-
-# target to build an object file
-models/src/DeviceContainer.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/models/src/DeviceContainer.cpp.obj
-.PHONY : models/src/DeviceContainer.cpp.obj
-
-models/src/DeviceContainer.i: models/src/DeviceContainer.cpp.i
-.PHONY : models/src/DeviceContainer.i
-
-# target to preprocess a source file
-models/src/DeviceContainer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/models/src/DeviceContainer.cpp.i
-.PHONY : models/src/DeviceContainer.cpp.i
-
-models/src/DeviceContainer.s: models/src/DeviceContainer.cpp.s
-.PHONY : models/src/DeviceContainer.s
-
-# target to generate assembly for a file
-models/src/DeviceContainer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/models/src/DeviceContainer.cpp.s
-.PHONY : models/src/DeviceContainer.cpp.s
-
-models/src/EnvironmentSimulator.obj: models/src/EnvironmentSimulator.cpp.obj
-.PHONY : models/src/EnvironmentSimulator.obj
-
-# target to build an object file
-models/src/EnvironmentSimulator.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/models/src/EnvironmentSimulator.cpp.obj
-.PHONY : models/src/EnvironmentSimulator.cpp.obj
-
-models/src/EnvironmentSimulator.i: models/src/EnvironmentSimulator.cpp.i
-.PHONY : models/src/EnvironmentSimulator.i
-
-# target to preprocess a source file
-models/src/EnvironmentSimulator.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/models/src/EnvironmentSimulator.cpp.i
-.PHONY : models/src/EnvironmentSimulator.cpp.i
-
-models/src/EnvironmentSimulator.s: models/src/EnvironmentSimulator.cpp.s
-.PHONY : models/src/EnvironmentSimulator.s
-
-# target to generate assembly for a file
-models/src/EnvironmentSimulator.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/models/src/EnvironmentSimulator.cpp.s
-.PHONY : models/src/EnvironmentSimulator.cpp.s
-
-models/src/Sensor.obj: models/src/Sensor.cpp.obj
-.PHONY : models/src/Sensor.obj
-
-# target to build an object file
-models/src/Sensor.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/models/src/Sensor.cpp.obj
-.PHONY : models/src/Sensor.cpp.obj
-
-models/src/Sensor.i: models/src/Sensor.cpp.i
-.PHONY : models/src/Sensor.i
-
-# target to preprocess a source file
-models/src/Sensor.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/models/src/Sensor.cpp.i
-.PHONY : models/src/Sensor.cpp.i
-
-models/src/Sensor.s: models/src/Sensor.cpp.s
-.PHONY : models/src/Sensor.s
-
-# target to generate assembly for a file
-models/src/Sensor.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/models/src/Sensor.cpp.s
-.PHONY : models/src/Sensor.cpp.s
-
-models/src/SmartHome.obj: models/src/SmartHome.cpp.obj
-.PHONY : models/src/SmartHome.obj
-
-# target to build an object file
-models/src/SmartHome.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/models/src/SmartHome.cpp.obj
-.PHONY : models/src/SmartHome.cpp.obj
-
-models/src/SmartHome.i: models/src/SmartHome.cpp.i
-.PHONY : models/src/SmartHome.i
-
-# target to preprocess a source file
-models/src/SmartHome.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/models/src/SmartHome.cpp.i
-.PHONY : models/src/SmartHome.cpp.i
-
-models/src/SmartHome.s: models/src/SmartHome.cpp.s
-.PHONY : models/src/SmartHome.s
-
-# target to generate assembly for a file
-models/src/SmartHome.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/models/src/SmartHome.cpp.s
-.PHONY : models/src/SmartHome.cpp.s
 
 models/src/User.obj: models/src/User.cpp.obj
 .PHONY : models/src/User.obj
@@ -560,77 +536,29 @@ models/src/devices/SmartLight.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/models/src/devices/SmartLight.cpp.s
 .PHONY : models/src/devices/SmartLight.cpp.s
 
-repositories/src/DeviceRepository.obj: repositories/src/DeviceRepository.cpp.obj
-.PHONY : repositories/src/DeviceRepository.obj
+repositories/src/FileRepository.obj: repositories/src/FileRepository.cpp.obj
+.PHONY : repositories/src/FileRepository.obj
 
 # target to build an object file
-repositories/src/DeviceRepository.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/repositories/src/DeviceRepository.cpp.obj
-.PHONY : repositories/src/DeviceRepository.cpp.obj
+repositories/src/FileRepository.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/repositories/src/FileRepository.cpp.obj
+.PHONY : repositories/src/FileRepository.cpp.obj
 
-repositories/src/DeviceRepository.i: repositories/src/DeviceRepository.cpp.i
-.PHONY : repositories/src/DeviceRepository.i
-
-# target to preprocess a source file
-repositories/src/DeviceRepository.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/repositories/src/DeviceRepository.cpp.i
-.PHONY : repositories/src/DeviceRepository.cpp.i
-
-repositories/src/DeviceRepository.s: repositories/src/DeviceRepository.cpp.s
-.PHONY : repositories/src/DeviceRepository.s
-
-# target to generate assembly for a file
-repositories/src/DeviceRepository.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/repositories/src/DeviceRepository.cpp.s
-.PHONY : repositories/src/DeviceRepository.cpp.s
-
-repositories/src/SensorRepository.obj: repositories/src/SensorRepository.cpp.obj
-.PHONY : repositories/src/SensorRepository.obj
-
-# target to build an object file
-repositories/src/SensorRepository.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/repositories/src/SensorRepository.cpp.obj
-.PHONY : repositories/src/SensorRepository.cpp.obj
-
-repositories/src/SensorRepository.i: repositories/src/SensorRepository.cpp.i
-.PHONY : repositories/src/SensorRepository.i
+repositories/src/FileRepository.i: repositories/src/FileRepository.cpp.i
+.PHONY : repositories/src/FileRepository.i
 
 # target to preprocess a source file
-repositories/src/SensorRepository.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/repositories/src/SensorRepository.cpp.i
-.PHONY : repositories/src/SensorRepository.cpp.i
+repositories/src/FileRepository.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/repositories/src/FileRepository.cpp.i
+.PHONY : repositories/src/FileRepository.cpp.i
 
-repositories/src/SensorRepository.s: repositories/src/SensorRepository.cpp.s
-.PHONY : repositories/src/SensorRepository.s
-
-# target to generate assembly for a file
-repositories/src/SensorRepository.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/repositories/src/SensorRepository.cpp.s
-.PHONY : repositories/src/SensorRepository.cpp.s
-
-repositories/src/UserRepository.obj: repositories/src/UserRepository.cpp.obj
-.PHONY : repositories/src/UserRepository.obj
-
-# target to build an object file
-repositories/src/UserRepository.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/repositories/src/UserRepository.cpp.obj
-.PHONY : repositories/src/UserRepository.cpp.obj
-
-repositories/src/UserRepository.i: repositories/src/UserRepository.cpp.i
-.PHONY : repositories/src/UserRepository.i
-
-# target to preprocess a source file
-repositories/src/UserRepository.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/repositories/src/UserRepository.cpp.i
-.PHONY : repositories/src/UserRepository.cpp.i
-
-repositories/src/UserRepository.s: repositories/src/UserRepository.cpp.s
-.PHONY : repositories/src/UserRepository.s
+repositories/src/FileRepository.s: repositories/src/FileRepository.cpp.s
+.PHONY : repositories/src/FileRepository.s
 
 # target to generate assembly for a file
-repositories/src/UserRepository.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/repositories/src/UserRepository.cpp.s
-.PHONY : repositories/src/UserRepository.cpp.s
+repositories/src/FileRepository.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/repositories/src/FileRepository.cpp.s
+.PHONY : repositories/src/FileRepository.cpp.s
 
 services/src/AuthenticationService.obj: services/src/AuthenticationService.cpp.obj
 .PHONY : services/src/AuthenticationService.obj
@@ -679,30 +607,6 @@ services/src/ClimateData.s: services/src/ClimateData.cpp.s
 services/src/ClimateData.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/services/src/ClimateData.cpp.s
 .PHONY : services/src/ClimateData.cpp.s
-
-services/src/ClimateFileManager.obj: services/src/ClimateFileManager.cpp.obj
-.PHONY : services/src/ClimateFileManager.obj
-
-# target to build an object file
-services/src/ClimateFileManager.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/services/src/ClimateFileManager.cpp.obj
-.PHONY : services/src/ClimateFileManager.cpp.obj
-
-services/src/ClimateFileManager.i: services/src/ClimateFileManager.cpp.i
-.PHONY : services/src/ClimateFileManager.i
-
-# target to preprocess a source file
-services/src/ClimateFileManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/services/src/ClimateFileManager.cpp.i
-.PHONY : services/src/ClimateFileManager.cpp.i
-
-services/src/ClimateFileManager.s: services/src/ClimateFileManager.cpp.s
-.PHONY : services/src/ClimateFileManager.s
-
-# target to generate assembly for a file
-services/src/ClimateFileManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/services/src/ClimateFileManager.cpp.s
-.PHONY : services/src/ClimateFileManager.cpp.s
 
 services/src/ClimateNormalizer.obj: services/src/ClimateNormalizer.cpp.obj
 .PHONY : services/src/ClimateNormalizer.obj
@@ -776,54 +680,6 @@ services/src/DeviceService.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/services/src/DeviceService.cpp.s
 .PHONY : services/src/DeviceService.cpp.s
 
-utils/src/InputUtils.obj: utils/src/InputUtils.cpp.obj
-.PHONY : utils/src/InputUtils.obj
-
-# target to build an object file
-utils/src/InputUtils.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/utils/src/InputUtils.cpp.obj
-.PHONY : utils/src/InputUtils.cpp.obj
-
-utils/src/InputUtils.i: utils/src/InputUtils.cpp.i
-.PHONY : utils/src/InputUtils.i
-
-# target to preprocess a source file
-utils/src/InputUtils.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/utils/src/InputUtils.cpp.i
-.PHONY : utils/src/InputUtils.cpp.i
-
-utils/src/InputUtils.s: utils/src/InputUtils.cpp.s
-.PHONY : utils/src/InputUtils.s
-
-# target to generate assembly for a file
-utils/src/InputUtils.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/utils/src/InputUtils.cpp.s
-.PHONY : utils/src/InputUtils.cpp.s
-
-utils/src/Menu.obj: utils/src/Menu.cpp.obj
-.PHONY : utils/src/Menu.obj
-
-# target to build an object file
-utils/src/Menu.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/utils/src/Menu.cpp.obj
-.PHONY : utils/src/Menu.cpp.obj
-
-utils/src/Menu.i: utils/src/Menu.cpp.i
-.PHONY : utils/src/Menu.i
-
-# target to preprocess a source file
-utils/src/Menu.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/utils/src/Menu.cpp.i
-.PHONY : utils/src/Menu.cpp.i
-
-utils/src/Menu.s: utils/src/Menu.cpp.s
-.PHONY : utils/src/Menu.s
-
-# target to generate assembly for a file
-utils/src/Menu.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/utils/src/Menu.cpp.s
-.PHONY : utils/src/Menu.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -836,6 +692,9 @@ help:
 	@echo ... exceptions/src/ContainerException.obj
 	@echo ... exceptions/src/ContainerException.i
 	@echo ... exceptions/src/ContainerException.s
+	@echo ... exceptions/src/Date.obj
+	@echo ... exceptions/src/Date.i
+	@echo ... exceptions/src/Date.s
 	@echo ... exceptions/src/Exception.obj
 	@echo ... exceptions/src/Exception.i
 	@echo ... exceptions/src/Exception.s
@@ -845,21 +704,15 @@ help:
 	@echo ... exceptions/src/InputException.obj
 	@echo ... exceptions/src/InputException.i
 	@echo ... exceptions/src/InputException.s
+	@echo ... exceptions/src/InputHandler.obj
+	@echo ... exceptions/src/InputHandler.i
+	@echo ... exceptions/src/InputHandler.s
+	@echo ... main/Menu.obj
+	@echo ... main/Menu.i
+	@echo ... main/Menu.s
 	@echo ... main/main.obj
 	@echo ... main/main.i
 	@echo ... main/main.s
-	@echo ... models/src/DeviceContainer.obj
-	@echo ... models/src/DeviceContainer.i
-	@echo ... models/src/DeviceContainer.s
-	@echo ... models/src/EnvironmentSimulator.obj
-	@echo ... models/src/EnvironmentSimulator.i
-	@echo ... models/src/EnvironmentSimulator.s
-	@echo ... models/src/Sensor.obj
-	@echo ... models/src/Sensor.i
-	@echo ... models/src/Sensor.s
-	@echo ... models/src/SmartHome.obj
-	@echo ... models/src/SmartHome.i
-	@echo ... models/src/SmartHome.s
 	@echo ... models/src/User.obj
 	@echo ... models/src/User.i
 	@echo ... models/src/User.s
@@ -887,24 +740,15 @@ help:
 	@echo ... models/src/devices/SmartLight.obj
 	@echo ... models/src/devices/SmartLight.i
 	@echo ... models/src/devices/SmartLight.s
-	@echo ... repositories/src/DeviceRepository.obj
-	@echo ... repositories/src/DeviceRepository.i
-	@echo ... repositories/src/DeviceRepository.s
-	@echo ... repositories/src/SensorRepository.obj
-	@echo ... repositories/src/SensorRepository.i
-	@echo ... repositories/src/SensorRepository.s
-	@echo ... repositories/src/UserRepository.obj
-	@echo ... repositories/src/UserRepository.i
-	@echo ... repositories/src/UserRepository.s
+	@echo ... repositories/src/FileRepository.obj
+	@echo ... repositories/src/FileRepository.i
+	@echo ... repositories/src/FileRepository.s
 	@echo ... services/src/AuthenticationService.obj
 	@echo ... services/src/AuthenticationService.i
 	@echo ... services/src/AuthenticationService.s
 	@echo ... services/src/ClimateData.obj
 	@echo ... services/src/ClimateData.i
 	@echo ... services/src/ClimateData.s
-	@echo ... services/src/ClimateFileManager.obj
-	@echo ... services/src/ClimateFileManager.i
-	@echo ... services/src/ClimateFileManager.s
 	@echo ... services/src/ClimateNormalizer.obj
 	@echo ... services/src/ClimateNormalizer.i
 	@echo ... services/src/ClimateNormalizer.s
@@ -914,12 +758,6 @@ help:
 	@echo ... services/src/DeviceService.obj
 	@echo ... services/src/DeviceService.i
 	@echo ... services/src/DeviceService.s
-	@echo ... utils/src/InputUtils.obj
-	@echo ... utils/src/InputUtils.i
-	@echo ... utils/src/InputUtils.s
-	@echo ... utils/src/Menu.obj
-	@echo ... utils/src/Menu.i
-	@echo ... utils/src/Menu.s
 .PHONY : help
 
 

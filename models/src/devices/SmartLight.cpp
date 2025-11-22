@@ -1,4 +1,7 @@
 #include "../../include/devices/SmartLight.hpp"
+#include "../../exceptions/include/InputHandler.hpp"
+#include <iomanip>
+using namespace std;
 
 SmartLight::SmartLight() 
     : SmartDevice(), turnOffHour(22) {}
@@ -15,27 +18,6 @@ void SmartLight::setTurnOffHour(int hour) {
     turnOffHour = hour;
 }
 
-void SmartLight::update(double temperature, double humidity, double co2, int hour) {
-    if (mode == DeviceMode::MANUAL) {
-        // В ручном режиме устройство работает пока пользователь не выключит
-        return;
-    }
-    
-    if (mode == DeviceMode::OFF) {
-        turnOff();
-        return;
-    }
-    
-    // Автоматический режим - лампочка выключается после указанного часа
-    if (hour >= turnOffHour) {
-        // После 22:00 (или указанного часа) - выключаем
-        turnOff();
-    } else {
-        // До указанного часа - включаем
-        turnOn();
-    }
-}
-
 bool SmartLight::operator==(const SmartLight& other) const {
     return SmartDevice::operator==(other);
 }
@@ -48,5 +30,51 @@ string SmartLight::getDeviceInfo() const {
     return SmartDevice::getDeviceInfo() + 
            ", Type: Smart Light" + 
            ", Turn Off After: " + to_string(turnOffHour) + ":00";
+}
+
+ostream& operator<<(ostream& os, const SmartLight& device) {
+    os << static_cast<const SmartDevice&>(device) << "|" << device.turnOffHour;
+    return os;
+}
+
+istream& operator>>(istream& is, SmartLight& device) {
+    is >> static_cast<SmartDevice&>(device);
+    
+    bool success = false;
+    while (!success) {
+        try {
+            safeInputInt(is, device.turnOffHour, 0, 23, "Enter turn off hour (0-23): ");
+            success = true;
+        } catch (const InputException& e) {
+            cout << "Error: " << e.what() << endl;
+        }
+    }
+    
+    return is;
+}
+
+void SmartLight::printHeader() const {
+    cout << left;
+    cout << "| " << setw(5) << "ID" << " | " << setw(15) << "Device Name" << " | " << setw(15) << "Location" << " | " << setw(12) << "Power Level" << " | " << setw(8) << "Status" << " | " << setw(10) << "Mode" << " | " << setw(15) << "Turn Off Hour" << " |" << endl;
+}
+
+void SmartLight::printTable() const {
+    cout << left;
+    cout << "| " << setw(5) << id << " | " << setw(15) << deviceName << " | " << setw(15) << location << " | " << setw(12) << powerLevel << " | " << setw(8) << (isOn ? "On" : "Off") << " | " << setw(10) << getModeString() << " | " << setw(15) << turnOffHour << " |" << endl;
+}
+
+void SmartLight::updateField(int fieldChoice) {
+    int num;
+    if(fieldChoice <= 5) {
+        SmartDevice::updateField(fieldChoice);
+        return;
+    }
+    
+    switch(fieldChoice) {
+        case 6:
+            safeInputInt(cin, num, 0, 23, "New turn off hour (0-23): ");
+            setTurnOffHour(num);
+            break;
+    }
 }
 

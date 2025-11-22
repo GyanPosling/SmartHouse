@@ -100,8 +100,6 @@ CMakeFiles/smartHouse.dir/services/src/ClimateNormalizer.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/bits/uses_allocator.h \
  C:/mingw64/include/c++/14.2.0/bits/uses_allocator_args.h \
  C:/mingw64/include/c++/14.2.0/tuple \
- D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/SmartDevice.hpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/Device.hpp \
  C:/mingw64/include/c++/14.2.0/iostream \
  C:/mingw64/include/c++/14.2.0/ostream C:/mingw64/include/c++/14.2.0/ios \
  C:/mingw64/include/c++/14.2.0/exception \
@@ -146,6 +144,8 @@ CMakeFiles/smartHouse.dir/services/src/ClimateNormalizer.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/bits/ostream.tcc \
  C:/mingw64/include/c++/14.2.0/istream \
  C:/mingw64/include/c++/14.2.0/bits/istream.tcc \
+ D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/SmartDevice.hpp \
+ D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/Device.hpp \
  C:/mingw64/include/c++/14.2.0/sstream \
  C:/mingw64/include/c++/14.2.0/bits/sstream.tcc \
  C:/mingw64/include/c++/14.2.0/utility \
@@ -177,4 +177,30 @@ CMakeFiles/smartHouse.dir/services/src/ClimateNormalizer.cpp.obj: \
  D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/SmartAirConditioner.hpp \
  D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/SmartHumidifier.hpp \
  D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/SmartDehumidifier.hpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/SmartFan.hpp
+ D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/SmartFan.hpp \
+ C:/mingw64/include/c++/14.2.0/cmath \
+ C:/mingw64/x86_64-w64-mingw32/include/math.h \
+ C:/mingw64/include/c++/14.2.0/bits/specfun.h \
+ C:/mingw64/include/c++/14.2.0/limits \
+ C:/mingw64/include/c++/14.2.0/tr1/gamma.tcc \
+ C:/mingw64/include/c++/14.2.0/tr1/special_function_util.h \
+ C:/mingw64/include/c++/14.2.0/tr1/bessel_function.tcc \
+ C:/mingw64/include/c++/14.2.0/tr1/beta_function.tcc \
+ C:/mingw64/include/c++/14.2.0/tr1/ell_integral.tcc \
+ C:/mingw64/include/c++/14.2.0/tr1/exp_integral.tcc \
+ C:/mingw64/include/c++/14.2.0/tr1/hypergeometric.tcc \
+ C:/mingw64/include/c++/14.2.0/tr1/legendre_function.tcc \
+ C:/mingw64/include/c++/14.2.0/tr1/modified_bessel_func.tcc \
+ C:/mingw64/include/c++/14.2.0/tr1/poly_hermite.tcc \
+ C:/mingw64/include/c++/14.2.0/tr1/poly_laguerre.tcc \
+ C:/mingw64/include/c++/14.2.0/tr1/riemann_zeta.tcc \
+ C:/mingw64/include/c++/14.2.0/iomanip \
+ C:/mingw64/include/c++/14.2.0/locale \
+ C:/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.h \
+ C:/mingw64/include/c++/14.2.0/ctime \
+ C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/time_members.h \
+ C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/messages_members.h \
+ C:/mingw64/include/c++/14.2.0/bits/codecvt.h \
+ C:/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.tcc \
+ C:/mingw64/include/c++/14.2.0/bits/locale_conv.h \
+ C:/mingw64/include/c++/14.2.0/bits/quoted_string.h

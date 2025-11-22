@@ -1,12 +1,10 @@
 #include "../include/AuthenticationService.hpp"
-#include "../exceptions/include/FileException.hpp"
 
 AuthenticationService::AuthenticationService() 
-    : userRepository(make_unique<UserRepository>("users.txt")), 
+    : userRepository(make_unique<TextFileRepository<User>>("users.txt")), 
       nextUserId(1), loggedIn(false) {
-    // Determine next available ID
     try {
-        auto users = userRepository->loadAllUsers();
+        auto users = userRepository->readVector();
         if (!users.empty()) {
             int maxId = 0;
             for (const auto& user : users) {
@@ -17,32 +15,52 @@ AuthenticationService::AuthenticationService()
             nextUserId = maxId + 1;
         }
     } catch (...) {
-        // Ignore errors on first run
     }
 }
 
 User AuthenticationService::registerUser(const string& username, const string& password) {
-    if (userRepository->userExists(username)) {
-        throw FileException(57, "User with name " + username + " already exists");
+    auto users = userRepository->readVector();
+    for (const auto& user : users) {
+        if (user.getUsername() == username) {
+            throw FileException(57, "User with name " + username + " already exists");
+        }
     }
     
     User newUser(nextUserId, username, password);
-    userRepository->saveUser(newUser);
+    userRepository->append(newUser);
+    nextUserId++;
+    
+    return newUser;
+}
+
+User AuthenticationService::registerUser(const string& username, const string& password, const Date& birthday) {
+    auto users = userRepository->readVector();
+    for (const auto& user : users) {
+        if (user.getUsername() == username) {
+            throw FileException(57, "User with name " + username + " already exists");
+        }
+    }
+    
+    User newUser(nextUserId, username, password, birthday);
+    userRepository->append(newUser);
     nextUserId++;
     
     return newUser;
 }
 
 User AuthenticationService::loginUser(const string& username, const string& password) {
-    User user = userRepository->findUserByUsername(username);
-    
-    if (!user.checkPassword(password)) {
-        throw FileException(58, "Invalid password");
+    auto users = userRepository->readVector();
+    for (const auto& user : users) {
+        if (user.getUsername() == username) {
+            if (!user.checkPassword(password)) {
+                throw FileException(58, "Invalid password");
+            }
+            currentUser = user;
+            loggedIn = true;
+            return user;
+        }
     }
-    
-    currentUser = user;
-    loggedIn = true;
-    return user;
+    throw FileException(52, "User with name " + username + " not found");
 }
 
 bool AuthenticationService::isUserLoggedIn() const {
