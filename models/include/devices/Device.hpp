@@ -35,7 +35,6 @@ protected:
     int powerLevel;
     bool isOn;
     
-    // Статическая переменная для режима поиска/сортировки
     static DeviceSearchField currentSearchMode;
 
 public:
@@ -45,7 +44,6 @@ public:
     Device& operator=(const Device& other);
     virtual ~Device() = default;
     
-    // Статический метод для установки режима поиска/сортировки
     static void setSearchMode(DeviceSearchField mode);
     static DeviceSearchField getSearchMode();
     
@@ -68,7 +66,6 @@ public:
     virtual void turnOff();
     virtual string getDeviceInfo() const;
     
-    // Перегрузка операторов сравнения для поиска и сортировки
     bool operator==(const Device& other) const;
     bool operator!=(const Device& other) const;
     bool operator<(const Device& other) const;

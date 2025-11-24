@@ -1,42 +1,17 @@
 #pragma once
-#include "../services/include/AuthenticationService.hpp"
-#include "../services/include/DeviceService.hpp"
-#include "../services/include/CommandHistory.hpp"
-#include "../services/include/ClimateData.hpp"
 #include <string>
+#include <iostream>
 using namespace std;
 
 class Menu {
 private:
-    AuthenticationService authService;
-    DeviceService deviceService;
-    CommandHistory commandHistory;
-    ClimateData currentClimateData;
-    bool loggedIn;
-
-    void printMainMenu();
-    void printUserMenu();
-    
-    void registerUser();
-    void login();
-    
-    void viewAllDevices();
-    void addDevice();
-    void modifyDevice();
-    void deleteDevice();
-    void searchDevices();
-    void sortDevices();
-    void viewDeviceInfo();
-    void undo();
-    void redo();
-    void viewEnvironmentIndicators();
-    void viewClimateRecommendations();
-    void normalizeClimate();
-    
-    ClimateData getClimateData();
+    const string* options;
+    int count;
+    const string header;
 
 public:
-    Menu();
-    void run();
-};
+    Menu(const string* opts, int cnt, const string& hdr)
+        : options(opts), count(cnt), header(hdr) {}
 
+    static void draw(const string& title, const string opts[], int cnt);
+};

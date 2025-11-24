@@ -7,7 +7,7 @@ SmartLight::SmartLight()
     : SmartDevice(), turnOffHour(22) {}
 
 SmartLight::SmartLight(int deviceId, const string& name, const string& location,
-                      DeviceMode deviceMode, int power, int offHour)
+                       DeviceMode deviceMode, int power, int offHour)
     : SmartDevice(deviceId, name, location, deviceMode, power), turnOffHour(offHour) {}
 
 int SmartLight::getTurnOffHour() const {
@@ -40,13 +40,31 @@ ostream& operator<<(ostream& os, const SmartLight& device) {
 istream& operator>>(istream& is, SmartLight& device) {
     is >> static_cast<SmartDevice&>(device);
     
-    bool success = false;
-    while (!success) {
-        try {
-            safeInputInt(is, device.turnOffHour, 0, 23, "Enter turn off hour (0-23): ");
-            success = true;
-        } catch (const InputException& e) {
-            cout << "Error: " << e.what() << endl;
+    bool isCin = (&is == &cin);
+    if (isCin) {
+        bool success = false;
+        while (!success) {
+            try {
+                device.turnOffHour = safeInputNumeric<int>(is, 0, 23, "Enter turn off hour (0-23): ");
+                success = true;
+            } catch (const InputException& e) {
+                cout << "Error: " << e.what() << endl;
+            }
+        }
+    } else {
+        string line;
+        if (getline(is, line)) {
+            stringstream ss(line);
+            string turnOffHourStr;
+            if (getline(ss, turnOffHourStr)) {
+                try {
+                    device.turnOffHour = stoi(turnOffHourStr);
+                } catch (const std::exception&) {
+                    is.setstate(ios::failbit);
+                }
+            } else {
+                is.setstate(ios::failbit);
+            }
         }
     }
     
@@ -64,17 +82,24 @@ void SmartLight::printTable() const {
 }
 
 void SmartLight::updateField(int fieldChoice) {
-    int num;
     if(fieldChoice <= 5) {
         SmartDevice::updateField(fieldChoice);
         return;
     }
     
-    switch(fieldChoice) {
-        case 6:
-            safeInputInt(cin, num, 0, 23, "New turn off hour (0-23): ");
-            setTurnOffHour(num);
-            break;
+    bool success = false;
+    while (!success) {
+        try {
+            switch(fieldChoice) {
+                case 6:
+                    turnOffHour = safeInputNumeric<int>(cin, 0, 23, "New turn off hour (0-23): ");
+                    break;
+                default:
+                    return;
+            }
+            success = true;
+        } catch (const InputException& e) {
+            cout << "Error: " << e.what() << endl;
+        }
     }
 }
-

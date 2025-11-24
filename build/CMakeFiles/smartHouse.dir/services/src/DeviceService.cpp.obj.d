@@ -155,11 +155,23 @@ CMakeFiles/smartHouse.dir/services/src/DeviceService.cpp.obj: \
  D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/SmartDehumidifier.hpp \
  D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/SmartFan.hpp \
  D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/SmartLight.hpp \
+ D:/programming/C++programming/PnaYAVU/kursavaya/repositories/include/TextFile.hpp \
+ D:/programming/C++programming/PnaYAVU/kursavaya/repositories/include/File.hpp \
+ C:/mingw64/include/c++/14.2.0/fstream \
+ C:/mingw64/include/c++/14.2.0/bits/codecvt.h \
+ C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/basic_file.h \
+ C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++io.h \
+ C:/mingw64/include/c++/14.2.0/bits/fstream.tcc \
  D:/programming/C++programming/PnaYAVU/kursavaya/exceptions/include/FileException.hpp \
  D:/programming/C++programming/PnaYAVU/kursavaya/exceptions/include/Exception.hpp \
+ C:/mingw64/include/c++/14.2.0/vector \
+ C:/mingw64/include/c++/14.2.0/bits/stl_uninitialized.h \
+ C:/mingw64/include/c++/14.2.0/bits/stl_vector.h \
+ C:/mingw64/include/c++/14.2.0/bits/stl_bvector.h \
+ C:/mingw64/include/c++/14.2.0/bits/vector.tcc \
+ D:/programming/C++programming/PnaYAVU/kursavaya/repositories/include/TextFile.tpp \
  C:/mingw64/include/c++/14.2.0/memory \
  C:/mingw64/include/c++/14.2.0/bits/stl_tempbuf.h \
- C:/mingw64/include/c++/14.2.0/bits/stl_uninitialized.h \
  C:/mingw64/include/c++/14.2.0/bits/stl_raw_storage_iter.h \
  C:/mingw64/include/c++/14.2.0/bits/align.h \
  C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
@@ -176,18 +188,9 @@ CMakeFiles/smartHouse.dir/services/src/DeviceService.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/backward/auto_ptr.h \
  C:/mingw64/include/c++/14.2.0/pstl/glue_memory_defs.h \
  C:/mingw64/include/c++/14.2.0/pstl/execution_defs.h \
- C:/mingw64/include/c++/14.2.0/vector \
- C:/mingw64/include/c++/14.2.0/bits/stl_vector.h \
- C:/mingw64/include/c++/14.2.0/bits/stl_bvector.h \
- C:/mingw64/include/c++/14.2.0/bits/vector.tcc \
  C:/mingw64/include/c++/14.2.0/algorithm \
  C:/mingw64/include/c++/14.2.0/bits/stl_algo.h \
  C:/mingw64/include/c++/14.2.0/bits/algorithmfwd.h \
  C:/mingw64/include/c++/14.2.0/bits/stl_heap.h \
  C:/mingw64/include/c++/14.2.0/bits/uniform_int_dist.h \
- C:/mingw64/include/c++/14.2.0/pstl/glue_algorithm_defs.h \
- C:/mingw64/include/c++/14.2.0/fstream \
- C:/mingw64/include/c++/14.2.0/bits/codecvt.h \
- C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/basic_file.h \
- C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++io.h \
- C:/mingw64/include/c++/14.2.0/bits/fstream.tcc
+ C:/mingw64/include/c++/14.2.0/pstl/glue_algorithm_defs.h

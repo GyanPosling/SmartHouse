@@ -3,7 +3,6 @@
 #include <iomanip>
 using namespace std;
 
-// Инициализация статической переменной
 DeviceSearchField Device::currentSearchMode = DeviceSearchField::ID;
 
 Device::Device() 
@@ -101,7 +100,6 @@ bool Device::operator==(const Device& other) const {
     } else if (currentSearchMode == DeviceSearchField::POWER_LEVEL) {
         return powerLevel == other.powerLevel;
     }
-    // Для MODE будет обработано в SmartDevice
     return id == other.id;
 }
 
@@ -119,7 +117,6 @@ bool Device::operator<(const Device& other) const {
     } else if (currentSearchMode == DeviceSearchField::POWER_LEVEL) {
         return powerLevel < other.powerLevel;
     }
-    // Для MODE будет обработано в SmartDevice
     return id < other.id;
 }
 
@@ -143,46 +140,77 @@ ostream& operator<<(ostream& os, const Device& device) {
 }
 
 istream& operator>>(istream& is, Device& device) {
-    bool success = false;
-    while (!success) {
-        try {
-            safeInputInt(is, device.id, 0, 999999, "Enter device ID: ");
-            success = true;
-        } catch (const InputException& e) {
-            cout << "Error: " << e.what() << endl;
+    bool isCin = (&is == &cin);
+    if (isCin) {
+        bool success = false;
+        while (!success) {
+            try {
+                device.id = safeInputNumeric<int>(is, 0, 999999, "Enter device ID: ");
+                success = true;
+            } catch (const InputException& e) {
+                cout << "Error: " << e.what() << endl;
+            }
+        }
+        
+        success = false;
+        while (!success) {
+            try {
+                device.deviceName = safeGetLine(is, Language::ENGLISH, "Enter device name: ");
+                success = true;
+            } catch (const InputException& e) {
+                cout << "Error: " << e.what() << endl;
+            }
+        }
+        
+        success = false;
+        while (!success) {
+            try {
+                device.location = safeGetLine(is, Language::ENGLISH, "Enter location: ");
+                success = true;
+            } catch (const InputException& e) {
+                cout << "Error: " << e.what() << endl;
+            }
+        }
+        
+        success = false;
+        while (!success) {
+            try {
+                device.powerLevel = safeInputNumeric<int>(is, 0, 100, "Enter power level (0-100): ");
+                success = true;
+            } catch (const InputException& e) {
+                cout << "Error: " << e.what() << endl;
+            }
+        }
+        
+    } else {
+        string line;
+        if (getline(is, line)) {
+            if (line.empty()) {
+                is.setstate(ios::failbit);
+                return is;
+            }
+            
+            stringstream ss(line);
+            string idStr, deviceNameStr, locationStr, powerLevelStr;
+            
+            if (getline(ss, idStr, '|') &&
+                getline(ss, deviceNameStr, '|') &&
+                getline(ss, locationStr, '|') &&
+                getline(ss, powerLevelStr))
+            {
+                try {
+                    device.id = stoi(idStr);
+                    device.deviceName = deviceNameStr;
+                    device.location = locationStr;
+                    device.powerLevel = stoi(powerLevelStr);
+                } catch (const std::exception&) {
+                    is.setstate(ios::failbit);
+                }
+            } else {
+                is.setstate(ios::failbit);
+            }
         }
     }
-    
-    success = false;
-    while (!success) {
-        try {
-            safeInputText(is, device.deviceName, "Enter device name: ");
-            success = true;
-        } catch (const InputException& e) {
-            cout << "Error: " << e.what() << endl;
-        }
-    }
-    
-    success = false;
-    while (!success) {
-        try {
-            safeInputText(is, device.location, "Enter location: ");
-            success = true;
-        } catch (const InputException& e) {
-            cout << "Error: " << e.what() << endl;
-        }
-    }
-    
-    success = false;
-    while (!success) {
-        try {
-            safeInputInt(is, device.powerLevel, 0, 100, "Enter power level (0-100): ");
-            success = true;
-        } catch (const InputException& e) {
-            cout << "Error: " << e.what() << endl;
-        }
-    }
-    
     return is;
 }
 
@@ -197,20 +225,29 @@ void Device::printTable() const {
 }
 
 void Device::updateField(int fieldChoice) {
-    string str;
-    int num;
-    switch(fieldChoice) {
-        case 1:
-            safeInputInt(cin, id, 0, 999999, "New device ID: ");
-            break;
-        case 2:
-            safeInputText(cin, deviceName, "New device name: ");
-            break;
-        case 3:
-            safeInputText(cin, location, "New location: ");
-            break;
-        case 4:
-            safeInputInt(cin, powerLevel, 0, 100, "New power level (0-100): ");
-            break;
+    bool success = false;
+    while (!success) {
+        try {
+            switch(fieldChoice) {
+                case 1:
+                    id = safeInputNumeric<int>(cin, 0, 999999, "New device ID: ");
+                    break;
+                case 2:
+                    deviceName = safeGetLine(cin, Language::ENGLISH, "New device name: ");
+                    break;
+                case 3:
+                    location = safeGetLine(cin, Language::ENGLISH, "New location: ");
+                    break;
+                case 4:
+                    powerLevel = safeInputNumeric<int>(cin, 0, 100, "New power level (0-100): ");
+                    break;
+                default:
+                    // Если поле не найдено, выходим
+                    return;
+            }
+            success = true;
+        } catch (const InputException& e) {
+            cout << "Error: " << e.what() << endl;
+        }
     }
 }

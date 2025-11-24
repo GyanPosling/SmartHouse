@@ -7,7 +7,7 @@ SmartHumidifier::SmartHumidifier()
     : SmartDevice(), targetHumidity(50.0), tolerance(5.0) {}
 
 SmartHumidifier::SmartHumidifier(int deviceId, const string& name, const string& location,
-                                DeviceMode deviceMode, int power, double targetHumidity, double deviceTolerance)
+                                 DeviceMode deviceMode, int power, double targetHumidity, double deviceTolerance)
     : SmartDevice(deviceId, name, location, deviceMode, power), 
       targetHumidity(targetHumidity), tolerance(deviceTolerance) {}
 
@@ -26,7 +26,6 @@ double SmartHumidifier::getTolerance() const {
 void SmartHumidifier::setTolerance(double deviceTolerance) {
     tolerance = deviceTolerance;
 }
-
 
 
 bool SmartHumidifier::operator==(const SmartHumidifier& other) const {
@@ -52,23 +51,42 @@ ostream& operator<<(ostream& os, const SmartHumidifier& device) {
 istream& operator>>(istream& is, SmartHumidifier& device) {
     is >> static_cast<SmartDevice&>(device);
     
-    bool success = false;
-    while (!success) {
-        try {
-            safeInputDouble(is, device.targetHumidity, 0, 100, "Enter target humidity: ");
-            success = true;
-        } catch (const InputException& e) {
-            cout << "Error: " << e.what() << endl;
+    bool isCin = (&is == &cin);
+    if (isCin) {
+        bool success = false;
+        while (!success) {
+            try {
+                device.targetHumidity = safeInputNumeric<double>(is, 0, 100, "Enter target humidity: ");
+                success = true;
+            } catch (const InputException& e) {
+                cout << "Error: " << e.what() << endl;
+            }
         }
-    }
-    
-    success = false;
-    while (!success) {
-        try {
-            safeInputDouble(is, device.tolerance, 0, 50, "Enter tolerance: ");
-            success = true;
-        } catch (const InputException& e) {
-            cout << "Error: " << e.what() << endl;
+        
+        success = false;
+        while (!success) {
+            try {
+                device.tolerance = safeInputNumeric<double>(is, 0, 50, "Enter tolerance: ");
+                success = true;
+            } catch (const InputException& e) {
+                cout << "Error: " << e.what() << endl;
+            }
+        }
+    } else {
+        string line;
+        if (getline(is, line)) {
+            stringstream ss(line);
+            string targetHumidityStr, toleranceStr;
+            if (getline(ss, targetHumidityStr, '|') && getline(ss, toleranceStr)) {
+                try {
+                    device.targetHumidity = stod(targetHumidityStr);
+                    device.tolerance = stod(toleranceStr);
+                } catch (const std::exception&) {
+                    is.setstate(ios::failbit);
+                }
+            } else {
+                is.setstate(ios::failbit);
+            }
         }
     }
     
@@ -86,21 +104,27 @@ void SmartHumidifier::printTable() const {
 }
 
 void SmartHumidifier::updateField(int fieldChoice) {
-    double num;
     if(fieldChoice <= 5) {
         SmartDevice::updateField(fieldChoice);
         return;
     }
     
-    switch(fieldChoice) {
-        case 6:
-            safeInputDouble(cin, num, 0, 100, "New target humidity: ");
-            setTargetHumidity(num);
-            break;
-        case 7:
-            safeInputDouble(cin, num, 0, 50, "New tolerance: ");
-            setTolerance(num);
-            break;
+    bool success = false;
+    while (!success) {
+        try {
+            switch(fieldChoice) {
+                case 6:
+                    targetHumidity = safeInputNumeric<double>(cin, 0, 100, "New target humidity: ");
+                    break;
+                case 7:
+                    tolerance = safeInputNumeric<double>(cin, 0, 50, "New tolerance: ");
+                    break;
+                default:
+                    return;
+            }
+            success = true;
+        } catch (const InputException& e) {
+            cout << "Error: " << e.what() << endl;
+        }
     }
 }
-

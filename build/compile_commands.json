@@ -19,12 +19,6 @@
 },
 {
   "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
-  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\exceptions\\src\\ContainerException.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\exceptions\\src\\ContainerException.cpp",
-  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/exceptions/src/ContainerException.cpp",
-  "output": "CMakeFiles/smartHouse.dir/exceptions/src/ContainerException.cpp.obj"
-},
-{
-  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
   "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\exceptions\\src\\Date.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\exceptions\\src\\Date.cpp",
   "file": "D:/programming/C++programming/PnaYAVU/kursavaya/exceptions/src/Date.cpp",
   "output": "CMakeFiles/smartHouse.dir/exceptions/src/Date.cpp.obj"
@@ -40,6 +34,18 @@
   "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\models\\src\\User.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\models\\src\\User.cpp",
   "file": "D:/programming/C++programming/PnaYAVU/kursavaya/models/src/User.cpp",
   "output": "CMakeFiles/smartHouse.dir/models/src/User.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\models\\src\\AddDeviceCommand.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\models\\src\\AddDeviceCommand.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/models/src/AddDeviceCommand.cpp",
+  "output": "CMakeFiles/smartHouse.dir/models/src/AddDeviceCommand.cpp.obj"
+},
+{
+  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\models\\src\\RemoveDeviceCommand.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\models\\src\\RemoveDeviceCommand.cpp",
+  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/models/src/RemoveDeviceCommand.cpp",
+  "output": "CMakeFiles/smartHouse.dir/models/src/RemoveDeviceCommand.cpp.obj"
 },
 {
   "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
@@ -88,12 +94,6 @@
   "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\models\\src\\devices\\SmartLight.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\models\\src\\devices\\SmartLight.cpp",
   "file": "D:/programming/C++programming/PnaYAVU/kursavaya/models/src/devices/SmartLight.cpp",
   "output": "CMakeFiles/smartHouse.dir/models/src/devices/SmartLight.cpp.obj"
-},
-{
-  "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",
-  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/smartHouse.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\smartHouse.dir\\repositories\\src\\FileRepository.cpp.obj -c D:\\programming\\C++programming\\PnaYAVU\\kursavaya\\repositories\\src\\FileRepository.cpp",
-  "file": "D:/programming/C++programming/PnaYAVU/kursavaya/repositories/src/FileRepository.cpp",
-  "output": "CMakeFiles/smartHouse.dir/repositories/src/FileRepository.cpp.obj"
 },
 {
   "directory": "D:/programming/C++programming/PnaYAVU/kursavaya/build",

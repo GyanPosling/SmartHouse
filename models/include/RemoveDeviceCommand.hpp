@@ -3,17 +3,14 @@
 #include "../../services/include/DeviceService.hpp"
 #include "devices/SmartDevice.hpp"
 #include <memory>
-using namespace std;
 
-class AddDeviceCommand : public Command {
+class RemoveDeviceCommand : public Command {
 private:
     DeviceService* deviceService;
-    shared_ptr<SmartDevice> device;
+    shared_ptr<SmartDevice> removedDevice;  // Сохраняем само устройство для undo
 
 public:
-    AddDeviceCommand(DeviceService* service, shared_ptr<SmartDevice> dev);
-    
+    RemoveDeviceCommand(DeviceService* service, int deviceId);
     void execute() override;
-    
     void undo() override;
 };

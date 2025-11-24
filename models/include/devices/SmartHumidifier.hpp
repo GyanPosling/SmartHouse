@@ -18,7 +18,6 @@ public:
     double getTolerance() const;
     void setTolerance(double deviceTolerance);
     
-    // Перегрузка операторов - вызывают методы базового класса
     bool operator==(const SmartHumidifier& other) const;
     bool operator<(const SmartHumidifier& other) const;
     friend ostream& operator<<(ostream& os, const SmartHumidifier& device);
@@ -30,4 +29,3 @@ public:
     void printTable() const override;
     void updateField(int fieldChoice) override;
 };
-

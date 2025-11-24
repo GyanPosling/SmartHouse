@@ -3,6 +3,7 @@
 #include <string>
 #include <sstream>
 #include <limits>
+#include <stdexcept>
 #include "InputException.hpp"
 #include "Date.hpp"
 
@@ -11,19 +12,44 @@ enum class Language {
     RUSSIAN
 };
 
-void safeGetLine(std::istream& is, std::string& value, Language lang, const std::string& prompt = "");
+template <typename T>
+T safeInputNumeric(std::istream& is, T min, T max, const std::string& prompt = "") {
+    if (!prompt.empty()) {
+        std::cout << prompt;
+    }
+    
+    std::string input;
+    std::getline(is, input);
+    
+    if (input.empty()) {
+        throw InputException(1, "Empty input. Please enter a number.");
+    }
+    
+    std::istringstream iss(input);
+    T temp;
+    
+    if (!(iss >> temp)) {
+        throw InputException(2, "Invalid input. Expected a number, got: " + input);
+    }
+    
+    char remaining;
+    if (iss >> remaining) {
+        throw InputException(3, "Invalid input. Number contains non-numeric characters: " + input);
+    }
+    
+    if (temp < min || temp > max) {
+        std::stringstream ss;
+        ss << "Number out of range. Expected value between " << min << " and " << max << ", got: " << temp;
+        throw InputException(4, ss.str());
+    }
+    
+    return temp;
+}
 
-void safeInputInt(std::istream& is, int& value, int min = std::numeric_limits<int>::min(), int max = std::numeric_limits<int>::max(), const std::string& prompt = "");
+std::string safeGetLine(std::istream& is, Language lang, const std::string& prompt = "");
 
-void safeInputDate(std::istream& is, Date& value, const std::string& format = "", const std::string& prompt = "");
-
-void safeInputText(std::istream& is, std::string& value, const std::string& prompt = "");
-
-void safeInputDouble(std::istream& is, double& value, double min = std::numeric_limits<double>::min(), double max = std::numeric_limits<double>::max(), const std::string& prompt = "");
-
-bool safeInputBool(std::istream& is, const std::string& prompt = "");
+Date safeInputDate(std::istream& is, const std::string& format = "", const std::string& prompt = "");
 
 bool isEnglishOnly(const std::string& str);
 
 bool isRussianOnly(const std::string& str);
-

@@ -14,7 +14,6 @@ public:
     int getTurnOffHour() const;
     void setTurnOffHour(int hour);
     
-    // Перегрузка операторов - вызывают методы базового класса
     bool operator==(const SmartLight& other) const;
     bool operator<(const SmartLight& other) const;
     friend ostream& operator<<(ostream& os, const SmartLight& device);
@@ -26,4 +25,3 @@ public:
     void printTable() const override;
     void updateField(int fieldChoice) override;
 };
-

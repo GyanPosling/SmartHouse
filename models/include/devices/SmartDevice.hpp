@@ -18,7 +18,6 @@ public:
     void setMode(DeviceMode deviceMode);
     string getModeString() const;
     
-    // Перегрузка операторов сравнения - вызывают методы базового класса
     bool operator==(const SmartDevice& other) const;
     bool operator<(const SmartDevice& other) const;
     
@@ -31,4 +30,3 @@ public:
     void printTable() const override;
     void updateField(int fieldChoice) override;
 };
-

@@ -28,7 +28,6 @@ void SmartHeater::setTolerance(double deviceTolerance) {
 }
 
 
-
 bool SmartHeater::operator==(const SmartHeater& other) const {
     return SmartDevice::operator==(other);
 }
@@ -52,23 +51,42 @@ ostream& operator<<(ostream& os, const SmartHeater& device) {
 istream& operator>>(istream& is, SmartHeater& device) {
     is >> static_cast<SmartDevice&>(device);
     
-    bool success = false;
-    while (!success) {
-        try {
-            safeInputDouble(is, device.targetTemperature, -50, 50, "Enter target temperature: ");
-            success = true;
-        } catch (const InputException& e) {
-            cout << "Error: " << e.what() << endl;
+    bool isCin = (&is == &cin);
+    if (isCin) {
+        bool success = false;
+        while (!success) {
+            try {
+                device.targetTemperature = safeInputNumeric<double>(is, -50, 50, "Enter target temperature: ");
+                success = true;
+            } catch (const InputException& e) {
+                cout << "Error: " << e.what() << endl;
+            }
         }
-    }
-    
-    success = false;
-    while (!success) {
-        try {
-            safeInputDouble(is, device.tolerance, 0, 10, "Enter tolerance: ");
-            success = true;
-        } catch (const InputException& e) {
-            cout << "Error: " << e.what() << endl;
+        
+        success = false;
+        while (!success) {
+            try {
+                device.tolerance = safeInputNumeric<double>(is, 0, 10, "Enter tolerance: ");
+                success = true;
+            } catch (const InputException& e) {
+                cout << "Error: " << e.what() << endl;
+            }
+        }
+    } else {
+        string line;
+        if (getline(is, line)) {
+            stringstream ss(line);
+            string targetTemperatureStr, toleranceStr;
+            if (getline(ss, targetTemperatureStr, '|') && getline(ss, toleranceStr)) {
+                try {
+                    device.targetTemperature = stod(targetTemperatureStr);
+                    device.tolerance = stod(toleranceStr);
+                } catch (const std::exception&) {
+                    is.setstate(ios::failbit);
+                }
+            } else {
+                is.setstate(ios::failbit);
+            }
         }
     }
     
@@ -86,21 +104,27 @@ void SmartHeater::printTable() const {
 }
 
 void SmartHeater::updateField(int fieldChoice) {
-    double num;
     if(fieldChoice <= 5) {
         SmartDevice::updateField(fieldChoice);
         return;
     }
     
-    switch(fieldChoice) {
-        case 6:
-            safeInputDouble(cin, num, -50, 50, "New target temperature: ");
-            setTargetTemperature(num);
-            break;
-        case 7:
-            safeInputDouble(cin, num, 0, 10, "New tolerance: ");
-            setTolerance(num);
-            break;
+    bool success = false;
+    while (!success) {
+        try {
+            switch(fieldChoice) {
+                case 6:
+                    targetTemperature = safeInputNumeric<double>(cin, -50, 50, "New target temperature: ");
+                    break;
+                case 7:
+                    tolerance = safeInputNumeric<double>(cin, 0, 10, "New tolerance: ");
+                    break;
+                default:
+                    return;
+            }
+            success = true;
+        } catch (const InputException& e) {
+            cout << "Error: " << e.what() << endl;
+        }
     }
 }
-

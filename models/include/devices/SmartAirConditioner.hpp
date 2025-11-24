@@ -10,7 +10,7 @@ private:
 public:
     SmartAirConditioner();
     SmartAirConditioner(int deviceId, const string& name, const string& location,
-                       DeviceMode deviceMode, int power, double targetCO2, double deviceTolerance);
+                        DeviceMode deviceMode, int power, double targetCO2, double deviceTolerance);
     
     double getTargetCO2() const;
     void setTargetCO2(double target);
@@ -18,7 +18,6 @@ public:
     double getTolerance() const;
     void setTolerance(double deviceTolerance);
     
-    // Перегрузка операторов - вызывают методы базового класса
     bool operator==(const SmartAirConditioner& other) const;
     bool operator<(const SmartAirConditioner& other) const;
     friend ostream& operator<<(ostream& os, const SmartAirConditioner& device);
@@ -30,4 +29,3 @@ public:
     void printTable() const override;
     void updateField(int fieldChoice) override;
 };
-

@@ -3,40 +3,39 @@
 #include <iostream>
 #include <iomanip>
 #include "../../exceptions/include/Date.hpp"
-using namespace std;
 
 class User {
 protected:
     int id;
-    string username;
-    string password;
+    std::string username;
+    std::string password;
     Date birthday;
 
 public:
     User();
-    User(int userId, const string& name, const string& userPassword);
-    User(int userId, const string& name, const string& userPassword, const Date& userBirthday);
+    User(int userId, const std::string& name, const std::string& userPassword);
+    User(int userId, const std::string& name, const std::string& userPassword, const Date& userBirthday);
     virtual ~User();
     
     User& operator=(const User& other);
     bool operator==(const User& other) const;
     bool operator<(const User& other) const;
-    friend ostream& operator<<(ostream& os, const User& user);
-    friend istream& operator>>(istream& is, User& user);
+    friend std::ostream& operator<<(std::ostream& os, const User& user);
+    friend std::istream& operator>>(std::istream& is, User& user);
     
     int getId() const;
     void setId(int userId);
     
-    string getUsername() const;
-    void setUsername(const string& name);
+    std::string getUsername() const;
+    void setUsername(const std::string& name);
     
-    string getPassword() const;
-    void setPassword(const string& userPassword);
+    std::string getPassword() const;
+    void setPassword(const std::string& userPassword);
     
     Date getBirthday() const;
     void setBirthday(const Date& userBirthday);
     
-    bool checkPassword(const string& userPassword) const;
+    bool checkPassword(const std::string& userPassword) const;
     
     virtual void printHeader() const;
     virtual void printTable() const;

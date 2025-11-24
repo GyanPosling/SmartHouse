@@ -6,6 +6,7 @@
 #include "../../models/include/devices/SmartDehumidifier.hpp"
 #include "../../models/include/devices/SmartFan.hpp"
 #include "../../models/include/devices/SmartLight.hpp"
+#include "../../repositories/include/TextFile.hpp"
 #include "../../exceptions/include/FileException.hpp"
 #include <memory>
 #include <vector>
@@ -18,7 +19,7 @@ using namespace std;
 class DeviceService {
 private:
     vector<shared_ptr<SmartDevice>> devices;
-    string filename;
+    TextFile<string> deviceFile;
 
 public:
     DeviceService();
@@ -27,10 +28,10 @@ public:
     void removeDevice(int deviceId);
     void updateDevice(int deviceId, shared_ptr<SmartDevice> updatedDevice);
     shared_ptr<SmartDevice> getDeviceById(int deviceId);
-    vector<shared_ptr<SmartDevice>> getAllDevices();
+    const vector<shared_ptr<SmartDevice>> getAllDevices() const;
     
-    vector<shared_ptr<SmartDevice>> searchDevices(DeviceSearchField field, const string& value);
-    void sortDevices(DeviceSortField field);
+    vector<shared_ptr<SmartDevice>> searchDevices(int option);
+    void sortDevices(int option);
     
     void saveAllDevices();
     void loadAllDevices();

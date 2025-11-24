@@ -128,30 +128,6 @@ smartHouse/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/build
 .PHONY : smartHouse/fast
 
-exceptions/src/ContainerException.obj: exceptions/src/ContainerException.cpp.obj
-.PHONY : exceptions/src/ContainerException.obj
-
-# target to build an object file
-exceptions/src/ContainerException.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/exceptions/src/ContainerException.cpp.obj
-.PHONY : exceptions/src/ContainerException.cpp.obj
-
-exceptions/src/ContainerException.i: exceptions/src/ContainerException.cpp.i
-.PHONY : exceptions/src/ContainerException.i
-
-# target to preprocess a source file
-exceptions/src/ContainerException.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/exceptions/src/ContainerException.cpp.i
-.PHONY : exceptions/src/ContainerException.cpp.i
-
-exceptions/src/ContainerException.s: exceptions/src/ContainerException.cpp.s
-.PHONY : exceptions/src/ContainerException.s
-
-# target to generate assembly for a file
-exceptions/src/ContainerException.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/exceptions/src/ContainerException.cpp.s
-.PHONY : exceptions/src/ContainerException.cpp.s
-
 exceptions/src/Date.obj: exceptions/src/Date.cpp.obj
 .PHONY : exceptions/src/Date.obj
 
@@ -319,6 +295,54 @@ main/main.s: main/main.cpp.s
 main/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/main/main.cpp.s
 .PHONY : main/main.cpp.s
+
+models/src/AddDeviceCommand.obj: models/src/AddDeviceCommand.cpp.obj
+.PHONY : models/src/AddDeviceCommand.obj
+
+# target to build an object file
+models/src/AddDeviceCommand.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/models/src/AddDeviceCommand.cpp.obj
+.PHONY : models/src/AddDeviceCommand.cpp.obj
+
+models/src/AddDeviceCommand.i: models/src/AddDeviceCommand.cpp.i
+.PHONY : models/src/AddDeviceCommand.i
+
+# target to preprocess a source file
+models/src/AddDeviceCommand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/models/src/AddDeviceCommand.cpp.i
+.PHONY : models/src/AddDeviceCommand.cpp.i
+
+models/src/AddDeviceCommand.s: models/src/AddDeviceCommand.cpp.s
+.PHONY : models/src/AddDeviceCommand.s
+
+# target to generate assembly for a file
+models/src/AddDeviceCommand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/models/src/AddDeviceCommand.cpp.s
+.PHONY : models/src/AddDeviceCommand.cpp.s
+
+models/src/RemoveDeviceCommand.obj: models/src/RemoveDeviceCommand.cpp.obj
+.PHONY : models/src/RemoveDeviceCommand.obj
+
+# target to build an object file
+models/src/RemoveDeviceCommand.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/models/src/RemoveDeviceCommand.cpp.obj
+.PHONY : models/src/RemoveDeviceCommand.cpp.obj
+
+models/src/RemoveDeviceCommand.i: models/src/RemoveDeviceCommand.cpp.i
+.PHONY : models/src/RemoveDeviceCommand.i
+
+# target to preprocess a source file
+models/src/RemoveDeviceCommand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/models/src/RemoveDeviceCommand.cpp.i
+.PHONY : models/src/RemoveDeviceCommand.cpp.i
+
+models/src/RemoveDeviceCommand.s: models/src/RemoveDeviceCommand.cpp.s
+.PHONY : models/src/RemoveDeviceCommand.s
+
+# target to generate assembly for a file
+models/src/RemoveDeviceCommand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/models/src/RemoveDeviceCommand.cpp.s
+.PHONY : models/src/RemoveDeviceCommand.cpp.s
 
 models/src/User.obj: models/src/User.cpp.obj
 .PHONY : models/src/User.obj
@@ -536,30 +560,6 @@ models/src/devices/SmartLight.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/models/src/devices/SmartLight.cpp.s
 .PHONY : models/src/devices/SmartLight.cpp.s
 
-repositories/src/FileRepository.obj: repositories/src/FileRepository.cpp.obj
-.PHONY : repositories/src/FileRepository.obj
-
-# target to build an object file
-repositories/src/FileRepository.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/repositories/src/FileRepository.cpp.obj
-.PHONY : repositories/src/FileRepository.cpp.obj
-
-repositories/src/FileRepository.i: repositories/src/FileRepository.cpp.i
-.PHONY : repositories/src/FileRepository.i
-
-# target to preprocess a source file
-repositories/src/FileRepository.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/repositories/src/FileRepository.cpp.i
-.PHONY : repositories/src/FileRepository.cpp.i
-
-repositories/src/FileRepository.s: repositories/src/FileRepository.cpp.s
-.PHONY : repositories/src/FileRepository.s
-
-# target to generate assembly for a file
-repositories/src/FileRepository.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\smartHouse.dir\build.make CMakeFiles/smartHouse.dir/repositories/src/FileRepository.cpp.s
-.PHONY : repositories/src/FileRepository.cpp.s
-
 services/src/AuthenticationService.obj: services/src/AuthenticationService.cpp.obj
 .PHONY : services/src/AuthenticationService.obj
 
@@ -689,9 +689,6 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... smartHouse
-	@echo ... exceptions/src/ContainerException.obj
-	@echo ... exceptions/src/ContainerException.i
-	@echo ... exceptions/src/ContainerException.s
 	@echo ... exceptions/src/Date.obj
 	@echo ... exceptions/src/Date.i
 	@echo ... exceptions/src/Date.s
@@ -713,6 +710,12 @@ help:
 	@echo ... main/main.obj
 	@echo ... main/main.i
 	@echo ... main/main.s
+	@echo ... models/src/AddDeviceCommand.obj
+	@echo ... models/src/AddDeviceCommand.i
+	@echo ... models/src/AddDeviceCommand.s
+	@echo ... models/src/RemoveDeviceCommand.obj
+	@echo ... models/src/RemoveDeviceCommand.i
+	@echo ... models/src/RemoveDeviceCommand.s
 	@echo ... models/src/User.obj
 	@echo ... models/src/User.i
 	@echo ... models/src/User.s
@@ -740,9 +743,6 @@ help:
 	@echo ... models/src/devices/SmartLight.obj
 	@echo ... models/src/devices/SmartLight.i
 	@echo ... models/src/devices/SmartLight.s
-	@echo ... repositories/src/FileRepository.obj
-	@echo ... repositories/src/FileRepository.i
-	@echo ... repositories/src/FileRepository.s
 	@echo ... services/src/AuthenticationService.obj
 	@echo ... services/src/AuthenticationService.i
 	@echo ... services/src/AuthenticationService.s

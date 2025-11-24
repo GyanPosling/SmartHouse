@@ -1,6 +1,6 @@
 #pragma once
 #include "../../models/include/User.hpp"
-#include "../../repositories/include/TextFileRepository.hpp"
+#include "../../repositories/include/TextFile.hpp"
 #include "../../exceptions/include/Date.hpp"
 #include "../../exceptions/include/FileException.hpp"
 #include <memory>
@@ -10,8 +10,11 @@ using namespace std;
 
 class AuthenticationService {
 private:
-    unique_ptr<TextFileRepository<User>> userRepository;
+    TextFile<User> userFile;
     int nextUserId;
+    User currentUser;
+    bool loggedIn;
+    int getNextUserId();
 
 public:
     AuthenticationService();
@@ -23,9 +26,4 @@ public:
     User getCurrentUser() const;
     void logout();
     
-private:
-    User currentUser;
-    bool loggedIn;
-    int getNextUserId();
 };
-

@@ -1,7 +1,7 @@
 CMakeFiles/smartHouse.dir/services/src/ClimateNormalizer.cpp.obj: \
  D:\programming\C++programming\PnaYAVU\kursavaya\services\src\ClimateNormalizer.cpp \
  D:/programming/C++programming/PnaYAVU/kursavaya/services/include/ClimateNormalizer.hpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/services/include/ClimateData.hpp \
+ D:/programming/C++programming/PnaYAVU/kursavaya/models/include/ClimateData.hpp \
  C:/mingw64/include/c++/14.2.0/string \
  C:/mingw64/include/c++/14.2.0/bits/requires_hosted.h \
  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \

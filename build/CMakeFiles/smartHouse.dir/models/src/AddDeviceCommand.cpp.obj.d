@@ -1,7 +1,10 @@
-CMakeFiles/smartHouse.dir/services/src/AuthenticationService.cpp.obj: \
- D:\programming\C++programming\PnaYAVU\kursavaya\services\src\AuthenticationService.cpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/services/include/AuthenticationService.hpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/models/include/User.hpp \
+CMakeFiles/smartHouse.dir/models/src/AddDeviceCommand.cpp.obj: \
+ D:\programming\C++programming\PnaYAVU\kursavaya\models\src\AddDeviceCommand.cpp \
+ D:/programming/C++programming/PnaYAVU/kursavaya/models/include/DeviceCommands.hpp \
+ D:/programming/C++programming/PnaYAVU/kursavaya/models/include/Command.hpp \
+ D:/programming/C++programming/PnaYAVU/kursavaya/services/include/DeviceService.hpp \
+ D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/SmartDevice.hpp \
+ D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/Device.hpp \
  C:/mingw64/include/c++/14.2.0/string \
  C:/mingw64/include/c++/14.2.0/bits/requires_hosted.h \
  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -144,22 +147,20 @@ CMakeFiles/smartHouse.dir/services/src/AuthenticationService.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/bits/ostream.tcc \
  C:/mingw64/include/c++/14.2.0/istream \
  C:/mingw64/include/c++/14.2.0/bits/istream.tcc \
- C:/mingw64/include/c++/14.2.0/iomanip \
- C:/mingw64/include/c++/14.2.0/locale \
- C:/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.h \
- C:/mingw64/include/c++/14.2.0/ctime \
- C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/time_members.h \
- C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/messages_members.h \
- C:/mingw64/include/c++/14.2.0/bits/codecvt.h \
- C:/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.tcc \
- C:/mingw64/include/c++/14.2.0/bits/locale_conv.h \
- C:/mingw64/include/c++/14.2.0/bits/quoted_string.h \
  C:/mingw64/include/c++/14.2.0/sstream \
  C:/mingw64/include/c++/14.2.0/bits/sstream.tcc \
- D:/programming/C++programming/PnaYAVU/kursavaya/exceptions/include/Date.hpp \
+ C:/mingw64/include/c++/14.2.0/utility \
+ C:/mingw64/include/c++/14.2.0/bits/stl_relops.h \
+ D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/SmartAirConditioner.hpp \
+ D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/SmartHeater.hpp \
+ D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/SmartHumidifier.hpp \
+ D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/SmartDehumidifier.hpp \
+ D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/SmartFan.hpp \
+ D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/SmartLight.hpp \
  D:/programming/C++programming/PnaYAVU/kursavaya/repositories/include/TextFile.hpp \
  D:/programming/C++programming/PnaYAVU/kursavaya/repositories/include/File.hpp \
  C:/mingw64/include/c++/14.2.0/fstream \
+ C:/mingw64/include/c++/14.2.0/bits/codecvt.h \
  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/basic_file.h \
  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++io.h \
  C:/mingw64/include/c++/14.2.0/bits/fstream.tcc \

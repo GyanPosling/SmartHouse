@@ -70,17 +70,34 @@ ostream& operator<<(ostream& os, const SmartDevice& device) {
 istream& operator>>(istream& is, SmartDevice& device) {
     is >> static_cast<Device&>(device);
     
-    bool success = false;
-    int modeInt = 0;
-    while (!success) {
-        try {
-            safeInputInt(is, modeInt, 0, 2, "Enter mode (0-Automatic, 1-Manual, 2-Off): ");
-            success = true;
-        } catch (const InputException& e) {
-            cout << "Error: " << e.what() << endl;
+    bool isCin = (&is == &cin);
+    if (isCin) {
+        bool success = false;
+        while (!success) {
+            try {
+                int modeInt = safeInputNumeric<int>(is, 0, 2, "Enter mode (0-Automatic, 1-Manual, 2-Off): ");
+                device.mode = static_cast<DeviceMode>(modeInt);
+                success = true;
+            } catch (const InputException& e) {
+                cout << "Error: " << e.what() << endl;
+            }
+        }
+    } else {
+        string line;
+        if (getline(is, line)) {
+            stringstream ss(line);
+            string modeStr;
+            if (getline(ss, modeStr)) {
+                try {
+                    device.mode = static_cast<DeviceMode>(stoi(modeStr));
+                } catch (const std::exception&) {
+                    is.setstate(ios::failbit);
+                }
+            } else {
+                is.setstate(ios::failbit);
+            }
         }
     }
-    device.mode = static_cast<DeviceMode>(modeInt);
     
     return is;
 }
@@ -96,18 +113,28 @@ void SmartDevice::printTable() const {
 }
 
 void SmartDevice::updateField(int fieldChoice) {
-    string str;
-    int num;
     if(fieldChoice <= 4) {
         Device::updateField(fieldChoice);
         return;
     }
     
-    switch(fieldChoice) {
-        case 5:
-            safeInputInt(cin, num, 0, 2, "New mode (0-Automatic, 1-Manual, 2-Off): ");
-            setMode(static_cast<DeviceMode>(num));
-            break;
+    bool success = false;
+    while (!success) {
+        try {
+            switch(fieldChoice) {
+                case 5:
+                    {
+                        int num = safeInputNumeric<int>(cin, 0, 2, "New mode (0-Automatic, 1-Manual, 2-Off): ");
+                        setMode(static_cast<DeviceMode>(num));
+                    }
+                    break;
+                default:
+                    // Если поле не найдено, выходим
+                    return;
+            }
+            success = true;
+        } catch (const InputException& e) {
+            cout << "Error: " << e.what() << endl;
+        }
     }
 }
-

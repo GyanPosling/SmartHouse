@@ -28,7 +28,6 @@ void SmartFan::setTolerance(double deviceTolerance) {
 }
 
 
-
 bool SmartFan::operator==(const SmartFan& other) const {
     return SmartDevice::operator==(other);
 }
@@ -52,23 +51,42 @@ ostream& operator<<(ostream& os, const SmartFan& device) {
 istream& operator>>(istream& is, SmartFan& device) {
     is >> static_cast<SmartDevice&>(device);
     
-    bool success = false;
-    while (!success) {
-        try {
-            safeInputDouble(is, device.targetCO2, 0, 10000, "Enter target CO2: ");
-            success = true;
-        } catch (const InputException& e) {
-            cout << "Error: " << e.what() << endl;
+    bool isCin = (&is == &cin);
+    if (isCin) {
+        bool success = false;
+        while (!success) {
+            try {
+                device.targetCO2 = safeInputNumeric<double>(is, 0, 10000, "Enter target CO2: ");
+                success = true;
+            } catch (const InputException& e) {
+                cout << "Error: " << e.what() << endl;
+            }
         }
-    }
-    
-    success = false;
-    while (!success) {
-        try {
-            safeInputDouble(is, device.tolerance, 0, 1000, "Enter tolerance: ");
-            success = true;
-        } catch (const InputException& e) {
-            cout << "Error: " << e.what() << endl;
+        
+        success = false;
+        while (!success) {
+            try {
+                device.tolerance = safeInputNumeric<double>(is, 0, 1000, "Enter tolerance: ");
+                success = true;
+            } catch (const InputException& e) {
+                cout << "Error: " << e.what() << endl;
+            }
+        }
+    } else {
+        string line;
+        if (getline(is, line)) {
+            stringstream ss(line);
+            string targetCO2Str, toleranceStr;
+            if (getline(ss, targetCO2Str, '|') && getline(ss, toleranceStr)) {
+                try {
+                    device.targetCO2 = stod(targetCO2Str);
+                    device.tolerance = stod(toleranceStr);
+                } catch (const std::exception&) {
+                    is.setstate(ios::failbit);
+                }
+            } else {
+                is.setstate(ios::failbit);
+            }
         }
     }
     
@@ -86,21 +104,27 @@ void SmartFan::printTable() const {
 }
 
 void SmartFan::updateField(int fieldChoice) {
-    double num;
     if(fieldChoice <= 5) {
         SmartDevice::updateField(fieldChoice);
         return;
     }
     
-    switch(fieldChoice) {
-        case 6:
-            safeInputDouble(cin, num, 0, 10000, "New target CO2: ");
-            setTargetCO2(num);
-            break;
-        case 7:
-            safeInputDouble(cin, num, 0, 1000, "New tolerance: ");
-            setTolerance(num);
-            break;
+    bool success = false;
+    while (!success) {
+        try {
+            switch(fieldChoice) {
+                case 6:
+                    targetCO2 = safeInputNumeric<double>(cin, 0, 10000, "New target CO2: ");
+                    break;
+                case 7:
+                    tolerance = safeInputNumeric<double>(cin, 0, 1000, "New tolerance: ");
+                    break;
+                default:
+                    return;
+            }
+            success = true;
+        } catch (const InputException& e) {
+            cout << "Error: " << e.what() << endl;
+        }
     }
 }
-

@@ -1,8 +1,6 @@
 CMakeFiles/smartHouse.dir/main/main.cpp.obj: \
  D:\programming\C++programming\PnaYAVU\kursavaya\main\main.cpp \
  D:\programming\C++programming\PnaYAVU\kursavaya\main\Menu.hpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/services/include/AuthenticationService.hpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/models/include/User.hpp \
  C:/mingw64/include/c++/14.2.0/string \
  C:/mingw64/include/c++/14.2.0/bits/requires_hosted.h \
  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -145,6 +143,8 @@ CMakeFiles/smartHouse.dir/main/main.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/bits/ostream.tcc \
  C:/mingw64/include/c++/14.2.0/istream \
  C:/mingw64/include/c++/14.2.0/bits/istream.tcc \
+ D:/programming/C++programming/PnaYAVU/kursavaya/services/include/AuthenticationService.hpp \
+ D:/programming/C++programming/PnaYAVU/kursavaya/models/include/User.hpp \
  C:/mingw64/include/c++/14.2.0/iomanip \
  C:/mingw64/include/c++/14.2.0/locale \
  C:/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.h \
@@ -158,8 +158,8 @@ CMakeFiles/smartHouse.dir/main/main.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/sstream \
  C:/mingw64/include/c++/14.2.0/bits/sstream.tcc \
  D:/programming/C++programming/PnaYAVU/kursavaya/exceptions/include/Date.hpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/repositories/include/TextFileRepository.hpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/repositories/include/FileRepository.hpp \
+ D:/programming/C++programming/PnaYAVU/kursavaya/repositories/include/TextFile.hpp \
+ D:/programming/C++programming/PnaYAVU/kursavaya/repositories/include/File.hpp \
  C:/mingw64/include/c++/14.2.0/fstream \
  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/basic_file.h \
  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++io.h \
@@ -171,7 +171,7 @@ CMakeFiles/smartHouse.dir/main/main.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/bits/stl_vector.h \
  C:/mingw64/include/c++/14.2.0/bits/stl_bvector.h \
  C:/mingw64/include/c++/14.2.0/bits/vector.tcc \
- D:/programming/C++programming/PnaYAVU/kursavaya/repositories/include/TextFileRepository.tpp \
+ D:/programming/C++programming/PnaYAVU/kursavaya/repositories/include/TextFile.tpp \
  C:/mingw64/include/c++/14.2.0/memory \
  C:/mingw64/include/c++/14.2.0/bits/stl_tempbuf.h \
  C:/mingw64/include/c++/14.2.0/bits/stl_raw_storage_iter.h \
@@ -220,7 +220,25 @@ CMakeFiles/smartHouse.dir/main/main.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/bits/erase_if.h \
  C:/mingw64/include/c++/14.2.0/array \
  C:/mingw64/include/c++/14.2.0/compare \
- D:/programming/C++programming/PnaYAVU/kursavaya/services/include/ClimateData.hpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/exceptions/include/InputHandler.hpp \
+ D:/programming/C++programming/PnaYAVU/kursavaya/services/include/ClimateNormalizer.hpp \
+ D:/programming/C++programming/PnaYAVU/kursavaya/models/include/ClimateData.hpp \
+ C:/mingw64/include/c++/14.2.0/cmath \
+ C:/mingw64/x86_64-w64-mingw32/include/math.h \
+ C:/mingw64/include/c++/14.2.0/bits/specfun.h \
  C:/mingw64/include/c++/14.2.0/limits \
+ C:/mingw64/include/c++/14.2.0/tr1/gamma.tcc \
+ C:/mingw64/include/c++/14.2.0/tr1/special_function_util.h \
+ C:/mingw64/include/c++/14.2.0/tr1/bessel_function.tcc \
+ C:/mingw64/include/c++/14.2.0/tr1/beta_function.tcc \
+ C:/mingw64/include/c++/14.2.0/tr1/ell_integral.tcc \
+ C:/mingw64/include/c++/14.2.0/tr1/exp_integral.tcc \
+ C:/mingw64/include/c++/14.2.0/tr1/hypergeometric.tcc \
+ C:/mingw64/include/c++/14.2.0/tr1/legendre_function.tcc \
+ C:/mingw64/include/c++/14.2.0/tr1/modified_bessel_func.tcc \
+ C:/mingw64/include/c++/14.2.0/tr1/poly_hermite.tcc \
+ C:/mingw64/include/c++/14.2.0/tr1/poly_laguerre.tcc \
+ C:/mingw64/include/c++/14.2.0/tr1/riemann_zeta.tcc \
+ D:/programming/C++programming/PnaYAVU/kursavaya/models/include/DeviceCommands.hpp \
+ D:/programming/C++programming/PnaYAVU/kursavaya/models/include/RemoveDeviceCommand.hpp \
+ D:/programming/C++programming/PnaYAVU/kursavaya/exceptions/include/InputHandler.hpp \
  D:/programming/C++programming/PnaYAVU/kursavaya/exceptions/include/InputException.hpp

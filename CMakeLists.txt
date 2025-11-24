@@ -9,7 +9,6 @@ set(EXCEPTIONS_SOURCES
     exceptions/src/Exception.cpp
     exceptions/src/InputException.cpp
     exceptions/src/FileException.cpp
-    exceptions/src/ContainerException.cpp
     exceptions/src/Date.cpp
     exceptions/src/InputHandler.cpp
 )
@@ -17,6 +16,8 @@ set(EXCEPTIONS_SOURCES
 # Модели
 set(MODELS_SOURCES
     models/src/User.cpp
+    models/src/AddDeviceCommand.cpp
+    models/src/RemoveDeviceCommand.cpp
     models/src/devices/Device.cpp
     models/src/devices/SmartDevice.cpp
     models/src/devices/SmartAirConditioner.cpp
@@ -25,11 +26,6 @@ set(MODELS_SOURCES
     models/src/devices/SmartDehumidifier.cpp
     models/src/devices/SmartFan.cpp
     models/src/devices/SmartLight.cpp
-)
-
-# Репозитории
-set(REPOSITORIES_SOURCES
-    repositories/src/FileRepository.cpp
 )
 
 # Сервисы
@@ -45,7 +41,6 @@ set(SERVICES_SOURCES
 set(ALL_SOURCES
     ${EXCEPTIONS_SOURCES}
     ${MODELS_SOURCES}
-    ${REPOSITORIES_SOURCES}
     ${SERVICES_SOURCES}
     main/main.cpp
     main/Menu.cpp
@@ -58,8 +53,7 @@ add_executable(smartHouse ${ALL_SOURCES})
 target_include_directories(smartHouse PRIVATE
     exceptions/include
     models/include
-    repositories/include
+    models/include/devices
     services/include
     main
 )
-

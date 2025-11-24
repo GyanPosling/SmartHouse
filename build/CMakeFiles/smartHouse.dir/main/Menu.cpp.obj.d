@@ -1,8 +1,6 @@
 CMakeFiles/smartHouse.dir/main/Menu.cpp.obj: \
  D:\programming\C++programming\PnaYAVU\kursavaya\main\Menu.cpp \
  D:\programming\C++programming\PnaYAVU\kursavaya\main\Menu.hpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/services/include/AuthenticationService.hpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/models/include/User.hpp \
  C:/mingw64/include/c++/14.2.0/string \
  C:/mingw64/include/c++/14.2.0/bits/requires_hosted.h \
  C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -144,85 +142,4 @@ CMakeFiles/smartHouse.dir/main/Menu.cpp.obj: \
  C:/mingw64/include/c++/14.2.0/bits/basic_ios.tcc \
  C:/mingw64/include/c++/14.2.0/bits/ostream.tcc \
  C:/mingw64/include/c++/14.2.0/istream \
- C:/mingw64/include/c++/14.2.0/bits/istream.tcc \
- C:/mingw64/include/c++/14.2.0/iomanip \
- C:/mingw64/include/c++/14.2.0/locale \
- C:/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.h \
- C:/mingw64/include/c++/14.2.0/ctime \
- C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/time_members.h \
- C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/messages_members.h \
- C:/mingw64/include/c++/14.2.0/bits/codecvt.h \
- C:/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.tcc \
- C:/mingw64/include/c++/14.2.0/bits/locale_conv.h \
- C:/mingw64/include/c++/14.2.0/bits/quoted_string.h \
- C:/mingw64/include/c++/14.2.0/sstream \
- C:/mingw64/include/c++/14.2.0/bits/sstream.tcc \
- D:/programming/C++programming/PnaYAVU/kursavaya/exceptions/include/Date.hpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/repositories/include/TextFileRepository.hpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/repositories/include/FileRepository.hpp \
- C:/mingw64/include/c++/14.2.0/fstream \
- C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/basic_file.h \
- C:/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++io.h \
- C:/mingw64/include/c++/14.2.0/bits/fstream.tcc \
- D:/programming/C++programming/PnaYAVU/kursavaya/exceptions/include/FileException.hpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/exceptions/include/Exception.hpp \
- C:/mingw64/include/c++/14.2.0/vector \
- C:/mingw64/include/c++/14.2.0/bits/stl_uninitialized.h \
- C:/mingw64/include/c++/14.2.0/bits/stl_vector.h \
- C:/mingw64/include/c++/14.2.0/bits/stl_bvector.h \
- C:/mingw64/include/c++/14.2.0/bits/vector.tcc \
- D:/programming/C++programming/PnaYAVU/kursavaya/repositories/include/TextFileRepository.tpp \
- C:/mingw64/include/c++/14.2.0/memory \
- C:/mingw64/include/c++/14.2.0/bits/stl_tempbuf.h \
- C:/mingw64/include/c++/14.2.0/bits/stl_raw_storage_iter.h \
- C:/mingw64/include/c++/14.2.0/bits/align.h \
- C:/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
- C:/mingw64/x86_64-w64-mingw32/include/stdint.h \
- C:/mingw64/include/c++/14.2.0/bits/unique_ptr.h \
- C:/mingw64/include/c++/14.2.0/bits/shared_ptr.h \
- C:/mingw64/include/c++/14.2.0/bits/shared_ptr_base.h \
- C:/mingw64/include/c++/14.2.0/bits/allocated_ptr.h \
- C:/mingw64/include/c++/14.2.0/ext/aligned_buffer.h \
- C:/mingw64/include/c++/14.2.0/ext/concurrence.h \
- C:/mingw64/include/c++/14.2.0/bits/shared_ptr_atomic.h \
- C:/mingw64/include/c++/14.2.0/bits/atomic_base.h \
- C:/mingw64/include/c++/14.2.0/bits/atomic_lockfree_defines.h \
- C:/mingw64/include/c++/14.2.0/backward/auto_ptr.h \
- C:/mingw64/include/c++/14.2.0/pstl/glue_memory_defs.h \
- C:/mingw64/include/c++/14.2.0/pstl/execution_defs.h \
- C:/mingw64/include/c++/14.2.0/algorithm \
- C:/mingw64/include/c++/14.2.0/bits/stl_algo.h \
- C:/mingw64/include/c++/14.2.0/bits/algorithmfwd.h \
- C:/mingw64/include/c++/14.2.0/bits/stl_heap.h \
- C:/mingw64/include/c++/14.2.0/bits/uniform_int_dist.h \
- C:/mingw64/include/c++/14.2.0/pstl/glue_algorithm_defs.h \
- D:/programming/C++programming/PnaYAVU/kursavaya/services/include/DeviceService.hpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/SmartDevice.hpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/Device.hpp \
- C:/mingw64/include/c++/14.2.0/utility \
- C:/mingw64/include/c++/14.2.0/bits/stl_relops.h \
- D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/SmartAirConditioner.hpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/SmartHeater.hpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/SmartHumidifier.hpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/SmartDehumidifier.hpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/SmartFan.hpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/models/include/devices/SmartLight.hpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/services/include/CommandHistory.hpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/models/include/Command.hpp \
- C:/mingw64/include/c++/14.2.0/functional \
- C:/mingw64/include/c++/14.2.0/bits/std_function.h \
- C:/mingw64/include/c++/14.2.0/unordered_map \
- C:/mingw64/include/c++/14.2.0/bits/unordered_map.h \
- C:/mingw64/include/c++/14.2.0/bits/hashtable.h \
- C:/mingw64/include/c++/14.2.0/bits/hashtable_policy.h \
- C:/mingw64/include/c++/14.2.0/bits/enable_special_members.h \
- C:/mingw64/include/c++/14.2.0/bits/node_handle.h \
- C:/mingw64/include/c++/14.2.0/bits/erase_if.h \
- C:/mingw64/include/c++/14.2.0/array \
- C:/mingw64/include/c++/14.2.0/compare \
- D:/programming/C++programming/PnaYAVU/kursavaya/services/include/ClimateData.hpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/services/include/ClimateNormalizer.hpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/models/include/DeviceCommands.hpp \
- D:/programming/C++programming/PnaYAVU/kursavaya/exceptions/include/InputHandler.hpp \
- C:/mingw64/include/c++/14.2.0/limits \
- D:/programming/C++programming/PnaYAVU/kursavaya/exceptions/include/InputException.hpp
+ C:/mingw64/include/c++/14.2.0/bits/istream.tcc
