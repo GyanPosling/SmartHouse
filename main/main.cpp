@@ -27,7 +27,6 @@ CommandHistory commandHistory;
 ClimateData currentClimateData;
 bool loggedIn = false;
 
-// ====================== CLIMATE DATA INPUT ======================
 ClimateData loadClimateData() {
     cout << "\n=== CLIMATE DATA SETUP ===\n";
     string options[] = { "1. Yes", "2. No" };
@@ -38,36 +37,44 @@ ClimateData loadClimateData() {
 
     if (choice == 1) {
         string filename = safeGetLine(cin, Language::ENGLISH, "Enter filename: ");
-        TextFile<ClimateData> file(filename);
-        auto records = file.readAllRecords();
 
-        if (!records.empty()) {
-            data = *records[0];
+        try {
+            TextFile<ClimateData> file(filename);
+            auto records = file.readAllRecords();
+
+            if (!records.empty()) {
+                data = *records[0];
+                for (auto ptr : records) delete ptr;
+
+                cout << fixed << setprecision(2);
+                cout << "\nData successfully loaded from '" << filename << "':\n";
+                cout << "Temperature: " << data.getTemperature() << " degrees C\n";
+                cout << "Humidity: " << data.getHumidity() << "%\n";
+                cout << "CO2: " << data.getCO2() << " ppm\n";
+                return data;
+            }
+
             for (auto ptr : records) delete ptr;
+            cout << "File '" << filename << "' is empty. Switching to manual input.\n";
 
-            cout << fixed << setprecision(2);
-            cout << "\nData successfully loaded:\n";
-            cout << "Temperature: " << data.getTemperature() << " degrees C\n";
-            cout << "Humidity: " << data.getHumidity() << "%\n";
-            cout << "CO2: " << data.getCO2() << " ppm\n";
-            return data;
+        } catch (const FileException& e) {
+            cout << "File not found or cannot be read: " << filename << "\n";
+            cout << "Switching to manual input.\n";
         }
-        for (auto ptr : records) delete ptr;
-        cout << "File is empty or not found. Switching to manual input.\n";
     }
 
     cout << "\nEnter climate indicators manually:\n";
     double temp = safeInputNumeric<double>(cin, -100.0, 100.0, "Temperature (degrees C): ");
-    double hum = safeInputNumeric<double>(cin, 0.0, 100.0, "Humidity (%): ");
-    double co2 = safeInputNumeric<double>(cin, 0.0, 10000.0, "CO2 level (ppm): ");
+    double hum  = safeInputNumeric<double>(cin,  0.0,  100.0, "Humidity (%): ");
+    double co2  = safeInputNumeric<double>(cin,  0.0, 10000.0, "CO2 level (ppm): ");
 
     data.setTemperature(temp);
     data.setHumidity(hum);
     data.setCO2(co2);
+
     return data;
 }
 
-// ====================== AUTH ======================
 void registerUser() {
     cout << "\n=== REGISTRATION ===\n";
     string username = safeGetLine(cin, Language::ENGLISH, "Enter username: ");
@@ -108,7 +115,6 @@ void loginUser() {
     }
 }
 
-// ====================== DEVICES ======================
 void viewAllDevices() {
     cout << "\n=== ALL DEVICES ===\n";
     auto devices = deviceService.getAllDevices();
@@ -192,14 +198,12 @@ void modifyDevice() {
     int modifyMode = safeInputNumeric<int>(cin, 1, 2, "Choose (1-2): ");
 
     if (modifyMode == 1) {
-        // Полная замена через оператор >>
         cin >> *deviceToModify;
         deviceService.updateDevice(targetId, deviceToModify);
         cout << "Device fully updated!\n";
         return;
     }
 
-    // === Изменение конкретного поля ===
     SmartAirConditioner* ac = dynamic_cast<SmartAirConditioner*>(deviceToModify.get());
     SmartHeater* heater = dynamic_cast<SmartHeater*>(deviceToModify.get());
     SmartHumidifier* humidifier = dynamic_cast<SmartHumidifier*>(deviceToModify.get());
@@ -243,7 +247,7 @@ void modifyDevice() {
         int field = safeInputNumeric<int>(cin, 1, 6, "Field number: ");
         deviceToModify->updateField(field);
     }
-    else { // базовый SmartDevice
+    else {
         string fields[] = { "1. ID", "2. Name", "3. Location", "4. Power Level", "5. Mode" };
         Menu::draw("Select field to change", fields, 5);
         int field = safeInputNumeric<int>(cin, 1, 5, "Field number: ");
@@ -383,9 +387,7 @@ void normalizeClimate() {
     currentClimateData = normalized;
 }
 
-// ====================== MAIN ======================
-int main() {
-    setlocale(LC_ALL, "Russian");
+void run(){
     currentClimateData = loadClimateData();
 
     while (true) {
@@ -439,5 +441,15 @@ int main() {
         }
         cout << "\n";
     }
+}
+
+int main() {
+    setlocale(LC_ALL, "Russian");
+    int restart;
+    do{
+        run();
+        restart = safeInputNumeric<int>(cin, 0, 1, "Do you want to restart project(0 - no / 1 - yes ): ");
+        
+    }while(restart != 0);
     return 0;
 }

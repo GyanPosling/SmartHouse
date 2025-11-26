@@ -9,7 +9,7 @@ void TextFile<T>::clearFile() const
     ofstream file(filename, ios::out | ios::trunc);
     if (!file.is_open())
     {
-        throw FileException(60, "Не удалось очистить файл: " + filename);
+        throw FileException(60, "Error clear file: " + filename);
     }
     file.close();
 }
@@ -20,7 +20,7 @@ void TextFile<T>::openFile(fstream& file, ios_base::openmode mode) const
     file.open(filename, mode);
     if (!file.is_open())
     {
-        throw FileException(61, "Не удалось открыть файл: " + filename);
+        throw FileException(61, "Error open file: " + filename);
     }
 }
 

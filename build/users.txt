@@ -1,6 +1,2 @@
-2|a|a|01/01/1900
-3|anton|password|12/12/2000
-4|avelina|avelina|14/12/2006
-5|zxc|zxc|12/12/2006
-6|hello|qweqwe|12/12/2000
+7|newUser|userPassword|12/12/2007
 

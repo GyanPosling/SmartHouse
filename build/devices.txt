@@ -1,1 +1,3 @@
-Heater|2|heater|kitchen|100|0|25|5
+Heater|34|Conditioner|kitcen|100|0|25|5
+Humidifier|2|Humudifer|for guest|56|0|30|5
+AirConditioner|3|Air|Zal|78|0|25|5
