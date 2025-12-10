@@ -1,23 +1,27 @@
-# Build directories
+# === Editor / IDE ===
+.vscode/
+.cache/
+
+# === Build directories ===
 build/
+builds/
 build-*/
 cmake-build-*/
 
-# Qt Creator
-*.user
-*.user.*
-*.pro.user
-*.pro.user.*
-*.autosave
-
-# CMake
+# CMake generated files
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
 Makefile
 compile_commands.json
 
-# qmake
+# Qt / MOC / UIC / RCC generated files
+moc_*.cpp
+moc_*.h
+ui_*.h
+qrc_*.cpp
+
+# Object files and binaries
 *.o
 *.obj
 *.dll
@@ -28,24 +32,19 @@ compile_commands.json
 *.exp
 *.pdb
 
-# Qt generated
-moc_*.cpp
-moc_*.h
-ui_*.h
-qrc_*.cpp
-
-# Logs and temporary files
+# Temporary files
 *.log
 *.tmp
-*.temp
 *.bak
+*.temp
 *~
 *.swp
 
-# OS specific
+# OS metadata
 .DS_Store
 Thumbs.db
 
-# IDEs
-.vscode/
+# IDE-specific (CLion/QtCreator)
 .idea/
+*.pro.user*
+*.creator.user*
