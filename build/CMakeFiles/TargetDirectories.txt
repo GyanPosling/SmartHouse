@@ -1,3 +1,0 @@
-D:/programming/C++programming/PnaYAVU/kursavaya/build/CMakeFiles/smartHouse.dir
-D:/programming/C++programming/PnaYAVU/kursavaya/build/CMakeFiles/edit_cache.dir
-D:/programming/C++programming/PnaYAVU/kursavaya/build/CMakeFiles/rebuild_cache.dir

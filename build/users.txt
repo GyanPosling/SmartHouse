@@ -1,2 +1,0 @@
-7|newUser|userPassword|12/12/2007
-

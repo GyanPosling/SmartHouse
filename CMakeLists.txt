@@ -3,6 +3,11 @@ project(SmartHome CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
+
+find_package(Qt6 6.2 COMPONENTS Widgets REQUIRED)
 
 # Исключения
 set(EXCEPTIONS_SOURCES
@@ -46,6 +51,12 @@ set(ALL_SOURCES
     main/Menu.cpp
 )
 
+set(GUI_SOURCES
+    gui/main.cpp
+    gui/MainWindow.cpp
+    gui/DeviceDialog.cpp
+)
+
 # Исполняемый файл
 add_executable(smartHouse ${ALL_SOURCES})
 
@@ -57,3 +68,21 @@ target_include_directories(smartHouse PRIVATE
     services/include
     main
 )
+
+add_executable(smartHouse_gui
+    ${EXCEPTIONS_SOURCES}
+    ${MODELS_SOURCES}
+    ${SERVICES_SOURCES}
+    ${GUI_SOURCES}
+)
+
+target_include_directories(smartHouse_gui PRIVATE
+    exceptions/include
+    models/include
+    models/include/devices
+    services/include
+    repositories/include
+    gui
+)
+
+target_link_libraries(smartHouse_gui PRIVATE Qt6::Widgets)
