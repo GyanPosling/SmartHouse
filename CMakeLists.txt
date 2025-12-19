@@ -35,6 +35,7 @@ set(MODELS_SOURCES
 
 # Сервисы
 set(SERVICES_SOURCES
+    templates/List.tpp
     services/src/AuthenticationService.cpp
     services/src/DeviceService.cpp
     services/src/CommandHistory.cpp
@@ -82,6 +83,7 @@ target_include_directories(smartHouse_gui PRIVATE
     models/include/devices
     services/include
     repositories/include
+    template/include
     gui
 )
 

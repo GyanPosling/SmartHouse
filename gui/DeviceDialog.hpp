@@ -29,13 +29,6 @@ struct DeviceFormData {
 
 class DeviceDialog : public QDialog {
     Q_OBJECT
-
-public:
-    explicit DeviceDialog(QWidget* parent = nullptr);
-
-    DeviceFormData data() const;
-    void fillFromDevice(const std::shared_ptr<SmartDevice>& device);
-
 private slots:
     void updateFields(int index);
 
@@ -51,4 +44,12 @@ private:
     QSpinBox* turnOffSpin;
     QLabel* primaryLabel;
     QLabel* toleranceLabel;
+
+public:
+    explicit DeviceDialog(QWidget* parent = nullptr);
+
+    DeviceFormData data() const;
+    void fillFromDevice(const std::shared_ptr<SmartDevice>& device);
+
+
 };
