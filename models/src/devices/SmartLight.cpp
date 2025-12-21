@@ -1,4 +1,4 @@
-#include "../../include/devices/SmartLight.hpp"
+﻿#include "../../include/devices/SmartLight.hpp"
 #include "../../exceptions/include/InputHandler.hpp"
 #include <iomanip>
 using namespace std;
@@ -59,7 +59,7 @@ istream& operator>>(istream& is, SmartLight& device) {
             if (getline(ss, turnOffHourStr)) {
                 try {
                     device.turnOffHour = stoi(turnOffHourStr);
-                } catch (const std::exception&) {
+                } catch (const exception&) {
                     is.setstate(ios::failbit);
                 }
             } else {

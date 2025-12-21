@@ -4,7 +4,7 @@ AuthenticationService::AuthenticationService()
     : userFile("users.txt"), nextUserId(1), loggedIn(false) {
     try {
         auto users = userFile.readAllRecords();
-        if (!users.empty()) {
+        if (!users.isEmpty()) {
             int maxId = 0;
             for (const auto& user : users) {
                 if (user->getId() > maxId) {

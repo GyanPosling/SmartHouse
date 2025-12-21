@@ -1,6 +1,5 @@
 #include "../include/DeviceService.hpp"
 #include "../exceptions/include/FileException.hpp"
-#include <algorithm>
 #include <fstream>
 #include <sstream>
 
@@ -9,46 +8,65 @@ DeviceService::DeviceService()
     loadAllDevices();
 }
 
-void DeviceService::addDevice(shared_ptr<SmartDevice> device) {
+DeviceService::~DeviceService() {
+    deleteAll();
+}
+
+void DeviceService::deleteAll() {
+    while (!devices.isEmpty()) {
+        SmartDevice* toDelete = devices.popFront();
+        delete toDelete;
+    }
+}
+
+void DeviceService::addDevice(SmartDevice* device) {
     if (device == nullptr) {
         throw FileException(100, "Attempt to add empty device");
     }
-    devices.push_back(device);
+    devices.pushBack(device);
     saveAllDevices();
 }
 
 void DeviceService::removeDevice(int deviceId) {
-    auto it = remove_if(devices.begin(), devices.end(),
-        [deviceId](const shared_ptr<SmartDevice>& d) {
-            return d->getId() == deviceId;
-        });
-    
-    if (it == devices.end()) {
-        throw FileException(101, "Device with ID " + to_string(deviceId) + " not found");
-    }
-    
-    devices.erase(it, devices.end());
-    saveAllDevices();
-}
-
-void DeviceService::updateDevice(int deviceId, shared_ptr<SmartDevice> updatedDevice) {
     bool found = false;
-    for (size_t i = 0; i < devices.size(); ++i) {
-        if (devices[i]->getId() == deviceId) {
-            devices[i] = updatedDevice;
+    for (auto it = devices.begin(); it != devices.end(); ++it) {
+        SmartDevice* current = *it;
+        if (current->getId() == deviceId) {
+            delete current;
+            devices.removeAt(it);
             found = true;
             break;
         }
     }
     
     if (!found) {
+        throw FileException(101, "Device with ID " + to_string(deviceId) + " not found");
+    }
+    
+    saveAllDevices();
+}
+
+void DeviceService::updateDevice(int deviceId, SmartDevice* updatedDevice) {
+    bool found = false;
+    for (auto it = devices.begin(); it != devices.end(); ++it) {
+        SmartDevice* current = *it;
+        if (current->getId() == deviceId) {
+            delete current;
+            *it = updatedDevice;
+            found = true;
+            break;
+        }
+    }
+    
+    if (!found) {
+        delete updatedDevice;
         throw FileException(103, "Device with ID " + to_string(deviceId) + " not found");
     }
     
     saveAllDevices();
 }
 
-shared_ptr<SmartDevice> DeviceService::getDeviceById(int deviceId) {
+SmartDevice* DeviceService::getDeviceById(int deviceId) {
     for (const auto& device : devices) {
         if (device->getId() == deviceId) {
             return device;
@@ -57,48 +75,48 @@ shared_ptr<SmartDevice> DeviceService::getDeviceById(int deviceId) {
     return nullptr;
 }
 
-const vector<shared_ptr<SmartDevice>> DeviceService::getAllDevices() const{
+Deque<SmartDevice*> DeviceService::getAllDevices() const{
     return devices;
 }
 
-vector<shared_ptr<SmartDevice>> DeviceService::searchDevices(int option) {
+Deque<SmartDevice*> DeviceService::searchDevices(int option) {
     string searchString;
     int searchInt = 0;
     
-    shared_ptr<SmartDevice> searchObj = make_shared<SmartDevice>();
+    SmartDevice searchObj;
     
     if (option == 1) {
         cout << "Enter ID to search: ";
         cin >> searchInt;
-        searchObj->setId(searchInt);
+        searchObj.setId(searchInt);
         Device::setSearchMode(DeviceSearchField::ID);
     } else if (option == 2) {
         cout << "Enter device name to search: ";
         cin >> searchString;
-        searchObj->setDeviceName(searchString);
+        searchObj.setDeviceName(searchString);
         Device::setSearchMode(DeviceSearchField::DEVICE_NAME);
     } else if (option == 3) {
         cout << "Enter location to search: ";
         cin >> searchString;
-        searchObj->setLocation(searchString);
+        searchObj.setLocation(searchString);
         Device::setSearchMode(DeviceSearchField::LOCATION);
     } else if (option == 4) {
         cout << "Enter power level to search: ";
         cin >> searchInt;
-        searchObj->setPowerLevel(searchInt);
+        searchObj.setPowerLevel(searchInt);
         Device::setSearchMode(DeviceSearchField::POWER_LEVEL);
     } else if (option == 5) {
         cout << "Enter mode to search (0-Automatic, 1-Manual, 2-Off): ";
         cin >> searchInt;
-        searchObj->setMode(static_cast<DeviceMode>(searchInt));
+        searchObj.setMode(static_cast<DeviceMode>(searchInt));
         Device::setSearchMode(DeviceSearchField::MODE);
     }
     
-    vector<shared_ptr<SmartDevice>> searchResults;
+    Deque<SmartDevice*> searchResults;
     
     for (const auto& device : devices) {
-        if (*device == *searchObj) {
-            searchResults.push_back(device);
+        if (*device == searchObj) {
+            searchResults.pushBack(device);
         }
     }
     
@@ -108,7 +126,7 @@ vector<shared_ptr<SmartDevice>> DeviceService::searchDevices(int option) {
 }
 
 void DeviceService::sortDevices(int option) {
-    if (devices.empty()) {
+    if (devices.isEmpty()) {
         cout << "No devices to sort." << endl;
         return;
     }
@@ -140,10 +158,9 @@ void DeviceService::sortDevices(int option) {
             break;
     }
     
-    sort(devices.begin(), devices.end(),
-        [](const shared_ptr<SmartDevice>& a, const shared_ptr<SmartDevice>& b) {
-            return *a < *b;
-        });
+    devices.sortDeque([](SmartDevice* a, SmartDevice* b) {
+        return *a < *b;
+    });
     
     Device::setSearchMode(DeviceSearchField::ID);
     
@@ -157,24 +174,24 @@ void DeviceService::saveAllDevices() {
         ostringstream oss;
         string deviceType;
         
-        if (dynamic_cast<SmartAirConditioner*>(device.get())) {
+        if (dynamic_cast<SmartAirConditioner*>(device)) {
             deviceType = "AirConditioner";
-            oss << *dynamic_cast<SmartAirConditioner*>(device.get());
-        } else if (dynamic_cast<SmartHeater*>(device.get())) {
+            oss << *dynamic_cast<SmartAirConditioner*>(device);
+        } else if (dynamic_cast<SmartHeater*>(device)) {
             deviceType = "Heater";
-            oss << *dynamic_cast<SmartHeater*>(device.get());
-        } else if (dynamic_cast<SmartHumidifier*>(device.get())) {
+            oss << *dynamic_cast<SmartHeater*>(device);
+        } else if (dynamic_cast<SmartHumidifier*>(device)) {
             deviceType = "Humidifier";
-            oss << *dynamic_cast<SmartHumidifier*>(device.get());
-        } else if (dynamic_cast<SmartDehumidifier*>(device.get())) {
+            oss << *dynamic_cast<SmartHumidifier*>(device);
+        } else if (dynamic_cast<SmartDehumidifier*>(device)) {
             deviceType = "Dehumidifier";
-            oss << *dynamic_cast<SmartDehumidifier*>(device.get());
-        } else if (dynamic_cast<SmartFan*>(device.get())) {
+            oss << *dynamic_cast<SmartDehumidifier*>(device);
+        } else if (dynamic_cast<SmartFan*>(device)) {
             deviceType = "Fan";
-            oss << *dynamic_cast<SmartFan*>(device.get());
-        } else if (dynamic_cast<SmartLight*>(device.get())) {
+            oss << *dynamic_cast<SmartFan*>(device);
+        } else if (dynamic_cast<SmartLight*>(device)) {
             deviceType = "Light";
-            oss << *dynamic_cast<SmartLight*>(device.get());
+            oss << *dynamic_cast<SmartLight*>(device);
         }
         
         if (!deviceType.empty()) {
@@ -185,58 +202,67 @@ void DeviceService::saveAllDevices() {
 }
 
 void DeviceService::loadAllDevices() {
+    deleteAll();
     auto records = deviceFile.readAllRecords();
     
     for (const auto& record : records) {
-        if (record->empty()) continue;
+        if (record->empty()) {
+            delete record;
+            continue;
+        }
         
         string line = *record;
         size_t pos = line.find('|');
-        if (pos == string::npos) continue;
+        if (pos == string::npos) {
+            delete record;
+            continue;
+        }
         
         string deviceType = line.substr(0, pos);
         string deviceData = line.substr(pos + 1);
         
-        shared_ptr<SmartDevice> device;
+        SmartDevice* device = nullptr;
         
         try {
             if (deviceType == "AirConditioner") {
-                auto ac = make_shared<SmartAirConditioner>();
+                auto ac = new SmartAirConditioner();
                 istringstream iss(deviceData);
                 iss >> *ac;
                 device = ac;
             } else if (deviceType == "Heater") {
-                auto heater = make_shared<SmartHeater>();
+                auto heater = new SmartHeater();
                 istringstream iss(deviceData);
                 iss >> *heater;
                 device = heater;
             } else if (deviceType == "Humidifier") {
-                auto humidifier = make_shared<SmartHumidifier>();
+                auto humidifier = new SmartHumidifier();
                 istringstream iss(deviceData);
                 iss >> *humidifier;
                 device = humidifier;
             } else if (deviceType == "Dehumidifier") {
-                auto dehumidifier = make_shared<SmartDehumidifier>();
+                auto dehumidifier = new SmartDehumidifier();
                 istringstream iss(deviceData);
                 iss >> *dehumidifier;
                 device = dehumidifier;
             } else if (deviceType == "Fan") {
-                auto fan = make_shared<SmartFan>();
+                auto fan = new SmartFan();
                 istringstream iss(deviceData);
                 iss >> *fan;
                 device = fan;
             } else if (deviceType == "Light") {
-                auto light = make_shared<SmartLight>();
+                auto light = new SmartLight();
                 istringstream iss(deviceData);
                 iss >> *light;
                 device = light;
             }
         } catch (...) {
+            delete device;
+            delete record;
             continue;
         }
         
         if (device) {
-            devices.push_back(device);
+            devices.pushBack(device);
         }
         delete record;
     }

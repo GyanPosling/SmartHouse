@@ -1,15 +1,15 @@
-#include "../include/User.hpp"
+﻿#include "../include/User.hpp"
 #include "../../exceptions/include/InputHandler.hpp"
 #include <sstream>
-#include <vector>
 #include <stdexcept>
+using namespace std;
 
 User::User() : id(0), username(""), password(""), birthday() {}
 
-User::User(int userId, const std::string& name, const std::string& userPassword)
+User::User(int userId, const string& name, const string& userPassword)
     : id(userId), username(name), password(userPassword), birthday() {}
 
-User::User(int userId, const std::string& name, const std::string& userPassword, const Date& userBirthday)
+User::User(int userId, const string& name, const string& userPassword, const Date& userBirthday)
     : id(userId), username(name), password(userPassword), birthday(userBirthday) {}
 
 User::~User() {}
@@ -35,13 +35,13 @@ bool User::operator<(const User& other) const {
     return this->id < other.id;
 }
 
-std::ostream& operator<<(std::ostream& os, const User& user) {
+ostream& operator<<(ostream& os, const User& user) {
     os << user.id << "|" << user.username << "|" << user.password << "|" << user.birthday << "\n";
     return os;
 }
 
-std::istream& operator>>(std::istream& is, User& user) {
-    bool isCin = (&is == &std::cin);
+istream& operator>>(istream& is, User& user) {
+    bool isCin = (&is == &cin);
     
     if (isCin) {
         bool success = false;
@@ -50,7 +50,7 @@ std::istream& operator>>(std::istream& is, User& user) {
                 user.id = safeInputNumeric<int>(is, 0, 999999, "Enter user ID: ");
                 success = true;
             } catch (const InputException& e) {
-                std::cout << "Error: " << e.what() << std::endl;
+                cout << "Error: " << e.what() << endl;
             }
         }
         
@@ -60,13 +60,13 @@ std::istream& operator>>(std::istream& is, User& user) {
                 user.username = safeGetLine(is, Language::ENGLISH, "Enter username: ");
                 success = true;
             } catch (const InputException& e) {
-                std::cout << "Error: " << e.what() << std::endl;
+                cout << "Error: " << e.what() << endl;
             }
         }
         
-        std::cout << "Enter password: ";
-        std::string passwordInput;
-        std::getline(is, passwordInput);
+        cout << "Enter password: ";
+        string passwordInput;
+        getline(is, passwordInput);
         if (passwordInput.empty()) {
             throw InputException(18, "Password cannot be empty.");
         }
@@ -78,32 +78,32 @@ std::istream& operator>>(std::istream& is, User& user) {
                 user.birthday = safeInputDate(is, "DD/MM/YYYY", "Enter birthday: ");
                 success = true;
             } catch (const InputException& e) {
-                std::cout << "Error: " << e.what() << std::endl;
+                cout << "Error: " << e.what() << endl;
             }
         }
     } else {
-        std::string line;
-        if (std::getline(is, line)) {
+        string line;
+        if (getline(is, line)) {
             if (line.empty()) {
-                is.setstate(std::ios::failbit);
+                is.setstate(ios::failbit);
                 return is;
             }
             
-            std::stringstream ss(line);
-            std::string idStr, username, password, birthdayStr;
+            stringstream ss(line);
+            string idStr, username, password, birthdayStr;
             
-            if (std::getline(ss, idStr, '|') &&
-                std::getline(ss, username, '|') &&
-                std::getline(ss, password, '|') &&
-                std::getline(ss, birthdayStr))
+            if (getline(ss, idStr, '|') &&
+                getline(ss, username, '|') &&
+                getline(ss, password, '|') &&
+                getline(ss, birthdayStr))
             {
                 try {
-                    user.id = std::stoi(idStr);
+                    user.id = stoi(idStr);
                     user.username = username;
                     user.password = password;
                     
                     if (!birthdayStr.empty()) {
-                        std::stringstream dateStream(birthdayStr);
+                        stringstream dateStream(birthdayStr);
                         int day, month, year;
                         char separator1, separator2;
                         
@@ -115,11 +115,11 @@ std::istream& operator>>(std::istream& is, User& user) {
                     } else {
                         user.birthday = Date();
                     }
-                } catch (const std::exception&) {
-                    is.setstate(std::ios::failbit);
+                } catch (const exception&) {
+                    is.setstate(ios::failbit);
                 }
             } else {
-                is.setstate(std::ios::failbit);
+                is.setstate(ios::failbit);
             }
         }
     }
@@ -135,19 +135,19 @@ void User::setId(int userId) {
     id = userId;
 }
 
-std::string User::getUsername() const {
+string User::getUsername() const {
     return username;
 }
 
-void User::setUsername(const std::string& name) {
+void User::setUsername(const string& name) {
     username = name;
 }
 
-std::string User::getPassword() const {
+string User::getPassword() const {
     return password;
 }
 
-void User::setPassword(const std::string& userPassword) {
+void User::setPassword(const string& userPassword) {
     password = userPassword;
 }
 
@@ -159,16 +159,17 @@ void User::setBirthday(const Date& userBirthday) {
     birthday = userBirthday;
 }
 
-bool User::checkPassword(const std::string& userPassword) const {
+bool User::checkPassword(const string& userPassword) const {
     return password == userPassword;
 }
 
 void User::printHeader() const {
-    std::cout << std::left;
-    std::cout << "| " << std::setw(5) << "ID" << " | " << std::setw(15) << "Username" << " | " << std::setw(15) << "Password" << " | " << std::setw(12) << "Birthday" << " |" << std::endl;
+    cout << left;
+    cout << "| " << setw(5) << "ID" << " | " << setw(15) << "Username" << " | " << setw(15) << "Password" << " | " << setw(12) << "Birthday" << " |" << endl;
 }
 
 void User::printTable() const {
-    std::cout << std::left;
-    std::cout << "| " << std::setw(5) << id << " | " << std::setw(15) << username << " | " << std::setw(15) << password << " | " << std::setw(12) << birthday << " |" << std::endl;
+    cout << left;
+    cout << "| " << setw(5) << id << " | " << setw(15) << username << " | " << setw(15) << password << " | " << setw(12) << birthday << " |" << endl;
 }
+

@@ -1,4 +1,4 @@
-#include "../../include/devices/Device.hpp"
+﻿#include "../../include/devices/Device.hpp"
 #include "../../exceptions/include/InputHandler.hpp"
 #include <iomanip>
 using namespace std;
@@ -203,7 +203,7 @@ istream& operator>>(istream& is, Device& device) {
                     device.deviceName = deviceNameStr;
                     device.location = locationStr;
                     device.powerLevel = stoi(powerLevelStr);
-                } catch (const std::exception&) {
+                } catch (const exception&) {
                     is.setstate(ios::failbit);
                 }
             } else {
@@ -242,7 +242,7 @@ void Device::updateField(int fieldChoice) {
                     powerLevel = safeInputNumeric<int>(cin, 0, 100, "New power level (0-100): ");
                     break;
                 default:
-                    // Если поле не найдено, выходим
+                    // Р•СЃР»Рё РїРѕР»Рµ РЅРµ РЅР°Р№РґРµРЅРѕ, РІС‹С…РѕРґРёРј
                     return;
             }
             success = true;

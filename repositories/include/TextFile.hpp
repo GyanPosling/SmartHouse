@@ -1,8 +1,8 @@
 #pragma once
 #include "File.hpp"
+#include "../../templates/Deque.hpp"
 #include <iostream>
 #include <fstream>
-#include <vector>
 #include <string>
 
 using namespace std;
@@ -16,7 +16,7 @@ public:
 
     void saveRecord(const T& object);
     T* readRecord();
-    vector<T*> readAllRecords();
+    Deque<T*> readAllRecords();
     void clearFile() const;
     void openFile(fstream& file, ios_base::openmode mode) const;
 };

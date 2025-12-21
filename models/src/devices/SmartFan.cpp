@@ -1,4 +1,4 @@
-#include "../../include/devices/SmartFan.hpp"
+﻿#include "../../include/devices/SmartFan.hpp"
 #include "../../exceptions/include/InputHandler.hpp"
 #include <iomanip>
 using namespace std;
@@ -40,7 +40,7 @@ string SmartFan::getDeviceInfo() const {
     return SmartDevice::getDeviceInfo() + 
            ", Type: Fan" + 
            ", Target CO2: " + to_string(targetCO2) + " ppm" +
-           ", Tolerance: ±" + to_string(tolerance) + " ppm";
+           ", Tolerance: В±" + to_string(tolerance) + " ppm";
 }
 
 ostream& operator<<(ostream& os, const SmartFan& device) {
@@ -81,7 +81,7 @@ istream& operator>>(istream& is, SmartFan& device) {
                 try {
                     device.targetCO2 = stod(targetCO2Str);
                     device.tolerance = stod(toleranceStr);
-                } catch (const std::exception&) {
+                } catch (const exception&) {
                     is.setstate(ios::failbit);
                 }
             } else {

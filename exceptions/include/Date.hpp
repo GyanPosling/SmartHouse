@@ -1,6 +1,7 @@
-#pragma once
+﻿#pragma once
 #include <iostream>
 #include <string>
+using namespace std;
 
 struct Date {
     int day;
@@ -11,12 +12,13 @@ struct Date {
     Date(int d, int m, int y);
     
     bool isValid() const;
-    std::string toString() const;
+    string toString() const;
     
-    friend std::ostream& operator<<(std::ostream& os, const Date& date);
-    friend std::istream& operator>>(std::istream& is, Date& date);
+    friend ostream& operator<<(ostream& os, const Date& date);
+    friend istream& operator>>(istream& is, Date& date);
     
     bool operator==(const Date& other) const;
     bool operator<(const Date& other) const;
 };
+
 

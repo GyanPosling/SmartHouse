@@ -1,6 +1,7 @@
-#include "../include/Date.hpp"
+﻿#include "../include/Date.hpp"
 #include <sstream>
 #include <iomanip>
+using namespace std;
 
 Date::Date() : day(1), month(1), year(1900) {}
 
@@ -19,19 +20,19 @@ bool Date::isValid() const {
     return day <= daysInMonth[month - 1];
 }
 
-std::string Date::toString() const {
-    std::ostringstream oss;
-    oss << std::setfill('0') << std::setw(2) << day << "/"
-        << std::setw(2) << month << "/" << year;
+string Date::toString() const {
+    ostringstream oss;
+    oss << setfill('0') << setw(2) << day << "/"
+        << setw(2) << month << "/" << year;
     return oss.str();
 }
 
-std::ostream& operator<<(std::ostream& os, const Date& date) {
+ostream& operator<<(ostream& os, const Date& date) {
     os << date.toString();
     return os;
 }
 
-std::istream& operator>>(std::istream& is, Date& date) {
+istream& operator>>(istream& is, Date& date) {
     char separator1, separator2;
     is >> date.day >> separator1 >> date.month >> separator2 >> date.year;
     return is;
@@ -46,4 +47,5 @@ bool Date::operator<(const Date& other) const {
     if (month != other.month) return month < other.month;
     return day < other.day;
 }
+
 

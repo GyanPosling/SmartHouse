@@ -1,23 +1,24 @@
 #pragma once
 #include "../../models/include/Command.hpp"
-#include <vector>
-#include <functional>
-#include <memory>
+#include <stack>
+
+using namespace std;
 
 class CommandHistory {
 private:
-    std::vector<std::unique_ptr<Command>> history;
-    size_t currentIndex;
-    static const size_t MAX_HISTORY_SIZE = 50;
+    stack<Command*> undoStack;
+    stack<Command*> redoStack;
+    
+    void clearStack(stack<Command*>& s);
 
 public:
     CommandHistory();
+    ~CommandHistory();
     
-    void executeCommand(std::unique_ptr<Command> command);
+    void executeCommand(Command* command);
     void undo();
     void redo();
     bool canUndo() const;
     bool canRedo() const;
     void clear();
 };
-

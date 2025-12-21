@@ -1,4 +1,4 @@
-#include "MainWindow.hpp"
+﻿#include "MainWindow.hpp"
 
 #include <QApplication>
 #include <QComboBox>
@@ -17,9 +17,16 @@
 #include <QSpacerItem>
 #include <QTabWidget>
 #include <QVBoxLayout>
+#include "../models/include/devices/SmartAirConditioner.hpp"
+#include "../models/include/devices/SmartHeater.hpp"
+#include "../models/include/devices/SmartHumidifier.hpp"
+#include "../models/include/devices/SmartDehumidifier.hpp"
+#include "../models/include/devices/SmartFan.hpp"
+#include "../models/include/devices/SmartLight.hpp"
 #include <chrono>
 #include <iostream>
 #include <sstream>
+using namespace std;
 
 MainWindow::MainWindow(QWidget* parent)
     : QMainWindow(parent),
@@ -42,7 +49,7 @@ MainWindow::MainWindow(QWidget* parent)
       deviceTable(nullptr),
       environmentFeed(nullptr),
       feed(nullptr) {
-    setWindowTitle("Smart House — Qt");
+    setWindowTitle("Smart House вЂ” Qt");
     resize(1180, 760);
     applyStyleSheet();
 
@@ -261,7 +268,7 @@ QWidget* MainWindow::buildClimatePage() {
     co2Spin->setValue(600.0);
 
     auto grid = new QGridLayout();
-    grid->addWidget(new QLabel("Temperature (°C)"), 0, 0);
+    grid->addWidget(new QLabel("Temperature (В°C)"), 0, 0);
     grid->addWidget(tempSpin, 0, 1);
     grid->addWidget(new QLabel("Humidity (%)"), 1, 0);
     grid->addWidget(humSpin, 1, 1);
@@ -283,7 +290,7 @@ QWidget* MainWindow::buildClimatePage() {
             return;
         }
         filePathEdit->setText(path);
-        std::string error;
+        string error;
         if (loadClimateDataFromFile(path.toStdString(), error)) {
             climateInfo->setText("Climate data loaded from file");
             refreshClimateBadge();
@@ -374,7 +381,7 @@ QWidget* MainWindow::buildAuthPage() {
             refreshClimateBadge();
             appendFeed("Login successful.");
             return true;
-        } catch (const std::exception& e) {
+        } catch (const exception& e) {
             authInfo->setText(QString::fromStdString(e.what()));
             return false;
         }
@@ -398,7 +405,7 @@ QWidget* MainWindow::buildAuthPage() {
             loginPass->setText(regPass->text());
             tabs->setCurrentIndex(0);
             tryLogin(loginUser->text(), loginPass->text());
-        } catch (const std::exception& e) {
+        } catch (const exception& e) {
             authInfo->setText(QString::fromStdString(e.what()));
         }
     });
@@ -462,8 +469,8 @@ QWidget* MainWindow::buildAppPage() {
     auto deviceLabel = new QLabel("Devices", content);
     deviceLabel->setObjectName("Subtitle");
     deviceTable = new QTableWidget(content);
-    deviceTable->setColumnCount(5);
-    deviceTable->setHorizontalHeaderLabels({"ID", "Name", "Location", "Mode", "Power"});
+    deviceTable->setColumnCount(6);
+    deviceTable->setHorizontalHeaderLabels({"ID", "Name", "Location", "Type", "Mode", "Power"});
     deviceTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     deviceTable->verticalHeader()->setVisible(false);
     deviceTable->setSelectionBehavior(QAbstractItemView::SelectRows);
@@ -471,6 +478,10 @@ QWidget* MainWindow::buildAppPage() {
     deviceTable->setShowGrid(true);
     contentLayout->addWidget(deviceLabel);
     contentLayout->addWidget(deviceTable, 1);
+
+    // Use custom Deque to seed the table with current devices
+    Deque<SmartDevice*> initialDevices = deviceService.getAllDevices();
+    refreshDevices(initialDevices);
 
     auto envLabel = new QLabel("Environment", content);
     envLabel->setObjectName("Subtitle");
@@ -501,7 +512,7 @@ QWidget* MainWindow::buildAppPage() {
     connect(btn6, &QPushButton::clicked, this, [this]() { performSort(); });
     connect(btn7, &QPushButton::clicked, this, [this]() { performDeviceInfo(); });
     connect(btn8, &QPushButton::clicked, this, [this]() {
-        std::string info;
+        string info;
         if (history.canUndo()) {
             history.undo();
             info = "Last action undone.";
@@ -512,7 +523,7 @@ QWidget* MainWindow::buildAppPage() {
         refreshDevices(deviceService.getAllDevices());
     });
     connect(btn9, &QPushButton::clicked, this, [this]() {
-        std::string info;
+        string info;
         if (history.canRedo()) {
             history.redo();
             info = "Action redone.";
@@ -526,10 +537,10 @@ QWidget* MainWindow::buildAppPage() {
         auto cd = climateData;
         QString text = QString(
                            "Environment snapshot\n"
-                           "────────────────────\n"
-                           "Temperature : %1 °C\n"
+                           "в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђ\n"
+                           "Temperature : %1 В°C\n"
                            "Humidity    : %2 %%\n"
-                           "CO₂ level   : %3 ppm")
+                           "COв‚‚ level   : %3 ppm")
                            .arg(cd.getTemperature(), 0, 'f', 2)
                            .arg(cd.getHumidity(), 0, 'f', 2)
                            .arg(cd.getCO2(), 0, 'f', 2);
@@ -540,7 +551,7 @@ QWidget* MainWindow::buildAppPage() {
         QString rec = QString::fromStdString(analyzeClimate());
         appendEnvironment(QString(
                               "Climate analysis & recommendations\n"
-                              "──────────────────────────────────\n%1").arg(rec));
+                              "в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђ\n%1").arg(rec));
     });
     connect(btn12, &QPushButton::clicked, this, [this]() { performNormalize(); });
     connect(btn0, &QPushButton::clicked, this, [this]() {
@@ -552,15 +563,39 @@ QWidget* MainWindow::buildAppPage() {
     return page;
 }
 
-void MainWindow::refreshDevices(const std::vector<std::shared_ptr<SmartDevice>>& devices) {
+QString MainWindow::deviceType(const SmartDevice* dev) const {
+    if (dynamic_cast<const SmartAirConditioner*>(dev)) {
+        return "Air Conditioner";
+    }
+    if (dynamic_cast<const SmartHeater*>(dev)) {
+        return "Heater";
+    }
+    if (dynamic_cast<const SmartHumidifier*>(dev)) {
+        return "Humidifier";
+    }
+    if (dynamic_cast<const SmartDehumidifier*>(dev)) {
+        return "Dehumidifier";
+    }
+    if (dynamic_cast<const SmartFan*>(dev)) {
+        return "Fan";
+    }
+    if (dynamic_cast<const SmartLight*>(dev)) {
+        return "Light";
+    }
+    return "Device";
+}
+
+void MainWindow::refreshDevices(const Deque<SmartDevice*>& devices) {
     deviceTable->setRowCount(static_cast<int>(devices.size()));
     int row = 0;
-    for (const auto& dev : devices) {
+    for (auto it = devices.begin(); it != devices.end(); ++it) {
+        SmartDevice* dev = *it;
         deviceTable->setItem(row, 0, new QTableWidgetItem(QString::number(dev->getId())));
         deviceTable->setItem(row, 1, new QTableWidgetItem(QString::fromStdString(dev->getDeviceName())));
         deviceTable->setItem(row, 2, new QTableWidgetItem(QString::fromStdString(dev->getLocation())));
-        deviceTable->setItem(row, 3, new QTableWidgetItem(QString::fromStdString(dev->getModeString())));
-        deviceTable->setItem(row, 4, new QTableWidgetItem(QString("%1%").arg(dev->getPowerLevel())));
+        deviceTable->setItem(row, 3, new QTableWidgetItem(deviceType(dev)));
+        deviceTable->setItem(row, 4, new QTableWidgetItem(QString::fromStdString(dev->getModeString())));
+        deviceTable->setItem(row, 5, new QTableWidgetItem(QString("%1%").arg(dev->getPowerLevel())));
         ++row;
     }
 }
@@ -569,7 +604,7 @@ void MainWindow::appendFeed(const QString& text) {
     if (text.trimmed().isEmpty()) {
         return;
     }
-    auto now = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+    auto now = chrono::system_clock::to_time_t(chrono::system_clock::now());
     QString stamp = QDateTime::fromSecsSinceEpoch(now).toString("hh:mm:ss");
     feed->append(QString("[%1] %2").arg(stamp, text));
 }
@@ -578,14 +613,14 @@ void MainWindow::appendEnvironment(const QString& text) {
     if (text.trimmed().isEmpty()) {
         return;
     }
-    auto now = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+    auto now = chrono::system_clock::to_time_t(chrono::system_clock::now());
     QString stamp = QDateTime::fromSecsSinceEpoch(now).toString("hh:mm:ss");
     environmentFeed->append(QString("[%1]\n%2\n").arg(stamp, text));
 }
 
 void MainWindow::refreshClimateBadge() {
     auto cd = climateData;
-    QString label = QString("t %1 °C  |  h %2 %  |  CO2 %3 ppm")
+    QString label = QString("t %1 В°C  |  h %2 %  |  CO2 %3 ppm")
                         .arg(cd.getTemperature(), 0, 'f', 1)
                         .arg(cd.getHumidity(), 0, 'f', 1)
                         .arg(cd.getCO2(), 0, 'f', 0);
@@ -596,7 +631,7 @@ void MainWindow::performAddDevice() {
     DeviceDialog dlg(this);
     if (dlg.exec() == QDialog::Accepted) {
         auto data = dlg.data();
-        std::string error;
+        string error;
         if (addDevice(data, error)) {
             appendFeed("Device added.");
             refreshDevices(deviceService.getAllDevices());
@@ -613,8 +648,9 @@ void MainWindow::performEditDevice() {
         return;
     }
     auto devices = deviceService.getAllDevices();
-    std::shared_ptr<SmartDevice> target;
-    for (const auto& d : devices) {
+    SmartDevice* target = nullptr;
+    for (auto it = devices.begin(); it != devices.end(); ++it) {
+        SmartDevice* d = *it;
         if (d->getId() == id) {
             target = d;
             break;
@@ -629,7 +665,7 @@ void MainWindow::performEditDevice() {
     dlg.fillFromDevice(target);
     if (dlg.exec() == QDialog::Accepted) {
         auto data = dlg.data();
-        std::string error;
+        string error;
         if (updateDevice(id, data, error)) {
             appendFeed("Device updated.");
             refreshDevices(deviceService.getAllDevices());
@@ -645,7 +681,7 @@ void MainWindow::performDeleteDevice() {
     if (!ok) {
         return;
     }
-    std::string error;
+    string error;
     if (deleteDevice(id, error)) {
         appendFeed("Device deleted.");
         refreshDevices(deviceService.getAllDevices());
@@ -680,7 +716,7 @@ void MainWindow::performSearch() {
         case 4: f = DeviceSearchField::MODE; break;
     }
 
-    std::string error;
+    string error;
     auto results = searchDevices(f, value->text().toStdString(), error);
     if (!error.empty()) {
         appendFeed(QString::fromStdString(error));
@@ -728,12 +764,12 @@ void MainWindow::performDeviceInfo() {
 }
 
 void MainWindow::performNormalize() {
-    std::string details;
+    string details;
     normalizeClimate(details);
     refreshClimateBadge();
     appendEnvironment(QString(
         "Normalized climate\n"
-        "──────────────────\n%1").arg(QString::fromStdString(details)));
+        "в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђ\n%1").arg(QString::fromStdString(details)));
 }
 
 void MainWindow::setManualClimate(double temp, double hum, double co2) {
@@ -742,17 +778,18 @@ void MainWindow::setManualClimate(double temp, double hum, double co2) {
     climateData.setCO2(co2);
 }
 
-bool MainWindow::loadClimateDataFromFile(const std::string& path, std::string& error) {
+bool MainWindow::loadClimateDataFromFile(const string& path, string& error) {
     try {
         TextFile<ClimateData> file(path);
         auto records = file.readAllRecords();
 
-        if (records.empty()) {
+        if (records.isEmpty()) {
             error = "File is empty. Please enter the readings manually.";
             return false;
         }
 
-        climateData = *records[0];
+        auto it = records.begin();
+        climateData = **it;
         for (auto ptr : records) {
             delete ptr;
         }
@@ -763,27 +800,27 @@ bool MainWindow::loadClimateDataFromFile(const std::string& path, std::string& e
     }
 }
 
-std::shared_ptr<SmartDevice> MainWindow::buildDeviceFromForm(const DeviceFormData& data, int lockedType) {
+SmartDevice* MainWindow::buildDeviceFromForm(const DeviceFormData& data, int lockedType) {
     int typeIndex = lockedType >= 0 ? lockedType : data.typeIndex;
     switch (typeIndex) {
         case 0:
-            return std::make_shared<SmartAirConditioner>(data.id, data.name, data.location, data.mode, data.power, data.primaryValue, data.tolerance);
+            return new SmartAirConditioner(data.id, data.name, data.location, data.mode, data.power, data.primaryValue, data.tolerance);
         case 1:
-            return std::make_shared<SmartHeater>(data.id, data.name, data.location, data.mode, data.power, data.primaryValue, data.tolerance);
+            return new SmartHeater(data.id, data.name, data.location, data.mode, data.power, data.primaryValue, data.tolerance);
         case 2:
-            return std::make_shared<SmartHumidifier>(data.id, data.name, data.location, data.mode, data.power, data.primaryValue, data.tolerance);
+            return new SmartHumidifier(data.id, data.name, data.location, data.mode, data.power, data.primaryValue, data.tolerance);
         case 3:
-            return std::make_shared<SmartDehumidifier>(data.id, data.name, data.location, data.mode, data.power, data.primaryValue, data.tolerance);
+            return new SmartDehumidifier(data.id, data.name, data.location, data.mode, data.power, data.primaryValue, data.tolerance);
         case 4:
-            return std::make_shared<SmartFan>(data.id, data.name, data.location, data.mode, data.power, data.primaryValue, data.tolerance);
+            return new SmartFan(data.id, data.name, data.location, data.mode, data.power, data.primaryValue, data.tolerance);
         case 5:
-            return std::make_shared<SmartLight>(data.id, data.name, data.location, data.mode, data.power, data.turnOffHour);
+            return new SmartLight(data.id, data.name, data.location, data.mode, data.power, data.turnOffHour);
         default:
             return nullptr;
     }
 }
 
-bool MainWindow::addDevice(const DeviceFormData& data, std::string& error) {
+bool MainWindow::addDevice(const DeviceFormData& data, string& error) {
     auto newDevice = buildDeviceFromForm(data);
     if (!newDevice) {
         error = "Failed to build device";
@@ -791,15 +828,15 @@ bool MainWindow::addDevice(const DeviceFormData& data, std::string& error) {
     }
 
     try {
-        history.executeCommand(std::make_unique<AddDeviceCommand>(&deviceService, newDevice));
+        history.executeCommand(new AddDeviceCommand(&deviceService, newDevice));
         return true;
-    } catch (const std::exception& e) {
+    } catch (const exception& e) {
         error = e.what();
         return false;
     }
 }
 
-bool MainWindow::updateDevice(int deviceId, const DeviceFormData& data, std::string& error) {
+bool MainWindow::updateDevice(int deviceId, const DeviceFormData& data, string& error) {
     auto existing = deviceService.getDeviceById(deviceId);
     if (!existing) {
         error = "Device not found";
@@ -807,17 +844,17 @@ bool MainWindow::updateDevice(int deviceId, const DeviceFormData& data, std::str
     }
 
     int lockedType = -1;
-    if (dynamic_cast<SmartAirConditioner*>(existing.get())) {
+    if (dynamic_cast<SmartAirConditioner*>(existing)) {
         lockedType = 0;
-    } else if (dynamic_cast<SmartHeater*>(existing.get())) {
+    } else if (dynamic_cast<SmartHeater*>(existing)) {
         lockedType = 1;
-    } else if (dynamic_cast<SmartHumidifier*>(existing.get())) {
+    } else if (dynamic_cast<SmartHumidifier*>(existing)) {
         lockedType = 2;
-    } else if (dynamic_cast<SmartDehumidifier*>(existing.get())) {
+    } else if (dynamic_cast<SmartDehumidifier*>(existing)) {
         lockedType = 3;
-    } else if (dynamic_cast<SmartFan*>(existing.get())) {
+    } else if (dynamic_cast<SmartFan*>(existing)) {
         lockedType = 4;
-    } else if (dynamic_cast<SmartLight*>(existing.get())) {
+    } else if (dynamic_cast<SmartLight*>(existing)) {
         lockedType = 5;
     }
 
@@ -830,54 +867,56 @@ bool MainWindow::updateDevice(int deviceId, const DeviceFormData& data, std::str
     try {
         deviceService.updateDevice(deviceId, updated);
         return true;
-    } catch (const std::exception& e) {
+    } catch (const exception& e) {
         error = e.what();
         return false;
     }
 }
 
-bool MainWindow::deleteDevice(int deviceId, std::string& error) {
+bool MainWindow::deleteDevice(int deviceId, string& error) {
     try {
-        history.executeCommand(std::make_unique<RemoveDeviceCommand>(&deviceService, deviceId));
+        history.executeCommand(new RemoveDeviceCommand(&deviceService, deviceId));
         return true;
-    } catch (const std::exception& e) {
+    } catch (const exception& e) {
         error = e.what();
         return false;
     }
 }
 
-std::vector<std::shared_ptr<SmartDevice>> MainWindow::searchDevices(DeviceSearchField field, const std::string& value, std::string& error) {
-    std::shared_ptr<SmartDevice> sample = std::make_shared<SmartDevice>();
+Deque<SmartDevice*> MainWindow::searchDevices(DeviceSearchField field, const string& value, string& error) {
+    SmartDevice sample;
     Device::setSearchMode(field);
 
     try {
         switch (field) {
             case DeviceSearchField::ID:
-                sample->setId(std::stoi(value));
+                sample.setId(stoi(value));
                 break;
             case DeviceSearchField::DEVICE_NAME:
-                sample->setDeviceName(value);
+                sample.setDeviceName(value);
                 break;
             case DeviceSearchField::LOCATION:
-                sample->setLocation(value);
+                sample.setLocation(value);
                 break;
             case DeviceSearchField::MODE:
-                sample->setMode(static_cast<DeviceMode>(std::stoi(value)));
+                sample.setMode(static_cast<DeviceMode>(stoi(value)));
                 break;
             case DeviceSearchField::POWER_LEVEL:
-                sample->setPowerLevel(std::stoi(value));
+                sample.setPowerLevel(stoi(value));
                 break;
         }
-    } catch (const std::exception&) {
+    } catch (const exception&) {
         error = "Invalid value for search";
         Device::setSearchMode(DeviceSearchField::ID);
         return {};
     }
 
-    std::vector<std::shared_ptr<SmartDevice>> results;
-    for (const auto& device : deviceService.getAllDevices()) {
-        if (*device == *sample) {
-            results.push_back(device);
+    Deque<SmartDevice*> results;
+    auto allDevices = deviceService.getAllDevices();
+    for (auto it = allDevices.begin(); it != allDevices.end(); ++it) {
+        SmartDevice* device = *it;
+        if (*device == sample) {
+            results.pushBack(device);
         }
     }
 
@@ -897,7 +936,7 @@ void MainWindow::sortDevices(DeviceSortField field) {
     deviceService.sortDevices(option);
 }
 
-std::string MainWindow::deviceInfo(int id) {
+string MainWindow::deviceInfo(int id) {
     auto device = deviceService.getDeviceById(id);
     if (!device) {
         return "Device not found";
@@ -905,18 +944,18 @@ std::string MainWindow::deviceInfo(int id) {
     return device->getDeviceInfo();
 }
 
-std::string MainWindow::analyzeClimate() {
-    std::ostringstream capture;
-    auto* oldBuf = std::cout.rdbuf(capture.rdbuf());
+string MainWindow::analyzeClimate() {
+    ostringstream capture;
+    auto* oldBuf = cout.rdbuf(capture.rdbuf());
     ClimateNormalizer::analyzeAndRecommend(climateData, deviceService.getAllDevices());
-    std::cout.rdbuf(oldBuf);
+    cout.rdbuf(oldBuf);
     return capture.str();
 }
 
-ClimateData MainWindow::normalizeClimate(std::string& details) {
+ClimateData MainWindow::normalizeClimate(string& details) {
     ClimateData normalized = ClimateNormalizer::normalize(climateData, deviceService.getAllDevices());
 
-    std::ostringstream oss;
+    ostringstream oss;
     oss << "Temperature: " << normalized.getTemperature()
         << "\nHumidity: " << normalized.getHumidity()
         << "\nCO2: " << normalized.getCO2();
@@ -928,3 +967,4 @@ ClimateData MainWindow::normalizeClimate(std::string& details) {
     climateData = normalized;
     return normalized;
 }
+

@@ -2,7 +2,7 @@
 
 using namespace std;
 
-ClimateData ClimateNormalizer::normalize(ClimateData& currentData, const vector<shared_ptr<SmartDevice>>& devices) {
+ClimateData ClimateNormalizer::normalize(ClimateData& currentData, const Deque<SmartDevice*>& devices) {
     ClimateData normalized = currentData;
     
     const double TARGET_TEMP_MIN = 21.0;
@@ -18,11 +18,11 @@ ClimateData ClimateNormalizer::normalize(ClimateData& currentData, const vector<
     bool hasFan = false;
 
     for (const auto& device : devices) {
-        if (dynamic_cast<SmartHeater*>(device.get())) hasHeater = true;
-        else if (dynamic_cast<SmartAirConditioner*>(device.get())) hasAC = true;
-        else if (dynamic_cast<SmartHumidifier*>(device.get())) hasHumidifier = true;
-        else if (dynamic_cast<SmartDehumidifier*>(device.get())) hasDehumidifier = true;
-        else if (dynamic_cast<SmartFan*>(device.get())) hasFan = true;
+        if (dynamic_cast<SmartHeater*>(device)) hasHeater = true;
+        else if (dynamic_cast<SmartAirConditioner*>(device)) hasAC = true;
+        else if (dynamic_cast<SmartHumidifier*>(device)) hasHumidifier = true;
+        else if (dynamic_cast<SmartDehumidifier*>(device)) hasDehumidifier = true;
+        else if (dynamic_cast<SmartFan*>(device)) hasFan = true;
     }
 
     if (normalized.getTemperature() < TARGET_TEMP_MIN && hasHeater) {
@@ -69,9 +69,9 @@ void ClimateNormalizer::printClimateStatus(const ClimateData& currentData) {
     cout << "\n\n";
 }
 
-bool ClimateNormalizer::analyzeAndRecommend(ClimateData& currentData, const vector<shared_ptr<SmartDevice>>& devices) {
+bool ClimateNormalizer::analyzeAndRecommend(ClimateData& currentData, const Deque<SmartDevice*>& devices) {
     bool hasRecommendations = false;
-    vector<string> recommendations;
+    Deque<string> recommendations;
     
     double temp = currentData.getTemperature();
     double humidity = currentData.getHumidity();
@@ -84,11 +84,11 @@ bool ClimateNormalizer::analyzeAndRecommend(ClimateData& currentData, const vect
     bool hasFan = false;
     
     for (const auto& device : devices) {
-        if (dynamic_cast<SmartHeater*>(device.get())) hasHeater = true;
-        if (dynamic_cast<SmartAirConditioner*>(device.get())) hasAC = true;
-        if (dynamic_cast<SmartHumidifier*>(device.get())) hasHumidifier = true;
-        if (dynamic_cast<SmartDehumidifier*>(device.get())) hasDehumidifier = true;
-        if (dynamic_cast<SmartFan*>(device.get())) hasFan = true;
+        if (dynamic_cast<SmartHeater*>(device)) hasHeater = true;
+        if (dynamic_cast<SmartAirConditioner*>(device)) hasAC = true;
+        if (dynamic_cast<SmartHumidifier*>(device)) hasHumidifier = true;
+        if (dynamic_cast<SmartDehumidifier*>(device)) hasDehumidifier = true;
+        if (dynamic_cast<SmartFan*>(device)) hasFan = true;
     }
     
     cout << "\n=== CLIMATE ANALYSIS & RECOMMENDATIONS ===\n\n";

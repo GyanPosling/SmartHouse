@@ -1,6 +1,7 @@
-#include "../include/Exception.hpp"
+﻿#include "../include/Exception.hpp"
+using namespace std;
 
-Exception::Exception(int errorCode, const std::string& errorMessage) 
+Exception::Exception(int errorCode, const string& errorMessage) 
     : code(errorCode), message(errorMessage) {}
 
 int Exception::getCode() const {
@@ -10,4 +11,5 @@ int Exception::getCode() const {
 const char* Exception::what() const noexcept {
     return message.c_str();
 }
+
 

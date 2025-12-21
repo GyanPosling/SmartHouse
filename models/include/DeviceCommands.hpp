@@ -2,16 +2,16 @@
 #include "Command.hpp"
 #include "../../services/include/DeviceService.hpp"
 #include "devices/SmartDevice.hpp"
-#include <memory>
 using namespace std;
 
 class AddDeviceCommand : public Command {
 private:
     DeviceService* deviceService;
-    shared_ptr<SmartDevice> device;
+    SmartDevice* device;
 
 public:
-    AddDeviceCommand(DeviceService* service, shared_ptr<SmartDevice> dev);
+    AddDeviceCommand(DeviceService* service, SmartDevice* dev);
+    ~AddDeviceCommand();
     
     void execute() override;
     

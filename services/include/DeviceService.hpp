@@ -8,9 +8,7 @@
 #include "../../models/include/devices/SmartLight.hpp"
 #include "../../repositories/include/TextFile.hpp"
 #include "../../exceptions/include/FileException.hpp"
-#include <memory>
-#include <vector>
-#include <algorithm>
+#include "../../templates/Deque.hpp"
 #include <fstream>
 #include <sstream>
 #include <string>
@@ -18,19 +16,22 @@ using namespace std;
 
 class DeviceService {
 private:
-    vector<shared_ptr<SmartDevice>> devices;
+    Deque<SmartDevice*> devices;
     TextFile<string> deviceFile;
+
+    void deleteAll();
 
 public:
     DeviceService();
+    ~DeviceService();
     
-    void addDevice(shared_ptr<SmartDevice> device);
+    void addDevice(SmartDevice* device);
     void removeDevice(int deviceId);
-    void updateDevice(int deviceId, shared_ptr<SmartDevice> updatedDevice);
-    shared_ptr<SmartDevice> getDeviceById(int deviceId);
-    const vector<shared_ptr<SmartDevice>> getAllDevices() const;
+    void updateDevice(int deviceId, SmartDevice* updatedDevice);
+    SmartDevice* getDeviceById(int deviceId);
+    Deque<SmartDevice*> getAllDevices() const;
     
-    vector<shared_ptr<SmartDevice>> searchDevices(int option);
+    Deque<SmartDevice*> searchDevices(int option);
     void sortDevices(int option);
     
     void saveAllDevices();

@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include <QButtonGroup>
 #include <QDateEdit>
@@ -12,6 +12,7 @@
 #include <QTextEdit>
 #include <QDoubleSpinBox>
 
+#include "../templates/Deque.hpp"
 #include "../services/include/AuthenticationService.hpp"
 #include "../services/include/DeviceService.hpp"
 #include "../services/include/CommandHistory.hpp"
@@ -21,6 +22,7 @@
 #include "../models/include/RemoveDeviceCommand.hpp"
 #include "../repositories/include/TextFile.hpp"
 #include "DeviceDialog.hpp"
+using namespace std;
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -65,24 +67,25 @@ private:
 
     QPushButton* makeMenuButton(const QString& text);
 
-    void refreshDevices(const std::vector<std::shared_ptr<SmartDevice>>& devices);
+    void refreshDevices(const Deque<SmartDevice*>& devices);
+    QString deviceType(const SmartDevice* dev) const;
     void appendFeed(const QString& text);
     void appendEnvironment(const QString& text);
     void refreshClimateBadge();
 
     void setManualClimate(double temp, double hum, double co2);
-    bool loadClimateDataFromFile(const std::string& path, std::string& error);
+    bool loadClimateDataFromFile(const string& path, string& error);
 
-    std::shared_ptr<SmartDevice> buildDeviceFromForm(const DeviceFormData& data, int lockedType = -1);
-    bool addDevice(const DeviceFormData& data, std::string& error);
-    bool updateDevice(int deviceId, const DeviceFormData& data, std::string& error);
-    bool deleteDevice(int deviceId, std::string& error);
+    SmartDevice* buildDeviceFromForm(const DeviceFormData& data, int lockedType = -1);
+    bool addDevice(const DeviceFormData& data, string& error);
+    bool updateDevice(int deviceId, const DeviceFormData& data, string& error);
+    bool deleteDevice(int deviceId, string& error);
 
-    std::vector<std::shared_ptr<SmartDevice>> searchDevices(DeviceSearchField field, const std::string& value, std::string& error);
+    Deque<SmartDevice*> searchDevices(DeviceSearchField field, const string& value, string& error);
     void sortDevices(DeviceSortField field);
-    std::string deviceInfo(int id);
-    std::string analyzeClimate();
-    ClimateData normalizeClimate(std::string& details);
+    string deviceInfo(int id);
+    string analyzeClimate();
+    ClimateData normalizeClimate(string& details);
 
     void performAddDevice();
     void performEditDevice();
@@ -92,3 +95,4 @@ private:
     void performDeviceInfo();
     void performNormalize();
 };
+

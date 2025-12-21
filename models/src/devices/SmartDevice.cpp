@@ -1,4 +1,4 @@
-#include "../../include/devices/SmartDevice.hpp"
+﻿#include "../../include/devices/SmartDevice.hpp"
 #include "../../exceptions/include/InputHandler.hpp"
 #include <iomanip>
 using namespace std;
@@ -90,7 +90,7 @@ istream& operator>>(istream& is, SmartDevice& device) {
             if (getline(ss, modeStr)) {
                 try {
                     device.mode = static_cast<DeviceMode>(stoi(modeStr));
-                } catch (const std::exception&) {
+                } catch (const exception&) {
                     is.setstate(ios::failbit);
                 }
             } else {
@@ -129,7 +129,7 @@ void SmartDevice::updateField(int fieldChoice) {
                     }
                     break;
                 default:
-                    // Если поле не найдено, выходим
+                    // Р•СЃР»Рё РїРѕР»Рµ РЅРµ РЅР°Р№РґРµРЅРѕ, РІС‹С…РѕРґРёРј
                     return;
             }
             success = true;

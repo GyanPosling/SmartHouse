@@ -1,5 +1,7 @@
-#include "../include/FileException.hpp"
+﻿#include "../include/FileException.hpp"
+using namespace std;
 
-FileException::FileException(int errorCode, const std::string& errorMessage)
+FileException::FileException(int errorCode, const string& errorMessage)
     : Exception(errorCode, errorMessage) {}
+
 

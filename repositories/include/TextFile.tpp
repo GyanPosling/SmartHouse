@@ -55,9 +55,9 @@ T* TextFile<T>::readRecord()
 }
 
 template <typename T>
-vector<T*> TextFile<T>::readAllRecords()
+Deque<T*> TextFile<T>::readAllRecords()
 {
-    vector<T*> records;
+    Deque<T*> records;
     fstream file;
     openFile(file, ios::in);
 
@@ -66,7 +66,7 @@ vector<T*> TextFile<T>::readAllRecords()
         T* object = new T();
         if (file >> *object)
         {
-            records.push_back(object);
+            records.pushBack(object);
         }
         else
         {

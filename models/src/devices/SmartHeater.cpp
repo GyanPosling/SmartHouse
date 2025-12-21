@@ -1,4 +1,4 @@
-#include "../../include/devices/SmartHeater.hpp"
+﻿#include "../../include/devices/SmartHeater.hpp"
 #include "../../exceptions/include/InputHandler.hpp"
 #include <iomanip>
 using namespace std;
@@ -39,8 +39,8 @@ bool SmartHeater::operator<(const SmartHeater& other) const {
 string SmartHeater::getDeviceInfo() const {
     return SmartDevice::getDeviceInfo() + 
            ", Type: Heater" + 
-           ", Target Temperature: " + to_string(targetTemperature) + "°C" +
-           ", Tolerance: ±" + to_string(tolerance) + "°C";
+           ", Target Temperature: " + to_string(targetTemperature) + "В°C" +
+           ", Tolerance: В±" + to_string(tolerance) + "В°C";
 }
 
 ostream& operator<<(ostream& os, const SmartHeater& device) {
@@ -81,7 +81,7 @@ istream& operator>>(istream& is, SmartHeater& device) {
                 try {
                     device.targetTemperature = stod(targetTemperatureStr);
                     device.tolerance = stod(toleranceStr);
-                } catch (const std::exception&) {
+                } catch (const exception&) {
                     is.setstate(ios::failbit);
                 }
             } else {

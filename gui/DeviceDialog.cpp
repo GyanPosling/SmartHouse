@@ -123,23 +123,23 @@ DeviceFormData DeviceDialog::data() const {
     return d;
 }
 
-void DeviceDialog::fillFromDevice(const std::shared_ptr<SmartDevice>& device) {
+void DeviceDialog::fillFromDevice(SmartDevice* device) {
     if (!device) {
         return;
     }
 
     int typeIndex = 0;
-    if (dynamic_cast<SmartAirConditioner*>(device.get())) {
+    if (dynamic_cast<SmartAirConditioner*>(device)) {
         typeIndex = 0;
-    } else if (dynamic_cast<SmartHeater*>(device.get())) {
+    } else if (dynamic_cast<SmartHeater*>(device)) {
         typeIndex = 1;
-    } else if (dynamic_cast<SmartHumidifier*>(device.get())) {
+    } else if (dynamic_cast<SmartHumidifier*>(device)) {
         typeIndex = 2;
-    } else if (dynamic_cast<SmartDehumidifier*>(device.get())) {
+    } else if (dynamic_cast<SmartDehumidifier*>(device)) {
         typeIndex = 3;
-    } else if (dynamic_cast<SmartFan*>(device.get())) {
+    } else if (dynamic_cast<SmartFan*>(device)) {
         typeIndex = 4;
-    } else if (dynamic_cast<SmartLight*>(device.get())) {
+    } else if (dynamic_cast<SmartLight*>(device)) {
         typeIndex = 5;
     }
 
@@ -152,22 +152,22 @@ void DeviceDialog::fillFromDevice(const std::shared_ptr<SmartDevice>& device) {
     modeCombo->setCurrentIndex(static_cast<int>(device->getMode()));
     powerSpin->setValue(device->getPowerLevel());
 
-    if (auto ac = dynamic_cast<SmartAirConditioner*>(device.get())) {
+    if (auto ac = dynamic_cast<SmartAirConditioner*>(device)) {
         primarySpin->setValue(ac->getTargetCO2());
         toleranceSpin->setValue(ac->getTolerance());
-    } else if (auto heater = dynamic_cast<SmartHeater*>(device.get())) {
+    } else if (auto heater = dynamic_cast<SmartHeater*>(device)) {
         primarySpin->setValue(heater->getTargetTemperature());
         toleranceSpin->setValue(heater->getTolerance());
-    } else if (auto hum = dynamic_cast<SmartHumidifier*>(device.get())) {
+    } else if (auto hum = dynamic_cast<SmartHumidifier*>(device)) {
         primarySpin->setValue(hum->getTargetHumidity());
         toleranceSpin->setValue(hum->getTolerance());
-    } else if (auto deh = dynamic_cast<SmartDehumidifier*>(device.get())) {
+    } else if (auto deh = dynamic_cast<SmartDehumidifier*>(device)) {
         primarySpin->setValue(deh->getTargetHumidity());
         toleranceSpin->setValue(deh->getTolerance());
-    } else if (auto fan = dynamic_cast<SmartFan*>(device.get())) {
+    } else if (auto fan = dynamic_cast<SmartFan*>(device)) {
         primarySpin->setValue(fan->getTargetCO2());
         toleranceSpin->setValue(fan->getTolerance());
-    } else if (auto light = dynamic_cast<SmartLight*>(device.get())) {
+    } else if (auto light = dynamic_cast<SmartLight*>(device)) {
         turnOffSpin->setValue(light->getTurnOffHour());
     }
 }

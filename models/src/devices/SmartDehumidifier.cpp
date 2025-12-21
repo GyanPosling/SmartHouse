@@ -1,4 +1,4 @@
-#include "../../include/devices/SmartDehumidifier.hpp"
+﻿#include "../../include/devices/SmartDehumidifier.hpp"
 #include "../../exceptions/include/InputHandler.hpp"
 #include <iomanip>
 using namespace std;
@@ -40,7 +40,7 @@ string SmartDehumidifier::getDeviceInfo() const {
     return SmartDevice::getDeviceInfo() + 
            ", Type: Dehumidifier" + 
            ", Target Humidity: " + to_string(targetHumidity) + "%" +
-           ", Tolerance: ±" + to_string(tolerance) + "%";
+           ", Tolerance: В±" + to_string(tolerance) + "%";
 }
 
 ostream& operator<<(ostream& os, const SmartDehumidifier& device) {
@@ -81,7 +81,7 @@ istream& operator>>(istream& is, SmartDehumidifier& device) {
                 try {
                     device.targetHumidity = stod(targetHumidityStr);
                     device.tolerance = stod(toleranceStr);
-                } catch (const std::exception&) {
+                } catch (const exception&) {
                     is.setstate(ios::failbit);
                 }
             } else {

@@ -42,8 +42,9 @@ ClimateData loadClimateData() {
             TextFile<ClimateData> file(filename);
             auto records = file.readAllRecords();
 
-            if (!records.empty()) {
-                data = *records[0];
+            if (!records.isEmpty()) {
+                auto it = records.begin();
+                data = **it;
                 for (auto ptr : records) delete ptr;
 
                 cout << fixed << setprecision(2);
@@ -118,11 +119,12 @@ void loginUser() {
 void viewAllDevices() {
     cout << "\n=== ALL DEVICES ===\n";
     auto devices = deviceService.getAllDevices();
-    if (devices.empty()) {
+    if (devices.isEmpty()) {
         cout << "No devices available.\n";
         return;
     }
-    devices[0]->printHeader();
+    auto it = devices.begin();
+    (*it)->printHeader();
     for (const auto& dev : devices) {
         dev->printTable();
     }
@@ -151,7 +153,7 @@ void addDevice() {
 
     int powerLevel = safeInputNumeric<int>(cin, 0, 100, "Power level (0-100): ");
 
-    shared_ptr<SmartDevice> newDevice;
+    SmartDevice* newDevice = nullptr;
 
     const double DEFAULT_TEMP = 25.0;
     const double DEFAULT_HUM = 30.0;
@@ -159,19 +161,19 @@ void addDevice() {
     const double DEFAULT_TOLERANCE = 5.0;
 
     switch (deviceType) {
-        case 1: newDevice = make_shared<SmartAirConditioner>(deviceId, deviceName, deviceLocation, operationMode, powerLevel, DEFAULT_TEMP, DEFAULT_TOLERANCE); break;
-        case 2: newDevice = make_shared<SmartHeater>(deviceId, deviceName, deviceLocation, operationMode, powerLevel, DEFAULT_TEMP, DEFAULT_TOLERANCE); break;
-        case 3: newDevice = make_shared<SmartHumidifier>(deviceId, deviceName, deviceLocation, operationMode, powerLevel, DEFAULT_HUM, DEFAULT_TOLERANCE); break;
-        case 4: newDevice = make_shared<SmartDehumidifier>(deviceId, deviceName, deviceLocation, operationMode, powerLevel, DEFAULT_HUM, DEFAULT_TOLERANCE); break;
-        case 5: newDevice = make_shared<SmartFan>(deviceId, deviceName, deviceLocation, operationMode, powerLevel, DEFAULT_CO2, DEFAULT_TOLERANCE); break;
+        case 1: newDevice = new SmartAirConditioner(deviceId, deviceName, deviceLocation, operationMode, powerLevel, DEFAULT_TEMP, DEFAULT_TOLERANCE); break;
+        case 2: newDevice = new SmartHeater(deviceId, deviceName, deviceLocation, operationMode, powerLevel, DEFAULT_TEMP, DEFAULT_TOLERANCE); break;
+        case 3: newDevice = new SmartHumidifier(deviceId, deviceName, deviceLocation, operationMode, powerLevel, DEFAULT_HUM, DEFAULT_TOLERANCE); break;
+        case 4: newDevice = new SmartDehumidifier(deviceId, deviceName, deviceLocation, operationMode, powerLevel, DEFAULT_HUM, DEFAULT_TOLERANCE); break;
+        case 5: newDevice = new SmartFan(deviceId, deviceName, deviceLocation, operationMode, powerLevel, DEFAULT_CO2, DEFAULT_TOLERANCE); break;
         case 6:
             int turnOffHour = safeInputNumeric<int>(cin, 0, 23, "Turn off hour (0-23): ");
-            newDevice = make_shared<SmartLight>(deviceId, deviceName, deviceLocation, operationMode, powerLevel, turnOffHour);
+            newDevice = new SmartLight(deviceId, deviceName, deviceLocation, operationMode, powerLevel, turnOffHour);
             break;
     }
 
     try {
-        commandHistory.executeCommand(make_unique<AddDeviceCommand>(&deviceService, newDevice));
+        commandHistory.executeCommand(new AddDeviceCommand(&deviceService, newDevice));
         cout << "Device successfully added!\n";
     } catch (const exception& e) {
         cout << "Error adding device: " << e.what() << "\n";
@@ -181,7 +183,7 @@ void addDevice() {
 void modifyDevice() {
     cout << "\n=== MODIFY DEVICE ===\n";
     auto allDevices = deviceService.getAllDevices();
-    if (allDevices.empty()) {
+    if (allDevices.isEmpty()) {
         cout << "No devices to modify.\n";
         return;
     }
@@ -193,23 +195,41 @@ void modifyDevice() {
         return;
     }
 
+    auto cloneDevice = [](SmartDevice* device) -> SmartDevice* {
+        if (auto ac = dynamic_cast<SmartAirConditioner*>(device)) {
+            return new SmartAirConditioner(*ac);
+        } else if (auto heater = dynamic_cast<SmartHeater*>(device)) {
+            return new SmartHeater(*heater);
+        } else if (auto humidifier = dynamic_cast<SmartHumidifier*>(device)) {
+            return new SmartHumidifier(*humidifier);
+        } else if (auto dehumidifier = dynamic_cast<SmartDehumidifier*>(device)) {
+            return new SmartDehumidifier(*dehumidifier);
+        } else if (auto fan = dynamic_cast<SmartFan*>(device)) {
+            return new SmartFan(*fan);
+        } else if (auto light = dynamic_cast<SmartLight*>(device)) {
+            return new SmartLight(*light);
+        }
+        return new SmartDevice(*device);
+    };
+
     string modifyOptions[] = { "1. Change all data", "2. Change specific field" };
     Menu::draw("Modification mode", modifyOptions, 2);
     int modifyMode = safeInputNumeric<int>(cin, 1, 2, "Choose (1-2): ");
 
     if (modifyMode == 1) {
         cin >> *deviceToModify;
-        deviceService.updateDevice(targetId, deviceToModify);
+        SmartDevice* updated = cloneDevice(deviceToModify);
+        deviceService.updateDevice(targetId, updated);
         cout << "Device fully updated!\n";
         return;
     }
 
-    SmartAirConditioner* ac = dynamic_cast<SmartAirConditioner*>(deviceToModify.get());
-    SmartHeater* heater = dynamic_cast<SmartHeater*>(deviceToModify.get());
-    SmartHumidifier* humidifier = dynamic_cast<SmartHumidifier*>(deviceToModify.get());
-    SmartDehumidifier* dehumidifier = dynamic_cast<SmartDehumidifier*>(deviceToModify.get());
-    SmartFan* fan = dynamic_cast<SmartFan*>(deviceToModify.get());
-    SmartLight* light = dynamic_cast<SmartLight*>(deviceToModify.get());
+    SmartAirConditioner* ac = dynamic_cast<SmartAirConditioner*>(deviceToModify);
+    SmartHeater* heater = dynamic_cast<SmartHeater*>(deviceToModify);
+    SmartHumidifier* humidifier = dynamic_cast<SmartHumidifier*>(deviceToModify);
+    SmartDehumidifier* dehumidifier = dynamic_cast<SmartDehumidifier*>(deviceToModify);
+    SmartFan* fan = dynamic_cast<SmartFan*>(deviceToModify);
+    SmartLight* light = dynamic_cast<SmartLight*>(deviceToModify);
 
     if (ac || heater) {
         string fields[] = {
@@ -254,20 +274,21 @@ void modifyDevice() {
         deviceToModify->updateField(field);
     }
 
-    deviceService.updateDevice(targetId, deviceToModify);
+    SmartDevice* updated = cloneDevice(deviceToModify);
+    deviceService.updateDevice(targetId, updated);
     cout << "Field updated successfully!\n";
 }
 
 void deleteDevice() {
     cout << "\n=== DELETE DEVICE ===\n";
-    if (deviceService.getAllDevices().empty()) {
+    if (deviceService.getAllDevices().isEmpty()) {
         cout << "No devices to delete.\n";
         return;
     }
 
     int deviceId = safeInputNumeric<int>(cin, 0, 999999, "Enter device ID to delete: ");
     try {
-        commandHistory.executeCommand(make_unique<RemoveDeviceCommand>(&deviceService, deviceId));
+        commandHistory.executeCommand(new RemoveDeviceCommand(&deviceService, deviceId));
         cout << "Device deleted!\n";
     } catch (const exception& e) {
         cout << "Error: " << e.what() << "\n";
@@ -288,7 +309,7 @@ void searchDevices() {
 
     auto results = deviceService.searchDevices(searchOption);
 
-    if (results.empty()) {
+    if (results.isEmpty()) {
         cout << "No devices found.\n";
     } else {
         cout << "Found " << results.size() << " device(s):\n";
@@ -300,7 +321,7 @@ void searchDevices() {
 
 void sortDevices() {
     cout << "\n=== SORT DEVICES ===\n";
-    if (deviceService.getAllDevices().empty()) {
+    if (deviceService.getAllDevices().isEmpty()) {
         cout << "No devices to sort.\n";
         return;
     }

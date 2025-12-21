@@ -3,9 +3,6 @@
 #include "../../repositories/include/TextFile.hpp"
 #include "../../exceptions/include/Date.hpp"
 #include "../../exceptions/include/FileException.hpp"
-#include <memory>
-#include <vector>
-#include <algorithm>
 using namespace std;
 
 class AuthenticationService {

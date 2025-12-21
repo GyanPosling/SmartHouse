@@ -1,4 +1,4 @@
-#include "../../include/devices/SmartAirConditioner.hpp"
+﻿#include "../../include/devices/SmartAirConditioner.hpp"
 #include "../../exceptions/include/InputHandler.hpp"
 #include <iomanip>
 using namespace std;
@@ -39,7 +39,7 @@ string SmartAirConditioner::getDeviceInfo() const {
     return SmartDevice::getDeviceInfo() + 
            ", Type: Air Conditioner" + 
            ", Target CO2: " + to_string(targetCO2) + " ppm" +
-           ", Tolerance: ±" + to_string(tolerance) + " ppm";
+           ", Tolerance: В±" + to_string(tolerance) + " ppm";
 }
 
 ostream& operator<<(ostream& os, const SmartAirConditioner& device) {
@@ -80,7 +80,7 @@ istream& operator>>(istream& is, SmartAirConditioner& device) {
                 try {
                     device.targetCO2 = stod(targetCO2Str);
                     device.tolerance = stod(toleranceStr);
-                } catch (const std::exception&) {
+                } catch (const exception&) {
                     is.setstate(ios::failbit);
                 }
             } else {
