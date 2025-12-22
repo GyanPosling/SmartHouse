@@ -9,6 +9,7 @@
 #include "../../repositories/include/TextFile.hpp"
 #include "../../exceptions/include/FileException.hpp"
 #include "../../templates/Deque.hpp"
+#include "../../templates/Algorithm.hpp"
 #include <fstream>
 #include <sstream>
 #include <string>
@@ -18,6 +19,7 @@ class DeviceService {
 private:
     Deque<SmartDevice*> devices;
     TextFile<string> deviceFile;
+    Algorithm<SmartDevice*> algorithm;
 
     void deleteAll();
 
@@ -32,8 +34,9 @@ public:
     Deque<SmartDevice*> getAllDevices() const;
     
     Deque<SmartDevice*> searchDevices(int option);
+    Deque<SmartDevice*> searchDevices(DeviceSearchField field, const SmartDevice& sample);
     void sortDevices(int option);
     
     void saveAllDevices();
     void loadAllDevices();
-};
+}; 

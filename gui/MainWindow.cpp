@@ -911,17 +911,7 @@ Deque<SmartDevice*> MainWindow::searchDevices(DeviceSearchField field, const str
         return {};
     }
 
-    Deque<SmartDevice*> results;
-    auto allDevices = deviceService.getAllDevices();
-    for (auto it = allDevices.begin(); it != allDevices.end(); ++it) {
-        SmartDevice* device = *it;
-        if (*device == sample) {
-            results.pushBack(device);
-        }
-    }
-
-    Device::setSearchMode(DeviceSearchField::ID);
-    return results;
+    return deviceService.searchDevices(field, sample);
 }
 
 void MainWindow::sortDevices(DeviceSortField field) {

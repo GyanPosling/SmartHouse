@@ -694,6 +694,8 @@ smartHouse_gui_autogen/timestamp: \
 	D:/programming/C++programming/PnaYAVU/kursavaya/services/src/ClimateNormalizer.cpp \
 	D:/programming/C++programming/PnaYAVU/kursavaya/services/src/CommandHistory.cpp \
 	D:/programming/C++programming/PnaYAVU/kursavaya/services/src/DeviceService.cpp \
+	D:/programming/C++programming/PnaYAVU/kursavaya/templates/Algorithm.hpp \
+	D:/programming/C++programming/PnaYAVU/kursavaya/templates/Algorithm.tpp \
 	D:/programming/C++programming/PnaYAVU/kursavaya/templates/Deque.hpp \
 	D:/programming/C++programming/PnaYAVU/kursavaya/templates/Deque.tpp \
 	C:/mingw64/bin/cmake.exe

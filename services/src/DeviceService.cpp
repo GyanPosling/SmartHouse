@@ -112,17 +112,18 @@ Deque<SmartDevice*> DeviceService::searchDevices(int option) {
         Device::setSearchMode(DeviceSearchField::MODE);
     }
     
-    Deque<SmartDevice*> searchResults;
-    
-    for (const auto& device : devices) {
-        if (*device == searchObj) {
-            searchResults.pushBack(device);
-        }
-    }
-    
+    Deque<SmartDevice*> searchResults = algorithm.find(devices.begin(), devices.end(), searchObj);
+
     Device::setSearchMode(DeviceSearchField::ID);
     
     return searchResults;
+}
+
+Deque<SmartDevice*> DeviceService::searchDevices(DeviceSearchField field, const SmartDevice& sample) {
+    Device::setSearchMode(field);
+    Deque<SmartDevice*> results = algorithm.find(devices.begin(), devices.end(), sample);
+    Device::setSearchMode(DeviceSearchField::ID);
+    return results;
 }
 
 void DeviceService::sortDevices(int option) {
@@ -158,7 +159,7 @@ void DeviceService::sortDevices(int option) {
             break;
     }
     
-    devices.sortDeque([](SmartDevice* a, SmartDevice* b) {
+    algorithm.sort(devices.begin(), devices.end(), [](SmartDevice* a, SmartDevice* b) {
         return *a < *b;
     });
     

@@ -486,5 +486,7 @@ D:/programming/C++programming/PnaYAVU/kursavaya/builds/Qt-6.10.1-mingw_64/Debug/
   D:/programming/C++programming/PnaYAVU/kursavaya/services/include/ClimateNormalizer.hpp \
   D:/programming/C++programming/PnaYAVU/kursavaya/services/include/CommandHistory.hpp \
   D:/programming/C++programming/PnaYAVU/kursavaya/services/include/DeviceService.hpp \
+  D:/programming/C++programming/PnaYAVU/kursavaya/templates/Algorithm.hpp \
+  D:/programming/C++programming/PnaYAVU/kursavaya/templates/Algorithm.tpp \
   D:/programming/C++programming/PnaYAVU/kursavaya/templates/Deque.hpp \
   D:/programming/C++programming/PnaYAVU/kursavaya/templates/Deque.tpp

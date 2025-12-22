@@ -496,6 +496,8 @@ D:/programming/C++programming/PnaYAVU/kursavaya/gui/MainWindow.hpp
  mdp:D:/programming/C++programming/PnaYAVU/kursavaya/services/include/ClimateNormalizer.hpp
  mdp:D:/programming/C++programming/PnaYAVU/kursavaya/services/include/CommandHistory.hpp
  mdp:D:/programming/C++programming/PnaYAVU/kursavaya/services/include/DeviceService.hpp
+ mdp:D:/programming/C++programming/PnaYAVU/kursavaya/templates/Algorithm.hpp
+ mdp:D:/programming/C++programming/PnaYAVU/kursavaya/templates/Algorithm.tpp
  mdp:D:/programming/C++programming/PnaYAVU/kursavaya/templates/Deque.hpp
  mdp:D:/programming/C++programming/PnaYAVU/kursavaya/templates/Deque.tpp
 D:/programming/C++programming/PnaYAVU/kursavaya/models/src/User.cpp
