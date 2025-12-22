@@ -1,15 +1,27 @@
-# === Editor / IDE ===
+﻿# === Editor / IDE ===
 .vscode/
 .cache/
+**/.cache/
+*.cache
 
 # === Build directories ===
 build/
 builds/
 build-*/
+**/build/
+**/builds/
+**/build-*/
 cmake-build-*/
+**/cmake-build-*/
+dist/
+bin/
+out/
+Debug/
+Release/
 
 # CMake generated files
 CMakeFiles/
+**/CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
 Makefile
@@ -31,6 +43,7 @@ qrc_*.cpp
 *.lib
 *.exp
 *.pdb
+*.exe
 
 # Temporary files
 *.log
@@ -48,3 +61,7 @@ Thumbs.db
 .idea/
 *.pro.user*
 *.creator.user*
+
+# Ninja build metadata
+.ninja_deps
+.ninja_log

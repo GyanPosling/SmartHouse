@@ -1,6 +1,0 @@
-set(__QT_DEPLOY_TARGET_smartHouse_FILE D:/programming/C++programming/PnaYAVU/kursavaya/builds/Qt-6.10.1-mingw_64/Debug/smartHouse.exe)
-set(__QT_DEPLOY_TARGET_smartHouse_TYPE EXECUTABLE)
-set(__QT_DEPLOY_TARGET_smartHouse_RUNTIME_DLLS )
-set(__QT_DEPLOY_TARGET_smartHouse_gui_FILE D:/programming/C++programming/PnaYAVU/kursavaya/builds/Qt-6.10.1-mingw_64/Debug/smartHouse_gui.exe)
-set(__QT_DEPLOY_TARGET_smartHouse_gui_TYPE EXECUTABLE)
-set(__QT_DEPLOY_TARGET_smartHouse_gui_RUNTIME_DLLS C:/Qt/6.10.1/mingw_64/bin/Qt6Widgets.dll;C:/Qt/6.10.1/mingw_64/bin/Qt6Gui.dll;C:/Qt/6.10.1/mingw_64/bin/Qt6Core.dll)

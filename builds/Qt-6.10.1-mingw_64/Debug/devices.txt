@@ -1,3 +1,0 @@
-Heater|0|heater|kitchen|0|0|22|2
-Fan|1|Fan|Kitchen|100|0|400|50
-Humidifier|2|Humidifier|Zal|0|0|50|5

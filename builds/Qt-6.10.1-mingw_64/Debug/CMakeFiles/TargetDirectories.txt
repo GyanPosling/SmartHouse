@@ -1,8 +1,0 @@
-D:/programming/C++programming/PnaYAVU/kursavaya/builds/Qt-6.10.1-mingw_64/Debug/CMakeFiles/smartHouse.dir
-D:/programming/C++programming/PnaYAVU/kursavaya/builds/Qt-6.10.1-mingw_64/Debug/CMakeFiles/smartHouse_gui.dir
-D:/programming/C++programming/PnaYAVU/kursavaya/builds/Qt-6.10.1-mingw_64/Debug/CMakeFiles/edit_cache.dir
-D:/programming/C++programming/PnaYAVU/kursavaya/builds/Qt-6.10.1-mingw_64/Debug/CMakeFiles/rebuild_cache.dir
-D:/programming/C++programming/PnaYAVU/kursavaya/builds/Qt-6.10.1-mingw_64/Debug/CMakeFiles/smartHouse_autogen_timestamp_deps.dir
-D:/programming/C++programming/PnaYAVU/kursavaya/builds/Qt-6.10.1-mingw_64/Debug/CMakeFiles/smartHouse_autogen.dir
-D:/programming/C++programming/PnaYAVU/kursavaya/builds/Qt-6.10.1-mingw_64/Debug/CMakeFiles/smartHouse_gui_autogen_timestamp_deps.dir
-D:/programming/C++programming/PnaYAVU/kursavaya/builds/Qt-6.10.1-mingw_64/Debug/CMakeFiles/smartHouse_gui_autogen.dir
