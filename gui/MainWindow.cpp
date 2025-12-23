@@ -537,7 +537,7 @@ QWidget* MainWindow::buildAppPage() {
         auto cd = climateData;
         QString text = QString(
                            "Environment snapshot\n"
-                           "в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђ\n"
+                           "-----------------------------\n"
                            "Temperature : %1 В°C\n"
                            "Humidity    : %2 %%\n"
                            "COв‚‚ level   : %3 ppm")
@@ -551,7 +551,7 @@ QWidget* MainWindow::buildAppPage() {
         QString rec = QString::fromStdString(analyzeClimate());
         appendEnvironment(QString(
                               "Climate analysis & recommendations\n"
-                              "в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђ\n%1").arg(rec));
+                              "--------------------------------------------------------------------------------------\n%1").arg(rec));
     });
     connect(btn12, &QPushButton::clicked, this, [this]() { performNormalize(); });
     connect(btn0, &QPushButton::clicked, this, [this]() {
@@ -769,7 +769,7 @@ void MainWindow::performNormalize() {
     refreshClimateBadge();
     appendEnvironment(QString(
         "Normalized climate\n"
-        "в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђ\n%1").arg(QString::fromStdString(details)));
+        "-------------------------------\n%1").arg(QString::fromStdString(details)));
 }
 
 void MainWindow::setManualClimate(double temp, double hum, double co2) {
